@@ -6,7 +6,7 @@ El producto esta dirigido a un publico conocedor del mercado de zapatillas, cole
 
 Equipo :
 
-Cristian Villafane
+Cristian Villafane: tengo 35 años, soy fanatico de Boca Juniors. Me gusta mucho hacer deportes en general y en particular futbol, natacion y gimnasio. 
 
 Mauricio Silvera 
 
@@ -17,7 +17,7 @@ Nicolas Macenco: Me dicen Nico, tengo 29 años. Estoy recibido de la carrera de 
 
 https://www.grid.com.ar/
 
-https://www.dafiti.com.ar/
+https://www.dafiti.com.ar/ : esta relacionada con el producto que elegimos y ademas tiene todos los elementos que tenemos planificado implementar. Es de gran referencia.  
 
 https://www.converse.com.ar/ : Si bien la pagina no tiene venta on line, nos parecio un referente del mercado en el rubro zapatillas. Tambien nos gusto la simplicidad del sitio. 
 
