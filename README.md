@@ -6,7 +6,7 @@ El producto esta dirigido a un publico conocedor del mercado de zapatillas, cole
 
 Equipo :
 
-Cristian Villafane: tengo 35 años, soy fanatico de Boca Juniors. Me gusta mucho hacer deportes en general y en particular futbol, natacion y gimnasio. 
+Cristian Villafane: tengo 35 años, vivo en Lanus. Soy fanatico de Boca Juniors. Me gusta mucho hacer deportes en general y en particular futbol, natacion y gimnasio. 
 
 Mauricio Silvera 
 
