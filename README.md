@@ -34,7 +34,7 @@ Wireframe :
 
 ● Carrito de compras
 
-● Formulario de registro
+● Formulario de registro : https://www.figma.com/file/mbUHVOIU3O2sCQDRs6HodF/Pantalla-de-Registo?node-id=0%3A1
 
 ● Formulario de login : https://www.figma.com/file/hixK78wP7JLIUsMTztvfR8/Pantalla-de-Logue?node-id=0%3A1
 
