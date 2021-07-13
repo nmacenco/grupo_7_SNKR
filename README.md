@@ -36,7 +36,7 @@ Wireframe :
 
 ● Formulario de registro
 
-● Formulario de login
+● Formulario de login : https://www.figma.com/file/hixK78wP7JLIUsMTztvfR8/Pantalla-de-Logue?node-id=0%3A1
 
 
 
