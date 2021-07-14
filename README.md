@@ -10,7 +10,7 @@ Cristian Villafane: tengo 35 años, vivo en Lanus. Soy fanatico de Boca Juniors.
 
 Mauricio Silvera 
 
-Renzo Pianciola 
+Renzo Pianciola: Vivo en la ciudad de Olavarría, Buenos Aires. Tengo 28 años, soy profesor de Educación Física. También me desempeño como DJ y me dedico a la producción musical.
 
 Nicolas Macenco: Me dicen Nico, tengo 29 años. Estoy recibido de la carrera de contador. Neuquino viviendo en Mendoza. Me gustan mucho los deportes y pasar tiempo con mi familia y amigos. 
 
@@ -21,7 +21,7 @@ https://www.dafiti.com.ar/ : esta relacionada con el producto que elegimos y ade
 
 https://www.converse.com.ar/ : Si bien la pagina no tiene venta on line, nos parecio un referente del mercado en el rubro zapatillas. Tambien nos gusto la simplicidad del sitio. 
 
-https://drifters.com.ar/
+https://drifters.com.ar/ : Plataforma de venta de indumentaria con gran oferta en el rubro del calzado en el cual queremos enfocarnos. Su navegación es intuitiva y nos resultó adecuada para tener como referencia y tomar algunas ideas.
 
 https://stockx.com/
 
@@ -32,7 +32,7 @@ Wireframe :
 
 ● Detalle de producto
 
-● Carrito de compras
+● Carrito de compras : https://www.figma.com/file/3Y5lyFn212KNSMx6m45HLZ/SNKR?node-id=0%3A1
 
 ● Formulario de registro : https://www.figma.com/file/mbUHVOIU3O2sCQDRs6HodF/Pantalla-de-Registo?node-id=0%3A1
 
