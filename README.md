@@ -1,11 +1,11 @@
 # grupo_7_SNKR
 
-Nuestro sitio se centrara en la comercializacion de zapatillas exclusivas importadas, 100% originales.
-El producto esta dirigido a un publico conocedor del mercado de zapatillas, coleccionista del tipo de calzado deportivo, apuntado siempre a modelos exclusivos. Dedicados a la cultura SneakerHead. 
+Nuestro sitio se centrará en la comercialización de zapatillas exclusivas y/o importadas, brindando productos completamente originales.
+El producto está dirigido a un público conocedor del mercado, coleccionista del tipo de calzado deportivo, apuntado siempre a modelos exclusivos. Dedicados a la cultura SneakerHead. 
 
 Equipo :
 
-Cristian Villafane: Tengo 35 años, vivo en Lanus. Soy fanatico de Boca Juniors. Me gusta mucho hacer deportes en general y en particular futbol, natacion y gimnasio. 
+Cristian Villafane: Tengo 35 años, vivo en Lanus. Soy fanático de Boca Juniors. Me gusta mucho hacer deportes en general y en particular futbol, natación y gimnasio. 
 
 Mauricio Silvera: Tengo 23 años, vivo en Floresta. Trabajo en IT y me gusta estar la mayor parte del día en la PC jugando videojuegos y hablando con amigos. A pesar de esto último, también me gusta practicar deporte los fines de semana.
 
@@ -20,11 +20,11 @@ https://www.grid.com.ar/: Actualmente una de las principales páginas de Argenti
 
 https://www.dafiti.com.ar/ : Esta relacionada con el producto que elegimos y ademas tiene todos los elementos que tenemos planificado implementar. Es de gran referencia.  
 
-https://www.converse.com.ar/ : Si bien la pagina no tiene venta online, nos parecio un referente del mercado en el rubro zapatillas. Nos gustó la simplicidad del sitio. 
+https://www.converse.com.ar/ : Si bien la pagina no tiene venta online, nos pareció un referente del mercado en el rubro zapatillas. Nos gustó la simplicidad del sitio. 
 
 https://drifters.com.ar/ : Plataforma de venta de indumentaria con gran oferta en el rubro del calzado en el cual queremos enfocarnos. Su navegación es intuitiva y nos resultó adecuada para tener como referencia y tomar algunas ideas.
 
-https://www.moovbydexter.com.ar/: Junto a Grid, actualmente posee el mayor público sneakerhead debido a sus lanzamientos exclusivos, mayormente reconocido por sus zapatillas. Tiene un diseño BLack&White minimalistta con animaciones muy prolijas y agradables al usuario final.
+https://www.moovbydexter.com.ar/: Junto a Grid, actualmente posee el mayor público sneakerhead debido a sus lanzamientos exclusivos, mayormente reconocido por sus zapatillas. Tiene un diseño Black&White minimalistta con animaciones muy prolijas y agradables al usuario final, la cual podemos usar de guia.
 
 
 Wireframes : 
