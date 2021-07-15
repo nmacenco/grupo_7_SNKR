@@ -31,6 +31,8 @@ Wireframes :
 
 ● Home : https://www.figma.com/file/8wOfDx8G1g5IDUfF03toOk/SNKR-Home?node-id=0%3A1 
 
+• Busqueda de producto: https://www.figma.com/file/MqJ7Ir5zlcuEMQvOucV1O6/SNKR-2?node-id=0%3A1
+
 ● Detalle de producto : https://www.figma.com/file/BSsMHn7TBaFRl8WpaXbrRL/SNKR?node-id=0%3A1
 
 ● Carrito de compras : https://www.figma.com/file/3Y5lyFn212KNSMx6m45HLZ/SNKR?node-id=0%3A1
