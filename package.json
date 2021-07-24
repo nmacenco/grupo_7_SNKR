@@ -1,0 +1,23 @@
+{
+  "name": "grupo_7_SNKR",
+  "version": "1.0.0",
+  "description": "Nuestro sitio se centrará en la comercialización de zapatillas exclusivas y/o importadas, brindando productos completamente originales.\r El producto está dirigido a un público conocedor del mercado, coleccionista del tipo de calzado deportivo, apuntado siempre a modelos exclusivos. Dedicados a la cultura SneakerHead.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmacenco/grupo_7_SNKR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmacenco/grupo_7_SNKR/issues"
+  },
+  "homepage": "https://github.com/nmacenco/grupo_7_SNKR#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
