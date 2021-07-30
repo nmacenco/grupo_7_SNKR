@@ -1,0 +1,173 @@
+* {
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+.cabecera {
+    background-color: #565B62 ;
+    text-align: center;
+    color: white;
+    height: 25px;
+    padding-top: 5px;
+}
+.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #accbd6;  
+}
+.main-header img {
+    height: 100px;
+}
+.search {
+    width: 30%;
+    padding: 5px;
+    position: relative;
+    left: -15px;
+    
+}
+.search input {
+    width: 80%;
+    height: 30px;
+    border-radius: 15px;
+}
+.search i {
+    position: relative;
+    right: 30px;
+
+}
+#login {
+    margin: 10px;
+    font-size: 25px;
+    color: black;
+}
+#cart {
+    margin: 10px;
+    font-size: 25px;
+    color: black;
+}
+
+.second-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #DAD3D3 ;
+}
+.second-header p {
+    margin: 5px 25px;
+    font-size: 15px;
+
+}
+.banner {
+    position: relative;
+    margin-bottom: 25px;
+}
+.banner img{
+    width: 100%;
+    height: 450px;
+    
+}
+.flecha-izquierda {
+    font-size: 40px;
+    position: absolute;
+    top: 40%;
+    left: 10px;
+
+}
+.flecha-derecha {
+    font-size: 40px;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+}
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px ;
+    
+}
+.producto {
+    width: 25%;
+    position: relative;
+
+}
+.producto h2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: all 450ms ;
+}
+.producto:hover h2 {
+    opacity: 1;
+
+}
+.producto img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex; 
+    justify-content: space-around;
+    background-color: #DAD3D3 ;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer section h3 {
+    margin-top: 15px;
+    
+}
+#seguinos {
+    margin-top: 0px;
+}
+footer section ul {
+    margin-top: 10px;
+    list-style: none;
+    
+}
+footer section ul li {
+    margin: 5px 0px;
+}
+footer section ul a {
+    color: black;
+    text-decoration: none;
+    
+}
+#caja-iconos-redes {
+    position: relative;
+    top: -25px;
+}
+
+.iconos-redes {
+    margin: 0px 5px; 
+    font-size: 20px;
+}

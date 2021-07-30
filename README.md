@@ -41,8 +41,15 @@ Wireframes :
 
 ● Formulario de login : https://www.figma.com/file/hixK78wP7JLIUsMTztvfR8/Pantalla-de-Logue?node-id=0%3A1
 
+TRELLO:
 
+https://trello.com/b/5B4lqYLk/proyecto-dh-snkr
 
+PALETA DE COLORES: 
 
+    #222831
+    #565B62
+    #accbd6
+    #DAD3D3
 
 
