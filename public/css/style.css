@@ -18,7 +18,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #accbd6;  
+    /* background-color: #accbd6;  */
+    /* background-color: #85C1E9;  */
+    background-color: #6491AF;
 }
 .main-header img {
     height: 100px;
@@ -125,12 +127,17 @@ section {
 
 /* FOOTER */
 
-footer {
+.footer {
     display: flex; 
     justify-content: space-around;
     background-color: #DAD3D3 ;
 }
-
+.copyright {
+    background-color: #DAD3D3 ;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
 footer section {
     display: flex;
     flex-direction: column;
