@@ -190,21 +190,38 @@ footer section ul a {
 .filtrosAplicados{
     height: 10%;
     padding: 15px;
+    font-size: 17px;
+}
+
+.filtrosAplicados i{
+    font-size: 17px;
 }
 
 .producto{
     display:flex;
     width: 100vw;
+    margin: 30px 0 5px 0;
 }
 
 .fotoProducto{
-
     width: 40%;
 }
 
-hr{
-    margin-bottom: 10px;
+/*** HR ***/
+
+.separacionFiltrosProducto{
+    width: 98%;
+    margin:auto;
+    opacity: 80%;
 }
+
+.separacionTituloTalles{
+    width: 95%;
+    color: #ebebeb;
+    opacity: 40%;
+}
+
+/***************************/
 
 .detalleProducto{
     width:50%;
@@ -214,6 +231,14 @@ hr{
 .listaTalles{
     list-style: none;
     display:flex;
+    flex-wrap: wrap;
+}
+
+.listaTalles li{
+    border: 2px solid #16969C;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px 5px 0;
 }
 
 .tituloZapas{
@@ -269,7 +294,7 @@ i{
 
 .cajaDescripcion{
     display:block;
-    border: 2px solid red;
+    margin: 0 10px 10px 30px;
 }
 
 h3{
@@ -277,13 +302,13 @@ h3{
     font-size: 20px;
 }
 
-.cajaRecomendados{
-    border: 2px solid red;
+.recomendados{
+    display:flex;
+    justify-content: space-between;
 }
 
 article{
     width: 24%;
-    border: 2px solid red;
 }
 
 .tituloRecomendados{
@@ -291,7 +316,7 @@ article{
     font-size: 20px;
 }
 
-.fotosProductos{
+.fotoRecomendados{
     width:100%;
 }
 
@@ -300,4 +325,38 @@ article{
     margin-top: 5px;
     font-size: 18px;
     font-style: italic;
+}
+
+.fotoProducto{
+    width:50%;
+}
+
+.cajaProductoRecomendado{
+    width: 21%;
+}
+
+.recomendados{
+    margin: 10px 0 10px 0;
+}
+
+.recomendados i{
+    align-self: center;
+    font-size: 30px;
+    margin: 0 10px 0 10px;
+}
+
+.tituloDescripcion{
+    font-size: 21px;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.descripcionDescripcion{
+    font-size: 18px;
+}
+
+.tituloRecomendados{
+    font-size: 25px;
+    margin: 30px 0 10px 0;
+    font-weight: bold;
 }

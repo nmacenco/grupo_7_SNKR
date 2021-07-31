@@ -7,9 +7,9 @@ const app = express() ;
 const publiPath = path.resolve (__dirname, "/public") ;
 app.use (express.static(publiPath)) ;
 
-app.listen (3000, () => console.log("El servidor se esta ejecutando en http://localhost:3000") ) ;
+app.use (express.static('public'));
 
-app.use(express.static('public'))
+app.listen (3000, () => console.log("El servidor se esta ejecutando en http://localhost:3000") ) ;
 
 app.get ("/home" , (req,res) => {
     res.sendFile(path.join(__dirname, "/views/index.html")) ;
