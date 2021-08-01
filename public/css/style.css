@@ -8,13 +8,15 @@ body {
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
+
 .cabecera {
     background-color: #565B62 ;
     text-align: center;
     color: white;
     height: 25px;
-    padding-top: 5px;
+    padding: 5px;
 }
+
 .main-header {
     display: flex;
     justify-content: space-around;
@@ -22,8 +24,13 @@ body {
     /* background-color: #accbd6;  */
     /* background-color: #85C1E9;  */
     /* background-color: #6491AF; */
-    background-color: #16969C;  
+    background-color: #39A6A3; 
 }
+
+.main-header a i{
+    font-size: 30px;
+}
+
 .main-header img {
     height: 100px;
 }
@@ -35,13 +42,13 @@ body {
     
 }
 .search input {
-    width: 80%;
-    height: 30px;
+    width: 82%;
+    height: 35px;
     border-radius: 15px;
 }
 .search i {
     position: relative;
-    right: 30px;
+    right: 40px;
 
 }
 #login {
@@ -49,9 +56,14 @@ body {
     font-size: 25px;
     color: black;
 }
+
 #cart {
     margin: 10px;
     font-size: 25px;
+    color: black;
+}
+
+#cart i{
     color: black;
 }
 
@@ -62,15 +74,18 @@ body {
     padding: 10px;
     background-color: #DAD3D3 ;
 }
+
 .second-header p {
     margin: 5px 25px;
-    font-size: 15px;
-
+    font-weight: 400;
+    font-size: 18px;
 }
+
 .banner {
     position: relative;
     margin-bottom: 25px;
 }
+
 .banner img{
     width: 100%;
     height: 450px;
@@ -125,21 +140,28 @@ body {
     height: 100%;
 }
 
-
+#sale{
+    color:red;
+}
 
 /* FOOTER */
 
 .footer {
     display: flex; 
     justify-content: space-around;
-    background-color: #DAD3D3 ;
+    background-color: #39A6A3 ;
 }
 .copyright {
     background-color: #DAD3D3 ;
-    padding-left: 15px;
-    padding-bottom: 5px;
-    font-size: 15px;
 }
+
+.copyright p{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
 footer section {
     display: flex;
     flex-direction: column;
@@ -151,15 +173,14 @@ footer section {
     flex-direction: column;
     align-items: center;
 }
+
 footer section h3 {
-    margin-top: 15px;
+    margin: 15px 0 5px 0;
     
 }
-#seguinos {
-    margin-top: 0px;
-}
+
 footer section ul {
-    margin-top: 10px;
+    margin: 10px 0 5px 0;
     list-style: none;
     
 }
@@ -169,16 +190,13 @@ footer section ul li {
 footer section ul a {
     color: black;
     text-decoration: none;
+    font-size: 17px;
     
-}
-#caja-iconos-redes {
-    position: relative;
-    top: -25px;
 }
 
 .iconos-redes {
-    margin: 0px 5px; 
-    font-size: 20px;
+    margin: 0px 10px; 
+    font-size: 43px;
 }
 
 
@@ -200,11 +218,28 @@ footer section ul a {
 .producto{
     display:flex;
     width: 100vw;
-    margin: 30px 0 5px 0;
+    margin: 20px 0 5px 0;
+    align-items: center;
+
+}
+
+.cajaFotoProducto{
+    display:flex;
+}
+
+.cajaFotoProducto i{
+    margin:0;
+    align-items: center;
+    width: 5%;
 }
 
 .fotoProducto{
-    width: 40%;
+    width: auto;
+}
+
+.producto i{
+    margin:0;
+    padding: 10px;
 }
 
 /*** HR ***/
@@ -235,10 +270,12 @@ footer section ul a {
 }
 
 .listaTalles li{
-    border: 2px solid #16969C;
-    border-radius: 50%;
-    padding: 10px;
+    border: 2px solid #39A6A3;
+    border-radius: 25%;
+    padding: 9px;
     margin: 0 5px 5px 0;
+    color:#39A6A3;
+    font-weight: bold;
 }
 
 .tituloZapas{
@@ -261,7 +298,7 @@ footer section ul a {
 
 .listaTalles{
     margin: 10px 0 20px 0;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .cajaBoton{
@@ -277,6 +314,10 @@ footer section ul a {
     align-items: center;
 }
 
+.compartirPublicacion .fab{
+    font-size: 27px;
+}
+
 .fas{
     font-size: 25px;
     padding: 5px;
@@ -284,22 +325,21 @@ footer section ul a {
 }
 
 .botonCompra{
-    width:60%;
+    width:70%;
     padding:8px;
     border-radius: 50px;
     border: none;
-    background-color: #16969C;
-    font-weight: 500;
+    background-color: #39A6A3;
+    font-weight: 700;
+}
+
+#compartirLabel{
+    font-style: italic;
 }
 
 .cajaDescripcion{
     display:block;
-    margin: 0 10px 10px 30px;
-}
-
-.recomendados{
-    display:flex;
-    justify-content: space-between;
+    margin: 20px 10px 10px 30px;
 }
 
 .cajaProductoRecomendado{
@@ -331,7 +371,9 @@ footer section ul a {
 }
 
 .recomendados{
-    margin: 10px 0 10px 0;
+    display:flex;
+    justify-content: space-between;
+    margin: 10px 0 25px 0;
 }
 
 .recomendados i{
@@ -347,11 +389,12 @@ footer section ul a {
 }
 
 .descripcionDescripcion{
+    margin: 10px 0 10px 0;
     font-size: 18px;
 }
 
 .tituloRecomendados{
     font-size: 25px;
-    margin: 30px 0 10px 0;
+    margin: 50px 0 10px 0;
     font-weight: bold;
 }

@@ -27,7 +27,7 @@
                 <img src="/images/logosimple.png" alt="Venta zapatillas">
             </a>
             <div class="search">
-                <input type="text">
+                <input type="text" placeholder="Buscar...">
                 <i class="fas fa-search"></i>
             </div>
             <div class="icons">
@@ -39,12 +39,13 @@
             </a>
             </div>  
         </div>
+
         <div class="second-header">
             <p>NEW</p>
             <p>HOMBRE</p>
             <p>MUJER</p>
             <p>MARCA</p>
-            <p>SALE</p>
+            <p id="sale">SALE</p>
         </div>
     </header>
 
@@ -57,9 +58,12 @@
 
         <hr class="separacionFiltrosProducto">
 
-        <section class="producto">                
-            <img class="fotoProducto" src="/images/Air jordan 1 mocha.png" alt="altas jordan 1">
-
+        <section class="producto">
+            
+                <i class="fas fa-arrow-left"></i>
+                <img  class="fotoProducto" src="/images/Air jordan 1 mocha.png" alt="altas jordan 1">
+                <i class="fas fa-arrow-right"></i>
+            
             <div class="detalleProducto">
                 <div>
                     <p class="tituloZapas">ZAPATILLAS NIKE AIR JORDAN 1 HIGH MOCHA</p>
@@ -72,20 +76,20 @@
                     <p class="talle">Talle</p>
                     <div class="numeroTalle">
                         <ul class="listaTalles">
-                            <li><span>37</span></li>
                             <li><span>38</span></li>
+                            <li><span>38.5</span></li>
                             <li><span>39</span></li>
+                            <li><span>39.5</span></li>
                             <li><span>40</span></li>
+                            <li><span>40.5</span></li>
                             <li><span>41</span></li>
+                            <li><span>41.5</span></li>
                             <li><span>42</span></li>
+                            <li><span>42.5</span></li>
                             <li><span>43</span></li>
+                            <li><span>43.5</span></li>
                             <li><span>44</span></li>
-                            <li><span>45</span></li>
-                            <li><span>46</span></li>
-                            <li><span>47</span></li>
-                            <li><span>48</span></li>
-                            <li><span>49</span></li>
-                            <li><span>50</span></li>
+                            <li><span>44.5</span></li>
                         </ul>
                     </div>
                 
@@ -93,7 +97,7 @@
                     <button class="botonCompra">AGREGAR AL CARRITO</button>    
                 </div>
                 <div class="compartirPublicacion">
-                    <span>Compartir</span>
+                    <span id="compartirLabel">Compartir</span>
                     <span><i class="fab fa-whatsapp"></i></span>
                     <span><i class="fab fa-instagram"></i></span>
                     <span><i class="fab fa-twitter"></i></span>
@@ -164,7 +168,7 @@
             </ul>
         </section>
         <section id="redes">
-            <h3 id="seguinos">Seguinos</h3>
+            <h3>Seguinos</h3>
             <ul id="caja-iconos-redes">
                 <a href=""  class="iconos-redes"><i class="fab fa-instagram"></i></a>
                 <a href="" class="iconos-redes"><i class="fab fa-facebook-square"></i></a>
