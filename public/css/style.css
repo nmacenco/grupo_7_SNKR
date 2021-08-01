@@ -484,3 +484,22 @@ footer section h3 {
     width: 140px;
     font-weight: 600;
 }
+
+.titulo-registro{
+    text-decoration: underline;
+    text-align: center;
+}
+.register{
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 75px;
+    margin: auto;
+    justify-content: center;
+}
+
+.etiqueta-ingreso{
+    display: flex;
+    justify-content: space-between;
+}
+
