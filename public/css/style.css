@@ -150,9 +150,6 @@ body {
     justify-content: space-around;
     background-color: #39A6A3 ;
 }
-.copyright {
-    background-color: #DAD3D3 ;
-}
 
 .copyright p{
     font-size: 15px;
@@ -174,7 +171,7 @@ footer section {
 }
 
 footer section h3 {
-    margin: 15px 0 5px 0;
+    margin: 10px 0 5px 0;
     
 }
 
@@ -182,23 +179,28 @@ footer section ul {
     margin: 10px 0 5px 0;
     list-style: none;
 }
+
 .footer section ul li {
     margin: 5px 0px;
 }
+
 .footer section ul a {
     color: black;
     text-decoration: none;
     font-size: 17px;
-    
+}
+
+#caja-iconos-redes i{
+    font-size: 35px;
 }
 
 .iconos-redes {
     margin: 0px 10px; 
     font-size: 43px;
 }
+
 .copyright {
     background-color: #DAD3D3 ;
-    padding: 10px 0px 5px 15px;
     font-size: 15px;
     position: relative ;
     top: -1px;
