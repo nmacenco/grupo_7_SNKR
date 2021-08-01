@@ -27,10 +27,6 @@ body {
     background-color: #39A6A3; 
 }
 
-.main-header a i{
-    font-size: 30px;
-}
-
 .main-header img {
     height: 100px;
 }
@@ -49,25 +45,26 @@ body {
 }
 .search i {
     position: relative;
-    right: 40px;
-
+    right: 45px;
+    top: 3px;
+    font-size: 20px;
+}
+.login-cart{
+    display: flex;
+    align-items: center;
 }
 #login {
     margin: 10px;
-    font-size: 25px;
     color: black;
 }
 
 #cart {
     margin: 10px;
-    font-size: 25px;
     color: black;
 }
-
-#cart i{
-    color: black;
+.main-header a i{
+    font-size: 30px;
 }
-
 .second-header {
     display: flex;
     align-items: center;
@@ -158,7 +155,7 @@ body {
     font-style: italic;
 }
 
-footer section {
+.footer section {
     display: flex;
     flex-direction: column;
     /* align-items: flex-start; */
@@ -171,11 +168,11 @@ footer section {
 }
 
 footer section h3 {
-    margin: 10px 0 5px 0;
+    margin: 15px 0 5px 0;
     
 }
 
-footer section ul {
+.footer section ul {
     margin: 10px 0 5px 0;
     list-style: none;
 }
@@ -221,7 +218,7 @@ footer section ul {
 
 .producto{
     display:flex;
-    width: 100vw;
+    width: 100%;
     margin: 20px 0 5px 0;
     align-items: center;
 
@@ -331,8 +328,9 @@ footer section ul {
 .flechas-detail {
     font-size: 30px;
     position: relative;
-    top: -10px;
+    top: 120px;
     margin: 0 10px 0 10px;
+    height: 50px;
 }
 
 
@@ -411,4 +409,78 @@ footer section ul {
     font-size: 25px;
     margin: 50px 0 10px 0;
     font-weight: bold;
+}
+
+/* ////////// LOGIN /////////// */
+
+.main-login {
+    height: 50vh;
+}
+
+.asistencia {
+    padding: 5px 0 5px 25px;
+    border-bottom: solid grey 1px;
+    font-size: 12px;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 15px;
+    height: 60%;
+}
+.ingresar {
+    width: 30%;
+    border-right: grey solid 1px;
+    padding-right: 20px;
+    padding-top: 15px;
+}
+.titulo {
+    margin-bottom: 10px;  
+}
+
+
+.detalle-formulario{
+    margin: 15px 0;
+    position: relative;
+}
+.detalle-formulario input{
+    position: absolute;
+    right: 35px;
+}
+
+.boton{
+    margin: 20px 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.boton button {
+    padding: 5px;
+    background-color: #39A6A3 ;
+    border: none;
+    border-radius: 10px;
+    width: 140px;
+    font-weight: 600;
+}
+.crear-cuenta{
+    width: 30%;
+    padding-left: 20px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crear-cuenta label {
+    margin-bottom: 10px;
+}
+.crear-cuenta button {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #39A6A3 ;
+    border: none;
+    border-radius: 10px;
+    width: 140px;
+    font-weight: 600;
 }
