@@ -43,8 +43,54 @@
         </div>
     </header>
     <main>
-        <p>este es el register</p>
-
+        //FORMULARIO DE REGISTRO
+        <form action="/registro" method="POST" class="formulario">
+            <p>
+                <label>REGISTRATE</label>
+            </p>
+            <p>
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </p>
+            <p>
+                <label for="apellido">APELLIDO:</label>
+                <input type="text" name="apellido" id="apellido" required>
+            </p>
+            <p>
+                <label for="nacimiento">FECHA DE NACIMIENTO:</label>
+                <input type="date" name="nacimiento" id="nacimiento" required>
+            </p>
+            <p>
+                <label for="documento">DNI:</label>
+                <input type="number" name="documento" id="documento" required> 
+            </p>
+            <p>
+                <label for="sexo">SEXO:</label>
+                <label>M</label>
+                <input type="radio" name="sexo" id="sexo" value="M">
+                <label>F</label>
+                <input type="radio" name="sexo" id="sexo" value="F">
+            </p>
+            <p>
+                <label for="usuario">USUARIO:</label>
+                <input type="text" name="usuario" id="usuario" required>
+            </p>
+            <p>
+                <label for="email">E-MAIL:</label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <label for="password">PASSWORD:</label>
+                <input type="password" name="password" id="password" required>
+            </p>
+            <p>
+                <label for="rep_password">REPITA LA PASSWORD:</label>
+                <input type="password" name="password" id="rep_password" required>
+            </p>
+            <p>
+                <button type="submit">ENVIAR</button>
+            </p>
+        </form>
     </main>
 </body>
 <footer>
