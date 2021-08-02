@@ -8,6 +8,9 @@ body {
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
+footer{
+    font-family: 'Roboto', sans-serif;
+}
 
 .cabecera {
     background-color: #565B62 ;
@@ -167,13 +170,13 @@ body {
     align-items: center;
 }
 
-footer section h3 {
+.footer section h3 {
     margin: 15px 0 5px 0;
     
 }
 
 .footer section ul {
-    margin: 10px 0 5px 0;
+    margin: 10px 0 10px 0;
     list-style: none;
 }
 
@@ -420,7 +423,10 @@ footer section h3 {
 .asistencia {
     padding: 5px 0 5px 25px;
     border-bottom: solid grey 1px;
+    width: 95%;
     font-size: 12px;
+    margin : 5px 25px ;
+    
 }
 .login {
     display: flex;
@@ -485,23 +491,52 @@ footer section h3 {
     font-weight: 600;
 }
 
+/* //////////// Registro ////////////// */
+
 .titulo-registro{
     text-decoration: underline;
     text-align: center;
+    padding-bottom: 15px;
+}
+.formulario {
+    width: 40%;
+
 }
 .register{
     display: flex;
-    font-size: 14px;
     line-height: 22px;
-    padding: 75px;
-    margin: auto;
+    padding: 50px;
     justify-content: center;
 }
-
 .etiqueta-ingreso{
     display: flex;
     justify-content: space-between;
+    padding: 5px 0;
 }
+.lafecha {
+    width: 37%;
+}
+.etiqueta-sexo{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.myh {
+    display: flex;
+    justify-content: center;
+    width: 37%;
+    position: relative;
+}
+.etiqueta-sexo .myh label{
+    margin: 0 10px;
+}
+.etiqueta-sexo input{
+    position: relative;
+    margin-right: 15px;
+    top: 4px;
+}
+
+
 
 
 /* ------------------------------------------------------------------------ */
@@ -513,6 +548,7 @@ footer section h3 {
     padding: 40px;
     margin-bottom: 15px ;
     border-right: grey solid 1px;
+    width: 70%;
 }
 
 #resumen {
@@ -540,7 +576,7 @@ footer section h3 {
 }
 
 .producto-carrito img {
-    width: 25%;
+    width: 35%;
 }
 
 .detalles-producto {

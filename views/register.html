@@ -9,6 +9,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
@@ -63,18 +69,20 @@
                 </div>
                 <div class="etiqueta-ingreso">
                     <label for="nacimiento">FECHA DE NACIMIENTO:</label>
-                    <input type="date" name="nacimiento" id="nacimiento" required>
+                    <input type="date" name="nacimiento" id="nacimiento" required class="lafecha">
                 </div>
                 <div class="etiqueta-ingreso">
                     <label for="documento">DNI:</label>
                     <input type="number" name="documento" id="documento" required> 
                 </div>
-                <div class="etiqueta-ingreso">
+                <div class="etiqueta-sexo">
                     <label for="sexo">SEXO:</label>
-                    <label>M</label>
-                    <input type="radio" name="sexo" id="sexo" value="M">
-                    <label>F</label>
-                    <input type="radio" name="sexo" id="sexo" value="F">
+                    <div class="myh">
+                        <label>M</label>
+                        <input type="radio" name="sexo" id="sexo" value="M">
+                        <label>F</label>
+                        <input type="radio" name="sexo" id="sexo" value="F">
+                    </div>
                 </div>
                 <div class="etiqueta-ingreso">
                     <label for="usuario">USUARIO:</label>
