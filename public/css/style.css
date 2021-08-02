@@ -503,3 +503,113 @@ footer section h3 {
     justify-content: space-between;
 }
 
+
+/* ------------------------------------------------------------------------ */
+/* ESTILOS PRODUCT CART */
+/* ------------------------------------------------------------------------ */
+
+#items {
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 15px ;
+    border-right: grey solid 1px;
+}
+
+#resumen {
+    align-items: center;
+    padding: 30px;
+    margin: 40px;
+    margin-bottom: 15px ;
+    background-color: #E3E3E3;
+    width: 30%;
+}
+
+.section-carrito {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.producto-carrito {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.548);
+    margin-right: 20px;
+}
+
+.producto-carrito img {
+    width: 25%;
+}
+
+.detalles-producto {
+    width: 80%;
+    padding: 0px 10px;
+    color: #565656;
+}
+
+.nombre-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: grey solid 1px;
+    padding-bottom: 10px;
+}
+
+.stock-item {
+    background-color: #E3E3E3;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stock-item i {
+    color: #808080;
+}
+
+#talle-color {
+    padding-top: 25px;
+}
+
+.barra {
+    border-bottom: rgba(100, 100, 100, 0.15) solid 1px;
+    padding-top: 25px;
+}
+
+#titulo-resumen {
+    border-bottom: rgba(100, 100, 100, 0.15) solid 1px;
+    padding-bottom: 10px;
+}
+
+.linea-resumen {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rgba(100, 100, 100, 0.15) solid 1px;
+    padding: 30px 0px;
+}
+
+#envio-gratis {
+    color: #2A7628;
+}
+
+#proceder-pago {
+    text-align: center;
+    background-color: #231E1E;
+    padding: 15px;
+    width: 80%;
+    margin: 15px auto;
+}
+
+#proceder-pago h4 {
+    color: #fff;
+}
+
+#aplicar-cupon {
+    text-align: center;
+    background-color: #BDBDBD;
+    padding: 15px;
+    width: 80%;
+    margin: 15px auto;
+}
