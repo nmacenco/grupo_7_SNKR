@@ -286,6 +286,11 @@ footer{
     font-weight: bold;
 }
 
+.listaTalles li:hover{
+    background-color: #39A6A3;
+    color: #fff;
+}
+
 .tituloZapas{
     font-size: 30px;
     font-weight: 400;
