@@ -38,8 +38,12 @@ footer{
     padding: 5px;
     position: relative;
     left: -15px;
-    
 }
+
+.buscador{
+    padding:15px;
+}
+
 .search input {
     width: 82%;
     height: 35px;
@@ -73,12 +77,12 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: #DAD3D3 ;
+    background-color: #DAD3D3;
 }
 
 .second-header p {
     margin: 5px 25px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
 }
 
