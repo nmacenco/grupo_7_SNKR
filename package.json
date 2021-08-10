@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nmacenco/grupo_7_SNKR#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }

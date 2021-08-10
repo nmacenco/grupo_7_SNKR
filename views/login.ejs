@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/head') %>
+</head>
+<body>
+    <header >
+        <%- include ('./partials/header') %>
+    </header>
+
+    <main class="main-login">
+        <!-- //PANTALLA DE LOGUEO -->
+        <section class="asistencia">
+            <p>Necesitas asistencia? escribinos a eshop@snkr.com.ar</p>
+        </section>
+        <section class="login">
+            <form action="" class="ingresar">
+                <div class="titulo">
+                    <h4>INGRESAR</h4>
+                </div>
+                <div class="detalle-formulario">
+                    <label for="usuario">Usuario/E-mail:</label>
+                    <input type="mail" name="usuario" id="usuario" required>
+                </div>
+                <div class="detalle-formulario">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="boton">
+                    <button type="submit">ACCEDER</button>
+                </div>
+            </form>
+            <div class="crear-cuenta">
+                <label>¿No tenés usuario?</label>
+                <button>REGISTRATE</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <%- include ('./partials/footer') %>
+    </footer>
+
+
+</body>
+</html>

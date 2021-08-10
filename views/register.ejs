@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/head') %>
+</head>
+<body>
+    <header >
+        <%- include ('./partials/header') %>
+    </header>
+
+    <main>
+        <!--FORMULARIO DE REGISTRO-->
+        <section class="register"> 
+            <form action="/registro" method="POST" class="formulario">
+                <div class="titulo-registro">
+                    <h4>REGISTRATE</h4>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="nombre">NOMBRE:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="apellido">APELLIDO:</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="nacimiento">FECHA DE NACIMIENTO:</label>
+                    <input type="date" name="nacimiento" id="nacimiento" required class="lafecha">
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="documento">DNI:</label>
+                    <input type="number" name="documento" id="documento" required> 
+                </div>
+                <div class="etiqueta-sexo">
+                    <label for="sexo">SEXO:</label>
+                    <div class="myh">
+                        <label>M</label>
+                        <input type="radio" name="sexo" id="sexo" value="M">
+                        <label>F</label>
+                        <input type="radio" name="sexo" id="sexo" value="F">
+                    </div>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="usuario">USUARIO:</label>
+                    <input type="text" name="usuario" id="usuario" required>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="password">PASSWORD:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="etiqueta-ingreso">
+                    <label for="rep_password">REPITA LA PASSWORD:</label>
+                    <input type="password" name="password" id="rep_password" required>
+                </div>
+                <div class="boton">
+                    <button type="submit">ENVIAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <%- include ('./partials/footer') %>
+    </footer>
+
+</body>
+</html>

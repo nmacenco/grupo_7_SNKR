@@ -1,32 +1,25 @@
 const express = require ("express") ;
 const { join } = require("path");
-const path = require ("path") ;
-
+const path = require ('path') ;
 const app = express() ;
 
-const publiPath = path.resolve (__dirname, "/public") ;
-app.use (express.static(publiPath)) ;
 
 app.use (express.static('public'));
 
-app.listen (3000, () => console.log("El servidor se esta ejecutando en http://localhost:3000") ) ;
+app.set ('view engine' , 'ejs') ;
+// app.set ('views' , '/views/products') ;
+    
+app.listen (3000, () => console.log('El servidor se esta ejecutando en http://localhost:3000') ) ;
 
-app.get ("/home" , (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/index.html")) ;
-})
+const rutasHome = require ('./routes/main.js') ;
+const rutasProducts = require ('./routes/products.js') ;
+const rutasUsers = require ('./routes/users') ;
 
-app.get ("/login" , (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/login.html")) ;
-})
+app.use ('/' , rutasHome)
 
-app.get ("/productCart" , (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/productCart.html")) ;
-})
+app.use ('/users' , rutasUsers)
 
-app.get ("/productDetail" , (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/productDetail.html")) ;
-})
+app.use ('/products' , rutasProducts)
 
-app.get ("/register" , (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/register.html")) ;
-})
+
+
