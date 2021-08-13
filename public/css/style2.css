@@ -1,0 +1,350 @@
+* {
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* //////////// HEADER ///////////////// */
+.cabecera p {
+    text-align: center;
+    background-color: #565B62 ;
+    text-align: center;
+    color: white;
+    height: 25px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.main-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: #accbd6;  */
+    /* background-color: #85C1E9;  */
+    /* background-color: #6491AF; */
+    background-color: #39A6A3;  
+    
+}
+.main-header a {
+    width: 50%;
+    display: flex;
+}
+.main-header img {
+    width: 80%;
+    margin: auto;
+    max-width: 195px;
+}
+
+.search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 360px;
+}
+.search i {
+    display: flex;
+    position: absolute;
+    right: 7vw;
+    font-size: 20px;
+
+}
+.search input {
+    width: 82%;
+    height: 40%;
+    max-height: 35px;
+    border-radius: 15px;
+    border: none;
+}
+.buscador {
+    padding: 7px;
+}
+.login-cart{
+    display: flex;
+    align-items: center;
+}
+#login {
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+#cart {
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+.second-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #DAD3D3;
+}
+
+.second-header p {
+    margin: 5px 10px;
+    font-weight: 500;
+    font-size: 13px;
+}
+#sale {
+    color: red;
+}
+
+/* /////////// FOOTER /////////// */
+
+.footer {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #39A6A3 ;
+}
+
+
+.footer section h3 {
+    margin: 15px 0 5px 0;
+    text-align: center;
+    font-size: 17px;
+}
+
+.footer section ul {
+    margin: 10px 0 10px 0;
+    list-style: none;
+    text-align: center;
+}
+
+.footer section ul li {
+    margin: 5px 0px;
+}
+
+.footer section ul a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+ .iconos-redes {
+    margin: 0px 10px; 
+}
+.copyright {
+    background-color: #DAD3D3 ;
+}
+.copyright p{
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* /////////// MAIN INDEX /////////// */
+
+.banner {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.banner img{
+    width: 100%;
+    max-height: 450px;
+}
+.flecha-izquierda {
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    left: 10px;
+
+}
+.flecha-derecha {
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+}
+.section-home {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+}
+.producto-home {
+    width: 80%;
+    /* border: #DAD3D3 solid;    */
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px ;
+    max-width: 300px;
+}
+.producto-home img {
+    width: 100%;
+    object-fit: cover;
+}
+.producto-home h2 {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+}
+
+
+
+
+@media (min-width: 768px) {
+/* ///////// HEADER //////////// */
+    .cabecera p {
+        height: 27px;
+        padding: 5px;
+        font-size: 15px;
+    }
+    .second-header p {
+        font-size: 15px;
+    }
+
+    #login {
+        padding: 10px;
+        color: black;
+        font-size: 30px;
+    }
+    
+    #cart {
+        padding: 10px;
+        color: black;
+        font-size: 30px;
+    }
+    .second-header p {
+        margin: 5px 25px;
+        font-weight: 500;
+        font-size: 18px
+    }
+    .main-header a {
+        width: 33%;
+    }
+    
+    .search {
+        width: 33%;
+    }
+    .login-cart {
+        width: 33%;
+        justify-content: center;
+    }
+
+    .search i {
+        right: 40px;
+        font-size: 20px;
+    }
+    /* ///// FOOTER ////// */
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .copyright p{
+        font-size: 15px;
+    }
+    .footer section h3 {
+        font-size: 19px;
+    }
+    .footer section ul a {
+        font-size: 15px;
+    }
+    .iconos-redes i {
+        font-size: 25px;
+    }
+    /* /////////// MAIN INDEX /////////// */
+    .flecha-izquierda {
+        font-size: 30px;
+    }
+    .flecha-derecha {
+        font-size: 30px;
+    }
+
+
+    .section-home {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 90%;
+    }
+    .producto-home {
+        /* border: #DAD3D3 solid;    */
+        position: relative;
+        margin: auto;
+        margin-bottom: 15px ;
+    }
+    .producto-home img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .producto-home h2 {
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* ////// HEADER /////// */
+    #login {
+        padding: 10px;
+        color: black;
+        font-size: 35px;
+    }
+    
+    #cart {
+        padding-left: 20px;
+        color: black;
+        font-size: 35px;
+    }
+
+     /* ///// FOOTER ////// */
+    .iconos-redes i {
+        font-size: 30px;
+    }
+
+
+    /* /////////// MAIN INDEX /////////// */
+    .flecha-izquierda {
+        font-size: 35px;
+    }
+    .flecha-derecha {
+        font-size: 35px;
+    }
+    .producto-home h2 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        opacity: 0;
+        font-size: 25px;
+        transition: all 700ms ;
+    }
+    .producto-home:hover h2 {
+        opacity: 1;
+    
+    }
+}
