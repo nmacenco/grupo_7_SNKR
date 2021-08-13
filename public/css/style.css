@@ -618,6 +618,30 @@ footer{
     padding-top: 25px;
 }
 
+.fila-inferior {
+    float: right;
+    margin: 35px 0;
+}
+
+#quitar-del-carrito {
+    display: flex;
+    background-color: #E3E3E3;
+    padding: 5px;
+    left: 0px;
+    justify-content: center;
+    width: 185px;
+    align-items: center;
+}
+
+#quitar-del-carrito h4 {
+    padding: 5px;
+}
+
+#quitar-del-carrito i {
+    color: #808080;
+    padding: 5px;
+}
+
 .barra {
     border-bottom: rgba(100, 100, 100, 0.15) solid 1px;
     padding-top: 25px;
