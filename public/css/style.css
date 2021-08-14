@@ -682,3 +682,34 @@ footer{
     width: 80%;
     margin: 15px auto;
 }
+
+
+
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS PRODUCT LIST                                */
+/* ------------------------------------------------------------------------ */
+
+.filtrosBusqueda{
+    display:flex;
+    justify-content: space-between;
+}
+
+.mainBox{
+    display:flex;
+    border: solid red;
+}
+
+.filtrosProductos{
+    width: 15%;
+    border: solid lightskyblue;
+    margin: 10px 0 25px 0;
+}
+
+
+.listadoProductos{
+    display:flex;
+    justify-content: space-between;
+    margin: 10px 0 25px 0;
+    border: solid red;
+    width: 85%;
+}

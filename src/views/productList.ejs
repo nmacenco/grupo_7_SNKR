@@ -11,7 +11,90 @@
 
     
     <main>
+        <section class="filtrosBusqueda">
+            <div class="filtrosAplicados">
+                <span>SNKR <i class="fas fa-arrow-right"></i> RESULTADO BUSQUEDA</span>
+            </div>
+            <div class="filtrosAplicados">
+            <form action="/list/productobuscado" method="GET">
+                <label>ORDENAR POR</label>
+                <select name="ordenar">
+                    <option value="masVendidos">Más vendidos</option>
+                    <option value="nuevoLanzamiento">Nuevos lanzamientos</option>
+                    <option value="precioMasBajo">Precio más bajo</option>
+                    <option value="precioMasAlto">Precio más alto</option>
+                </select>
+            </form>
+            </div>
+        </section>
 
+        <div class="mainBox">
+            <section class="filtrosProductos">
+                <div>
+                    <form action="/list/productobuscado" method="GET">
+                        <label>MARCA</label> <BR>
+                        <input type="checkbox" name="marca" value="nike">
+                        <label for="marca">NIKE</label>
+                        <input type="checkbox" name="marca" value="adidas">
+                        <label for="marca">ADIDAS</label>
+                        <input type="checkbox" name="marca" value="puma">
+                        <label for="marca">PUMA</label>
+                        <input type="checkbox" name="marca" value="reebok">
+                        <label for="marca">REEBOK</label>
+                    </form>
+                </div>
+                <div>
+                    <form action="/list/productobuscado" method="GET">
+                        <label>TALLE</label> <BR>
+                        <input type="checkbox" name="talle" value="nike">
+                        <label for="talle">NIKE</label>
+                        <input type="checkbox" name="talle" value="adidas">
+                        <label for="talle">ADIDAS</label>
+                        <input type="checkbox" name="talle" value="puma">
+                        <label for="talle">PUMA</label>
+                        <input type="checkbox" name="talle" value="reebok">
+                        <label for="talle">REEBOK</label>
+                    </form>
+                </div>
+            </section>
+
+            <section class="listadoProductos">
+                <article class="cajaProductoRecomendado">
+                    <img class="fotoRecomendados" src="/images/airforce107wb.png">
+                    <div>
+                        <p class="descripcionRecomendados">Zapatillas Nike Air Force 1 07' Wb</p>
+                        <p class="precioRecomendados">$12.999</p>
+                    </div>
+                </article>
+                <article class="cajaProductoRecomendado">
+                    <ul>
+                        <img  class="fotoRecomendados" src="/images/jordan1low.png" alt="">
+                        <div class="cajaProductos">
+                            <p class="descripcionRecomendados">Zapatillas Air Jordan 1</p>
+                            <p class="precioRecomendados">$17.999</p>
+                        </div>
+                    </ul>
+                </article>
+                <article class="cajaProductoRecomendado">
+                    <ul>
+                        <div><img  class="fotoRecomendados" src="/images/pumaRS-Xbold.png" alt=""></div>
+                        <div class="cajaProductos">
+                            <p class="descripcionRecomendados">Zapatillas Puma RS-X Bold</p>
+                            <p class="precioRecomendados">$13.500</p>
+                        </div>
+                    </ul>
+                </article>
+                <article class="cajaProductoRecomendado">
+                    <ul>
+                        <div> <img  class="fotoRecomendados" src="/images/airmax200SE.png" alt="altas jordan 1"> </div>
+                        <div class="cajaProductos">
+                            <p class="descripcionRecomendados">Zapatillas Nike Air Max 200 SE</p>
+                            <p class="precioRecomendados">$19.999</p>
+                        </div>
+                    </ul>
+                </article>
+            </section>
+        </div>
     </main>
 
 
