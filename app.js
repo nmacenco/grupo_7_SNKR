@@ -11,15 +11,15 @@ app.set ('views' , path.join(__dirname, './src/views') ) ;
     
 app.listen (3000, () => console.log('El servidor se esta ejecutando en http://localhost:3000') ) ;
 
-const rutasHome = require ('./routes/main.js') ;
-const rutasProducts = require ('./routes/products.js') ;
-const rutasUsers = require ('./routes/users') ;
+
+/* DEFINICIÓN DE RUTAS */
+
+const rutasHome = require ('./src/routes/main');
+const rutasProducts = require ('./src/routes/products');
+const rutasUsers = require ('./src/routes/users');
 
 app.use ('/' , rutasHome)
-
 app.use ('/users' , rutasUsers)
-
 app.use ('/products' , rutasProducts)
-
 
 

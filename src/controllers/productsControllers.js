@@ -6,6 +6,9 @@ const productsControllers = {
     },
     detalle : (req,res) => {
         res.render ('productDetail') ;
+    },
+    lista : (req,res) => {
+        res.render('productList');
     }
 }
 
