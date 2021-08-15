@@ -705,6 +705,11 @@ footer{
     margin: 10px 0 25px 0;
 }
 
+.numeroDePagina{
+    border: blue solid;
+    width:100%;
+    text-align: center;
+}
 
 .listadoProductos{
     display:flex;
@@ -712,4 +717,5 @@ footer{
     margin: 10px 0 25px 0;
     border: solid red;
     width: 85%;
+    flex-wrap: wrap;
 }
