@@ -29,12 +29,12 @@
         </section>
 
         <hr class="separacionFiltrosProducto">
-        
+
         <div class="mainBox">
             <section class="filtrosProductos">
+                <label class="tituloFiltros">MARCA</label>
                 <div class="boxFiltros">
                     <form action="/list/productobuscado" method="GET">
-                        <label class="tituloFiltros">MARCA</label><br>
                         <input type="checkbox" name="marca" value="nike">
                         <label for="marca">Nike</label><br>
                         <input type="checkbox" name="marca" value="adidas">
@@ -45,34 +45,56 @@
                         <label for="marca">Reebok</label><br>
                     </form>
                 </div>
+                <label class="tituloFiltros">TALLE</label>
                 <div class="boxFiltros">
-                    <form action="/list/productobuscado" method="GET">
-                        <label class="tituloFiltros">TALLE</label> <BR>
-                        <input type="checkbox" name="talle" value="35">
-                        <label for="talle">35</label><br>
-                        <input type="checkbox" name="talle" value="36">
-                        <label for="talle">36</label><br>
-                        <input type="checkbox" name="talle" value="37">
-                        <label for="talle">37</label><br>
-                        <input type="checkbox" name="talle" value="38">
-                        <label for="talle">38</label><br>
-                        <input type="checkbox" name="talle" value="39">
-                        <label for="talle">39</label><br>
-                        <input type="checkbox" name="talle" value="40">
-                        <label for="talle">40</label><br>
-                        <input type="checkbox" name="talle" value="41">
-                        <label for="talle">41</label><br>
-                        <input type="checkbox" name="talle" value="42">
-                        <label for="talle">42</label><br>
-                        <input type="checkbox" name="talle" value="43">
-                        <label for="talle">43</label><br>
-                        <input type="checkbox" name="talle" value="44">
-                        <label for="talle">44</label><br>
+                    <div>
+                        <form action="/list/productobuscado" method="GET">
+                            <input type="checkbox" name="talle" value="35">
+                            <label for="talle">35</label><br>
+                            <input type="checkbox" name="talle" value="36">
+                            <label for="talle">36</label><br>
+                            <input type="checkbox" name="talle" value="37">
+                            <label for="talle">37</label><br>
+                            <input type="checkbox" name="talle" value="38">
+                            <label for="talle">38</label><br>
+                            <input type="checkbox" name="talle" value="39">
+                            <label for="talle">39</label><br>
+                            <input type="checkbox" name="talle" value="40">
+                            <label for="talle">40</label><br>
+                            <input type="checkbox" name="talle" value="41">
+                            <label for="talle">41</label><br>
+                            <input type="checkbox" name="talle" value="42">
+                            <label for="talle">42</label><br>
+                            <input type="checkbox" name="talle" value="43">
+                            <label for="talle">43</label><br>
+                            <input type="checkbox" name="talle" value="44">
+                            <label for="talle">44</label><br>
+                    </div>
+                    <div class="tallesIntermedios">
+                        <input type="checkbox" name="talle" value="35.5">
+                        <label for="talle">35.5</label><br>
+                        <input type="checkbox" name="talle" value="36.5">
+                        <label for="talle">36.5</label><br>
+                        <input type="checkbox" name="talle" value="37.5">
+                        <label for="talle">37.5</label><br>
+                        <input type="checkbox" name="talle" value="38.5">
+                        <label for="talle">38.5</label><br>
+                        <input type="checkbox" name="talle" value="39.5">
+                        <label for="talle">39.5</label><br>
+                        <input type="checkbox" name="talle" value="40.5">
+                        <label for="talle">40.5</label><br>
+                        <input type="checkbox" name="talle" value="41.5">
+                        <label for="talle">41.5</label><br>
+                        <input type="checkbox" name="talle" value="42.5">
+                        <label for="talle">42.5</label><br>
+                        <input type="checkbox" name="talle" value="43.5">
+                        <label for="talle">43.5</label><br>
+                    </div>    
                     </form>
                 </div>
+                <label class="tituloFiltros">GENERO</label><br>
                 <div class="boxFiltros">
                     <form action="/list/productobuscado" method="GET">
-                        <label class="tituloFiltros">GENERO</label><br>
                         <input type="checkbox" name="genero" value="hombre">
                         <label for="genero">Hombre</label><br>
                         <input type="checkbox" name="genero" value="mujer">
@@ -81,6 +103,8 @@
                         <label for="genero">Unisex</label><br>
                     </form>
                 </div>
+
+                <button class="botonAplicarFiltros">Aplicar filtros</button>
             </section>
 
             <section class="listadoProductos">

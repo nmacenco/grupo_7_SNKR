@@ -756,6 +756,7 @@ footer{
 
 .boxFiltros{
     padding: 10px;
+    display:flex;
 }
 
 .botonNumeroDePagina{
@@ -764,4 +765,17 @@ footer{
     background-color: #fff;
     font-weight: 600;
     border: 2px solid #39A6A3;
+}
+
+.tallesIntermedios{
+    padding-left: 10px;
+}
+
+.botonAplicarFiltros{
+    width:80%;
+    padding:8px;
+    border-radius: 50px;
+    border: none;
+    background-color: #39A6A3;
+    font-weight: 500;
 }
