@@ -506,7 +506,7 @@ footer{
     text-align: center;
     padding-bottom: 15px;
 }
-.formulario {
+.formulario-registro {
     width: 40%;
 
 }
@@ -682,13 +682,39 @@ footer{
     margin: 15px auto;
 }
 
+/* //////////////// ABM PRODUCT /////////////////// */
 
+.título-abmProductos{
+    text-align: center;
+    padding: 50px 0;
+    text-decoration: underline;
+}
+
+.formulario-abmProductos{
+    width: 40%;
+    margin: auto;
+}
+
+.etiqueta-abmProductos{
+    display: flex;
+    justify-content: space-between;
+
+}
+.etiqueta-abmProductos label {
+    padding: 5px 15px;
+}
+
+.etiqueta-abmProductos input {
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    max-width: 200px;
+}
 
 /* ------------------------------------------------------------------------ */
 /*                      ESTILOS PRODUCT LIST                                */
 /* ------------------------------------------------------------------------ */
 
-.filtrosBusqueda{
+.filtrosBusqueda {
     display:flex;
     justify-content: space-between;
 }

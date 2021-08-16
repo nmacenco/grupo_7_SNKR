@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/head') %>
+</head>
+<body>
+    <header >
+        <%- include ('./partials/header') %>
+    </header>
+
+        <h2 class="título-abmProductos">ALTA BAJA MODIFICACION DE PRODUCTOS</h1>
+        <section class="formulario-abmProductos">
+            <form action="/abmProductos" method="POST">
+                <div class="etiqueta-abmProductos">
+                    <label for="nombreProducto">NOMBRE DEL PRODUCTO:</label>
+                    <input type="text" name="nombreProducto" id="nombreProducto" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="Descripcion">DESCRIPCION:</label>
+                    <input type="text" name="descripcion" id="descripcion" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="Categoria">CATEGORIA:</label>
+                    <input type="text" name="categoria" id="categoria" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="talle">TALLE:</label>
+                    <input type="number" name="talle" id="talle" required> 
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="Color">COLOR:</label>
+                    <input type="text" name="color" id="color" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="precio">PRECIO</label>
+                    <input type="number" name="precio" id="precio" required> 
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label>SELECCIONAR IMAGENES:</label>
+                    <input type="file" name="imagen" accept="jpg" multiple >
+                </div>
+                <div class="boton">
+                    <button type="submit">GUARDAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <%- include ('./partials/footer') %>
+    </footer>
+
+</body>
+</html>

@@ -9,6 +9,9 @@ const productsControllers = {
     },
     lista : (req,res) => {
         res.render('productList');
+    },
+    abm : (req,res) => {
+        res.render ('abmProductos')
     }
 }
 
