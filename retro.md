@@ -8,8 +8,8 @@ Dejar de hacer: Todavia no encontramos algo para dejar de hacer.
 
 Retro sprint n° 2 :
 
-Comenzar a hacer: Comenzar a trabajar haciendo un mejor uso del tiempo y no esperar a la ultima semana.
+Comenzar a hacer: Commits más descriptivos, indicando todos los cambios hechos.
 Hacer mas: En el caso de ser necesario hacer dos weekly meetings.
 Continuar haciendo: Division de tareas y organizacion a través de Trello.
-Hacer menos: 
-Dejar de hacer: 
+Hacer menos: No dejar comentarios en el código.
+Dejar de hacer: Esperar a la última semana para realizar el sprint y usar mejor el tiempo.
