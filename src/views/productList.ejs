@@ -28,24 +28,26 @@
             </div>
         </section>
 
+        <hr class="separacionFiltrosProducto">
+        
         <div class="mainBox">
             <section class="filtrosProductos">
-                <div class="filtroMarcas">
+                <div class="boxFiltros">
                     <form action="/list/productobuscado" method="GET">
-                        <label>MARCA</label><br>
+                        <label class="tituloFiltros">MARCA</label><br>
                         <input type="checkbox" name="marca" value="nike">
-                        <label for="marca">NIKE</label><br>
+                        <label for="marca">Nike</label><br>
                         <input type="checkbox" name="marca" value="adidas">
-                        <label for="marca">ADIDAS</label><br>
+                        <label for="marca">Adidas</label><br>
                         <input type="checkbox" name="marca" value="puma">
-                        <label for="marca">PUMA</label><br>
+                        <label for="marca">Puma</label><br>
                         <input type="checkbox" name="marca" value="reebok">
-                        <label for="marca">REEBOK</label><br>
+                        <label for="marca">Reebok</label><br>
                     </form>
                 </div>
-                <div class="filtroTalles">
+                <div class="boxFiltros">
                     <form action="/list/productobuscado" method="GET">
-                        <label>TALLE</label> <BR>
+                        <label class="tituloFiltros">TALLE</label> <BR>
                         <input type="checkbox" name="talle" value="35">
                         <label for="talle">35</label><br>
                         <input type="checkbox" name="talle" value="36">
@@ -68,15 +70,15 @@
                         <label for="talle">44</label><br>
                     </form>
                 </div>
-                <div class="filtroGenero">
+                <div class="boxFiltros">
                     <form action="/list/productobuscado" method="GET">
-                        <label>GENERO</label><br>
+                        <label class="tituloFiltros">GENERO</label><br>
                         <input type="checkbox" name="genero" value="hombre">
-                        <label for="genero">HOMBRE</label><br>
+                        <label for="genero">Hombre</label><br>
                         <input type="checkbox" name="genero" value="mujer">
-                        <label for="genero">MUJER</label><br>
+                        <label for="genero">Mujer</label><br>
                         <input type="checkbox" name="genero" value="unisex">
-                        <label for="genero">UNISEX</label><br>
+                        <label for="genero">Unisex</label><br>
                     </form>
                 </div>
             </section>
@@ -173,7 +175,13 @@
                     </div>
                 </article>
                 <div class="numeroDePagina">
-                    <span>Página <button>1</button> de 3</span>
+                    <span>Página  
+                        <select class="botonNumeroDePagina" name="pagina">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        </select>
+                    de 3</span>
                 </div>
             </section>
         </div>
