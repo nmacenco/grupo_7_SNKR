@@ -9,7 +9,7 @@ app.use (express.static('public'));
 app.set ('view engine' , 'ejs') ;   
 app.set ('views' , path.join(__dirname, './src/views') ) ;
     
-app.listen (3000, () => console.log('El servidor se esta ejecutando en http://localhost:3000') ) ;
+app.listen (process.env.PORT || 3000, () => console.log('El servidor se esta ejecutando en http://localhost:3000') ) ;
 
 
 /* REQUIRES DE ARCHIVOS DE RUTAS */
