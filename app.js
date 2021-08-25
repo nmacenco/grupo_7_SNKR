@@ -1,14 +1,24 @@
+//////////// REQUIRES //////////////////
 const express = require ("express") ;
 const { join } = require("path");
 const path = require ('path') ;
 const app = express() ;
+const methodOverride = require ('method-override') ; 
+const cookieParser = require('cookie-parser');
 
 
+///////////// MIDDLEWARES //////////////////////
 app.use (express.static('public'));
+app.use (methodOverride('_method')) ;
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
 
+/////////// TEMPLATE ENGINE //////////////
 app.set ('view engine' , 'ejs') ;   
 app.set ('views' , path.join(__dirname, './src/views') ) ;
-    
+
+
+
 app.listen (process.env.PORT || 3000, () => console.log('El servidor se esta ejecutando en http://localhost:3000') ) ;
 
 

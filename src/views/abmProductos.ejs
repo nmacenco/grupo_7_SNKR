@@ -10,37 +10,46 @@
 
         <h2 class="título-abmProductos">ALTA BAJA MODIFICACION DE PRODUCTOS</h1>
         <section class="formulario-abmProductos">
-            <form action="/abmProductos" method="POST">
+            <form action="/products/create" method="POST">
                 <div class="etiqueta-abmProductos">
-                    <label for="nombreProducto">NOMBRE DEL PRODUCTO:</label>
-                    <input type="text" name="nombreProducto" id="nombreProducto" required>
+                    <label for="name">NOMBRE DEL PRODUCTO:</label>
+                    <input type="text" name="name" id="name" required>
                 </div>
                 <div class="etiqueta-abmProductos">
-                    <label for="Descripcion">DESCRIPCION:</label>
-                    <input type="text" name="descripcion" id="descripcion" required>
+                    <label for="brand">MARCA:</label>
+                    <input type="text" name="brand" id="brand" required>
                 </div>
                 <div class="etiqueta-abmProductos">
-                    <label for="Categoria">CATEGORIA:</label>
-                    <input type="text" name="categoria" id="categoria" required>
+                    <label for="detail">DESCRIPCION:</label>
+                    <input type="text" name="detail" id="detail" required>
                 </div>
                 <div class="etiqueta-abmProductos">
-                    <label for="talle">TALLE:</label>
-                    <input type="number" name="talle" id="talle" required> 
+                    <label for="gender">GENERO:</label>
+                    <input type="text" name="gender" id="gender" required>
                 </div>
                 <div class="etiqueta-abmProductos">
-                    <label for="Color">COLOR:</label>
+                    <label for="size">TALLE:</label>
+                    <input type="number" name="size" id="size" required> 
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="color">COLOR:</label>
                     <input type="text" name="color" id="color" required>
                 </div>
                 <div class="etiqueta-abmProductos">
-                    <label for="precio">PRECIO</label>
-                    <input type="number" name="precio" id="precio" required> 
+                    <label for="price">PRECIO</label>
+                    <input type="number" name="price" id="price" required> 
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label>SELECCIONAR IMAGENES:</label>
                     <input type="file" name="imagen" accept="jpg" multiple >
                 </div>
-                <div class="boton">
-                    <button type="submit">GUARDAR</button>
+                <div class="botones">
+                    <div class="boton">
+                        <button type="submit">CREAR</button>
+                    </div>
+                    <div class="boton">
+                        <button type="submit">EDITAR</button>
+                    </div>
                 </div>
             </form>
         </section>

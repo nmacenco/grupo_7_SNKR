@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/nmacenco/grupo_7_SNKR#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3",
     "nodemon": "^2.0.12"
   }
 }
