@@ -43,7 +43,7 @@ const productsControllers = {
             size : req.body.size ,
             color : req.body.color , 
             price : req.body.price ,
-            // image = req.file.filename
+            image : req.file.filename
         }
         //  agrego el nuevo producto al array 
         let newArray = [... products , newProduct] ;

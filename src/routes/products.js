@@ -16,6 +16,7 @@ const storage = multer.diskStorage ({
     }
 })
 
+const upLoadFile = multer({storage}) ;
 
 //  CONTROLLER REQUIRE  //
 const productsControllers = require ('../controllers/productsControllers')
@@ -32,7 +33,7 @@ router.get('/list', productsControllers.list);
 
 //  FORMULARIO DE CREACION DE PRODUCTOS //
 router.get ('/create' , productsControllers.abm) 
-router.post ('/create' , productsControllers.create) 
+router.post ('/create' , upLoadFile.single('image') , productsControllers.create) 
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
 router.get ('/:id/edit' , productsControllers.abm) 

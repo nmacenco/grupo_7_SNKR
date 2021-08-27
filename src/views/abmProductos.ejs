@@ -10,7 +10,7 @@
 
         <h2 class="título-abmProductos">ALTA BAJA MODIFICACION DE PRODUCTOS</h1>
         <section class="formulario-abmProductos">
-            <form action="/products/create" method="POST">
+            <form action="/products/create" enctype="multipart/form-data" method="POST" >
                 <div class="etiqueta-abmProductos">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
                     <input type="text" name="name" id="name" required>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label>SELECCIONAR IMAGENES:</label>
-                    <input type="file" name="imagen" accept="jpg" multiple >
+                    <input type="file" name="image" accept="jpg" multiple >
                 </div>
                 <div class="botones">
                     <div class="boton">
