@@ -17,6 +17,8 @@ function escribirJson (array) {
 }
 
 
+var productosJSON = leerJson();
+
 const productsControllers = {
     cart : (req,res) => {
         res.render ('productCart') ;
@@ -25,7 +27,7 @@ const productsControllers = {
         res.render ('productDetail') ;
     },
     list : (req,res) => {
-        res.render('productList');
+        res.render('productList', { productos: productosJSON});
     },
     abm : (req,res) => {
         res.render ('abmProductos')

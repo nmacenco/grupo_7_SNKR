@@ -16,20 +16,19 @@ const storage = multer.diskStorage ({
     }
 })
 
-const upLoadFile = multer({storage}) ;
+const upLoadFile = multer({storage});
 
 //  CONTROLLER REQUIRE  //
 const productsControllers = require ('../controllers/productsControllers')
 
-
-
+// CARRITO DE PRODUCTOS //
 router.get ('/cart', productsControllers.cart);
 
 //  DETALLE DE PRODUCTO PARTICULAR  //
 router.get ('/detail', productsControllers.detail);
 
 //  LISTADO DE PRODUCTOS    //
-router.get('/list', productsControllers.list);
+router.get('/', productsControllers.list);
 
 //  FORMULARIO DE CREACION DE PRODUCTOS //
 router.get ('/create' , productsControllers.abm) 

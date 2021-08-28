@@ -108,96 +108,19 @@
             </section>
 
             <section class="listadoProductos">
+
+                <% productos.forEach(function(producto) { %>
                 <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/airforce107wb.png">
+                    <img class="fotoRecomendados" src="/images/<%= producto.image%>">
                     <div>
-                        <p class="descripcionRecomendados">Zapatillas Nike Air Force 1 07' Wb</p>
-                        <p class="precioRecomendados">$12.999</p>
+                        <p class="descripcionRecomendados"><%= producto.name %></p>
+                        <p class="precioRecomendados">$<%= producto.price %></p>
                     </div>
                 </article>
-                <article class="cajaProductoRecomendado">
-                    <ul>
-                        <img  class="fotoRecomendados" src="/images/jordan1low.png" alt="">
-                        <div class="cajaProductos">
-                            <p class="descripcionRecomendados">Zapatillas Air Jordan 1</p>
-                            <p class="precioRecomendados">$17.999</p>
-                        </div>
-                    </ul>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <ul>
-                        <div><img  class="fotoRecomendados" src="/images/pumaRS-Xbold.png" alt=""></div>
-                        <div class="cajaProductos">
-                            <p class="descripcionRecomendados">Zapatillas Puma RS-X Bold</p>
-                            <p class="precioRecomendados">$13.500</p>
-                        </div>
-                    </ul>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <ul>
-                        <div> <img  class="fotoRecomendados" src="/images/airmax200SE.png" alt="altas jordan 1"> </div>
-                        <div class="cajaProductos">
-                            <p class="descripcionRecomendados">Zapatillas Nike Air Max 200 SE</p>
-                            <p class="precioRecomendados">$19.999</p>
-                        </div>
-                    </ul>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/adidas-forum-low.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Adidas Forum Low</p>
-                        <p class="precioRecomendados">$11.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/nike-sb-alleyoop.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Nike SB Alleyoop</p>
-                        <p class="precioRecomendados">$12.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/nike-air-max-97.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Nike Air Max 97</p>
-                        <p class="precioRecomendados">$27.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/puma-fast-intl-game.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Puma Fast Intl Game</p>
-                        <p class="precioRecomendados">$15.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/nike-air-max-270-react.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Nike Air Max 270 React</p>
-                        <p class="precioRecomendados">$16.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/nike-air-max-1-recycled-white.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Nike Air Max 1 Recycled White</p>
-                        <p class="precioRecomendados">$24.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/reebok-aztrek-96.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Reebok Aztrek 96</p>
-                        <p class="precioRecomendados">$11.999</p>
-                    </div>
-                </article>
-                <article class="cajaProductoRecomendado">
-                    <img class="fotoRecomendados" src="/images/puma-rs-fast-mix.jfif">
-                    <div>
-                        <p class="descripcionRecomendados">Zapatillas Puma RS-Fast Mix</p>
-                        <p class="precioRecomendados">$14.999</p>
-                    </div>
-                </article>
+                
+                <% }); %>
+                
+                
                 <div class="numeroDePagina">
                     <span>Página  
                         <select class="botonNumeroDePagina" name="pagina">
