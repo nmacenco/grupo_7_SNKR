@@ -17,16 +17,20 @@
 
         <hr class="separacionFiltrosProducto">
 
+        
         <section class="producto">
             
+            <% productos.forEach(function(producto) { %>
+                <% if(producto.id == id) { %>
+
                 <i class="fas fa-arrow-left"></i>
-                <img  class="fotoProducto" src="/images/Airjordan1mocha.png" alt="altas jordan 1">
+                <img  class="fotoProducto" src="/images/<%= producto.image%>" alt="altas jordan 1">
                 <i class="fas fa-arrow-right"></i>
             
             <div class="detalleProducto">
                 <div>
-                    <p class="tituloZapas">ZAPATILLAS NIKE AIR JORDAN 1 HIGH MOCHA</p>
-                    <p class="precioZapas">$19.999</p>
+                    <p class="tituloZapas"><%= producto.name %></p>
+                    <p class="precioZapas">$<%= producto.price%></p>
                 </div>
 
                 <hr class="separacionTituloTalles">
@@ -68,10 +72,13 @@
         <section class="cajaDescripcion">
 
             <p class="tituloDescripcion">DESCRIPCIÓN</p>
-            <p class="descripcionDescripcion">Las zapatillas Air Jordan 1 están confeccionadas en cuero sintético para una mayor durabilidad y un look sofisticado. Nacidas en 1985, su estilo reconocido mundialmente introduce mejoras en la unidad Air-Sole encapsulada para proporcionar una amortiguación ligera y en la suela de goma que brinda mayor agarre sobre la superficie. El legado está más vivo que nunca.</p>
+            <p class="descripcionDescripcion"><%= producto.detail %></p>
 
         </section>
         
+        <% } %>
+        <% }); %>
+
         <p class="tituloRecomendados">RECOMENDADOS PARA VOS</p>
 
         <section class="recomendados">

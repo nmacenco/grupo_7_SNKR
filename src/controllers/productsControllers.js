@@ -24,7 +24,8 @@ const productsControllers = {
         res.render ('productCart') ;
     },
     detail : (req,res) => {
-        res.render ('productDetail') ;
+        let id = req.params.id;
+        res.render ('productDetail', {productos: productosJSON, id}) ;
     },
     list : (req,res) => {
         res.render('productList', { productos: productosJSON});

@@ -25,9 +25,9 @@ const productsControllers = require ('../controllers/productsControllers')
 router.get ('/cart', productsControllers.cart);
 
 //  DETALLE DE PRODUCTO PARTICULAR  //
-router.get ('/detail', productsControllers.detail);
+router.get ('/:id', productsControllers.detail);
 
-//  LISTADO DE PRODUCTOS    //
+//  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);
 
 //  FORMULARIO DE CREACION DE PRODUCTOS //
