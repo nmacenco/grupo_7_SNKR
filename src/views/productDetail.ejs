@@ -27,7 +27,17 @@
                 <img  class="fotoProducto" src="/images/<%= producto.image%>" alt="altas jordan 1">
                 <i class="fas fa-arrow-right"></i>
             
+
             <div class="detalleProducto">
+
+                <div class="cajaBoton">
+                    <div class="editarYBorrarProducto">
+                        <a href="/products/<%= producto.id %>/edit" class="botonEditarProducto">EDITAR PRODUCTO</a>
+                            <form action="/products/<%= producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button type="submit" class="botonEliminarProducto">ELIMINAR PRODUCTO</button>
+                            </form>
+                    </div>
+                </div>
                 <div>
                     <p class="tituloZapas"><%= producto.name %></p>
                     <p class="precioZapas">$<%= producto.price%></p>

@@ -270,7 +270,7 @@ a {
     opacity: 40%;
 }
 
-/***************************/
+/************* DETALLE DE PRODUCTO **************/
 
 .detalleProducto{
     width:50%;
@@ -427,6 +427,24 @@ a {
     margin: 50px 0 10px 0;
     font-weight: bold;
 }
+
+.botonEditarProducto{
+    padding:10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #FEC260;
+    font-weight: 700;
+}
+
+.botonEliminarProducto{
+    justify-content: right;
+    padding:10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #FF2442;
+    font-weight: 700;
+}
+
 
 /* ////////// LOGIN /////////// */
 
