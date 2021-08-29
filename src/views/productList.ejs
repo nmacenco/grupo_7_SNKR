@@ -111,11 +111,13 @@
 
                 <% productos.forEach(function(producto) { %>
                 <article class="cajaProductoRecomendado">
+                    <a href="/products/<%= producto.id %>">
                     <img class="fotoRecomendados" src="/images/<%= producto.image%>">
                     <div>
                         <p class="descripcionRecomendados"><%= producto.name %></p>
                         <p class="precioRecomendados">$<%= producto.price %></p>
                     </div>
+                    </a>
                 </article>
                 
                 <% }); %>

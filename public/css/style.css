@@ -12,6 +12,12 @@ footer{
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+
 .cabecera {
     background-color: #565B62 ;
     text-align: center;

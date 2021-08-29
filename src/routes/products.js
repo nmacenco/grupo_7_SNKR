@@ -36,6 +36,9 @@ router.post ('/create' , upLoadFile.single('image') , productsControllers.create
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
 router.get ('/:id/edit' , productsControllers.abm) 
+
 //  ACCION DE BORRADO   //
+router.delete ('/:id', productsControllers.delete)
+
 
 module.exports = router ; 

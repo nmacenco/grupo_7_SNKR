@@ -55,6 +55,19 @@ const productsControllers = {
         escribirJson (newArray) ;
         //  redirecciono la pagina 
         res.redirect ('list')
+    },
+    delete: (req,res) => {
+
+        // Filter que devuelve todo el array sin el producto con el mismo ID pasado por req
+        let productosActualizados = productos.filter(function(producto){
+            return producto.id != req.params.id;
+        })
+
+        // Sobreescribo el JSON con el nuevo array actualizado
+        escribirJson(productosActualizados)
+
+        // Redirecciono al apartado de productos
+        res.redirect('/products')
     }
 }
 
