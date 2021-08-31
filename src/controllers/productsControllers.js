@@ -58,8 +58,8 @@ const productsControllers = {
     },
     delete: (req,res) => {
 
-        // Filter que devuelve todo el array sin el producto con el mismo ID pasado por req
-        let productosActualizados = productos.filter(function(producto){
+        // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req
+        let productosActualizados = productosJSON.filter(function(producto){
             return producto.id != req.params.id;
         })
 
