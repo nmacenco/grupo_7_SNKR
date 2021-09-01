@@ -12,12 +12,18 @@ function leerJson () {
 
 //  ESCRITURA JSON  //  
 function escribirJson (array) {
-    let newString = JSON.stringify(array) ;
+    let newString = JSON.stringify(array, null, ' ') ;
     return fs.writeFileSync(path.join(__dirname,'../data/products.json'),newString)
 }
 
+//  BUSCAR POR ID   //
 
-var productosJSON = leerJson();
+function findById (id){
+    return  productosJSON.find(elem => String(elem.id) === id)
+}
+
+//  variable de todos los productos 
+const productosJSON = leerJson();
 
 const productsControllers = {
     cart : (req,res) => {
@@ -30,10 +36,11 @@ const productsControllers = {
     list : (req,res) => {
         res.render('productList', { productos: productosJSON});
     },
-    abm : (req,res) => {
-        res.render ('abmProductos')
-    },
     create : (req,res) => {
+        
+      res.render ('abmProductos-create')
+    },
+    store : (req,res) => {
         //  leo todo el JSON 
         let products = leerJson () ;
         //  creo el nuevo producto 
@@ -54,33 +61,39 @@ const productsControllers = {
         //  escribo el JSON 
         escribirJson (newArray) ;
         //  redirecciono la pagina 
-        res.redirect ('list')
+        res.redirect ('/products')
     },
     edit: (req, res) => {
-        // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req
-        // Ese es el producto a actualizar
-        let productoAactualizar = null;
-        let productosIntactos = productosJSON.filter(function(producto){
-            if (producto.id == req.params.id)
-                productoAactualizar = producto;
-            return producto.id != req.params.id;
-        })
+        let products = findById(req.params.id) ;
 
-        // Ahora edito el producto a actualizar, con los datos proporcionados en req
-        for (let propiedad in req.body)
-            productoAactualizar[propiedad] = req.body[propiedad]
-
-        // Lo agrego al array donde tengo todos los productos menos el que fue editado
-        // Y ordeno nuevamente todo el array segun el id de producto
-        let productosActualizados = productosIntactos
-        productosActualizados.push(productoAactualizar)
-        productosActualizados.sort((a,b) => (a.id > b.id) ? 1 : -1);
-
-        // Sobreescribo el JSON con el nuevo array actualizado
-        escribirJson(productosActualizados)
-
-        res.send(JSON.stringify(productosActualizados))
+        res.render ('abmProductos-edit' , {productToEdit : products})
     },
+    update : (req,res) => {
+        //  leo todo el JSON 
+        let products = leerJson () ;
+
+        //  producto editado 
+        let editProduct = products.map (function (prod) {
+            if (prod.id == req.params.id) {
+                prod.name = req.body.name ,
+                prod.brand = req.body.brand ,
+                prod.description = req.body.detail ,
+                prod.gender = req.body.gender ,
+                prod.size = req.body.size ,
+                prod.color = req.body.color , 
+                prod.price = req.body.price 
+                prod.image = req.file.filename
+            }
+            return prod
+        })
+        //  escribir json 
+        escribirJson (editProduct)
+
+        //  redireccionar la vista al aparatado productos 
+        res.redirect ('/products')
+
+
+    } ,
     delete: (req,res) => {
 
         // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req

@@ -8,45 +8,43 @@
         <%- include ('./partials/header') %>
     </header>
 
-        <h2 class="título-abmProductos">ALTA BAJA MODIFICACION DE PRODUCTOS</h1>
+        <h2 class="título-abmProductos">EDICION DE PRODUCTOS</h1>
         <section class="formulario-abmProductos">
-            <form action="/products/create" enctype="multipart/form-data" method="POST" >
+            <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data" method="POST" >
                 <div class="etiqueta-abmProductos">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" value="<%= productToEdit.name %>" required>
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="brand">MARCA:</label>
-                    <input type="text" name="brand" id="brand" required>
+                    <input type="text" name="brand" id="brand" value="<%= productToEdit.brand %>"  required>
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="detail">DESCRIPCION:</label>
-                    <input type="text" name="detail" id="detail" required>
+                    <input type="text" name="detail" id="detail" value="<%= productToEdit.detail %>"  required>
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="gender">GENERO:</label>
-                    <input type="text" name="gender" id="gender" required>
+                    <input type="text" name="gender" id="gender" value="<%= productToEdit.gender %>"  required>
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="size">TALLE:</label>
-                    <input type="number" name="size" id="size" required> 
+                    <input type="number" name="size" id="size" value="<%= productToEdit.size %>"  required> 
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="color">COLOR:</label>
-                    <input type="text" name="color" id="color" required>
+                    <input type="text" name="color" id="color" value="<%= productToEdit.color %>"  required>
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="price">PRECIO</label>
-                    <input type="number" name="price" id="price" required> 
+                    <input type="number" name="price" id="price" value="<%= productToEdit.price %>"  required> 
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label>SELECCIONAR IMAGENES:</label>
-                    <input type="file" name="image" accept="jpg" multiple >
+                    <input type="file" name="image" accept="jpg" value="<%= productToEdit.image %>"  multiple >
                 </div>
                 <div class="botones">
-                    <div class="boton">
-                        <button type="submit">CREAR</button>
-                    </div>
+
                     <div class="boton">
                         <button type="submit">EDITAR</button>
                     </div>

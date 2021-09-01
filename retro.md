@@ -13,3 +13,11 @@ Hacer mas: En el caso de ser necesario hacer dos weekly meetings.
 Continuar haciendo: Division de tareas y organizacion a través de Trello.
 Hacer menos: No dejar comentarios en el código.
 Dejar de hacer: Esperar a la última semana para realizar el sprint y usar mejor el tiempo.
+
+Retro sprint n° 3 :
+
+Comenzar a hacer: Reuniones en las que hagamos codigo todos juntos. 
+Hacer mas: Comenzar a dedicarle un poco mas de tiempo a la practica. 
+Continuar haciendo: Ayudarnos mutuamente con las trabas/errores que tenemos al momento de codear. 
+Hacer menos: No dejar comentarios en el código.
+Dejar de hacer: 

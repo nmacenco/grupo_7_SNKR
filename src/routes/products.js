@@ -8,7 +8,7 @@ const multer = require ('multer')
 
 const storage = multer.diskStorage ({
     destination: (req,file,cb) => {
-        folder = path.join(__dirname, '../../public/images/products')
+        folder = path.join(__dirname, '../../public/images')
         cb(null, folder)
     },
     filename : (req,file,cb) => {
@@ -21,6 +21,11 @@ const upLoadFile = multer({storage});
 //  CONTROLLER REQUIRE  //
 const productsControllers = require ('../controllers/productsControllers')
 
+
+//  FORMULARIO DE CREACION DE PRODUCTOS //
+router.get ('/create' , productsControllers.create) 
+router.post ('/new/' , upLoadFile.single('image') , productsControllers.store) 
+
 // CARRITO DE PRODUCTOS //
 router.get ('/cart', productsControllers.cart);
 
@@ -30,18 +35,16 @@ router.get ('/:id', productsControllers.detail);
 //  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);
 
-//  FORMULARIO DE CREACION DE PRODUCTOS //
-router.get ('/create' , productsControllers.abm) 
-router.post ('/create' , upLoadFile.single('image') , productsControllers.create) 
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
-router.get ('/:id/edit' , productsControllers.abm) 
+router.get ('/edit/:id' , productsControllers.edit) 
 
 //  ACCION DE EDITAR PRODUCTO  //
-router.put ('/:id' , productsControllers.edit) 
+router.put ('/edit/:id' ,upLoadFile.single('image'),  productsControllers.update) 
 
 //  ACCION DE BORRADO   //
 router.delete ('/:id', productsControllers.delete)
+
 
 
 module.exports = router ; 

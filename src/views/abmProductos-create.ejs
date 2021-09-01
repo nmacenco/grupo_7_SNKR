@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/head') %>
+</head>
+<body>
+    <header >
+        <%- include ('./partials/header') %>
+    </header>
+
+        <h2 class="título-abmProductos">CREACION DE PRODUCTOS</h1>
+        <section class="formulario-abmProductos">
+            <form action="/products/new" enctype="multipart/form-data" method="POST" >
+                <div class="etiqueta-abmProductos">
+                    <label for="name">NOMBRE DEL PRODUCTO:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="brand">MARCA:</label>
+                    <input type="text" name="brand" id="brand" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="detail">DESCRIPCION:</label>
+                    <input type="text" name="detail" id="detail" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="gender">GENERO:</label>
+                    <input type="text" name="gender" id="gender" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="size">TALLE:</label>
+                    <input type="number" name="size" id="size" required> 
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="color">COLOR:</label>
+                    <input type="text" name="color" id="color" required>
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="price">PRECIO</label>
+                    <input type="number" name="price" id="price" required> 
+                </div>
+                <div class="etiqueta-abmProductos">
+                    <label>SELECCIONAR IMAGENES:</label>
+                    <input type="file" name="image" accept="jpg" multiple >
+                </div>
+                <div class="botones">
+                    <div class="boton">
+                        <button type="submit">CREAR</button>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <%- include ('./partials/footer') %>
+    </footer>
+
+</body>
+</html>

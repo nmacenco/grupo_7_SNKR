@@ -32,7 +32,7 @@
 
                 <div class="cajaBoton">
                     <div class="editarYBorrarProducto">
-                        <a href="/products/<%= producto.id %>/edit" class="botonEditarProducto">EDITAR PRODUCTO</a>
+                        <a href="/products/edit/<%= producto.id %>" class="botonEditarProducto">EDITAR PRODUCTO</a>
                             <form action="/products/<%= producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                                 <button type="submit" class="botonEliminarProducto">ELIMINAR PRODUCTO</button>
                             </form>
