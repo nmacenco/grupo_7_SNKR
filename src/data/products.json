@@ -8,7 +8,7 @@
   "gender": "Unisex",
   "brand": "Adidas",
   "color": "Mauv",
-  "category": "nan" ,
+  "category": "nan",
   "image": "adidas-forum-low.jfif"
  },
  {
@@ -20,7 +20,7 @@
   "gender": "Unisex",
   "brand": "Nike",
   "color": "Turquoise",
-  "category": "nan" ,
+  "category": "nan",
   "image": "airforce107wb.png"
  },
  {
@@ -32,7 +32,7 @@
   "gender": "Unisex",
   "brand": "Nike",
   "color": "Fuscia",
-  "category": "nan" ,
+  "category": "nan",
   "image": "nike-air-max-97.jfif"
  },
  {
@@ -44,7 +44,7 @@
   "gender": "Unisex",
   "brand": "Nike",
   "color": "Purple",
-  "category": "home" ,
+  "category": "home",
   "image": "airmax200SE.png"
  },
  {
@@ -56,7 +56,7 @@
   "gender": "Male",
   "brand": "Nike",
   "color": "Goldenrod",
-  "category": "home" ,
+  "category": "home",
   "image": "jordan1low.png"
  },
  {
@@ -68,7 +68,7 @@
   "gender": "Female",
   "brand": "Puma",
   "color": "Blue",
-  "category": "in-sale" ,
+  "category": "in-sale",
   "image": "puma-fast-intl-game.jfif"
  },
  {
@@ -80,7 +80,7 @@
   "gender": "Male",
   "brand": "Puma",
   "color": "Crimson",
-  "category": "home" ,
+  "category": "home",
   "image": "pumaRS-Xbold.png"
  },
  {
@@ -92,7 +92,7 @@
   "gender": "Male",
   "brand": "Reebok",
   "color": "Purple",
-  "category": "in-sale" ,
+  "category": "in-sale",
   "image": "reebok-aztrek-96.jfif"
  },
  {
@@ -104,7 +104,7 @@
   "gender": "Unisex",
   "brand": "Nike",
   "color": "Green",
-  "category": "in-sale" ,
+  "category": "in-sale",
   "image": "nike-sb-alleyoop.jfif"
  },
  {
@@ -116,7 +116,7 @@
   "gender": "Female",
   "brand": "Puma",
   "color": "Violet",
-  "category": "product" ,
+  "category": "product",
   "image": "nike-air-max-270-react.jfif"
  },
  {
@@ -128,7 +128,7 @@
   "gender": "Female",
   "brand": "Nike",
   "color": "Goldenrod",
-  "category": "product" ,
+  "category": "product",
   "image": "nike-air-max-1-recycled-white.jfif"
  },
  {
@@ -140,7 +140,18 @@
   "gender": "Male",
   "brand": "Puma",
   "color": "Crimson",
-  "category": "product" ,
+  "category": "product",
   "image": "puma-rs-fast-mix.jfif"
+ },
+ {
+  "id": 13,
+  "name": "Las zapa mas piola ",
+  "brand": "Nike ",
+  "description": "Las mejores zapatillas del mundo ",
+  "gender": "Male ",
+  "size": "45",
+  "color": "red",
+  "price": "125000",
+  "image": "image-1630536191239.jpg"
  }
 ]
