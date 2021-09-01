@@ -6,3 +6,13 @@ En esta reunion leimos los entregables del Sprint N° 3 y distribuimos las tarea
 Reunion 11/08/2021: 
 Nico comento que tuvo problemas en el ruteo, al querer incluir las carpetas dentro del src. La idea es consultarlo en la clase del 12/08/2021.
 Mauri Renzo y Cristian se encuentran trabajando en las vistas de Listado de Productos y Creacion y edicion de Productos. Hasta el momento no hubo problemas. 
+
+Sprint 4 : 
+
+Reunion 20/08/2021:
+Utilizamos el tiempo de clase para definir que tareas realizaria cada uno y actualizar el tablero de trabajo entre todos. 
+
+Reunion 27/08/2021:
+La utilizamos para ver como veniamos con las tareas. Cristian y Renzo nos avisaron que venian medios complicados de tiempo asi que decidimos dividir el trabajo nuevamente para poder cumplir con los objetivos. 
+
+Respecto a la daily optamos por no realizarla ya que hacemos el seguimiento por el grupo de whatsapp, consultandonos si pudimos avanzar o si alguno tuvo problemas con algo. 

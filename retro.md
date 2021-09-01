@@ -20,4 +20,4 @@ Comenzar a hacer: Reuniones en las que hagamos codigo todos juntos.
 Hacer mas: Comenzar a dedicarle un poco mas de tiempo a la practica. 
 Continuar haciendo: Ayudarnos mutuamente con las trabas/errores que tenemos al momento de codear. 
 Hacer menos: No dejar comentarios en el código.
-Dejar de hacer: 
+Dejar de hacer: Sigue siendo la misma del sprint pasado. Tenemos que ponernos a trabajar antes para terminar con mas margen los sprints. 
