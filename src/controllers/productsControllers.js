@@ -56,6 +56,31 @@ const productsControllers = {
         //  redirecciono la pagina 
         res.redirect ('list')
     },
+    edit: (req, res) => {
+        // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req
+        // Ese es el producto a actualizar
+        let productoAactualizar = null;
+        let productosIntactos = productosJSON.filter(function(producto){
+            if (producto.id == req.params.id)
+                productoAactualizar = producto;
+            return producto.id != req.params.id;
+        })
+
+        // Ahora edito el producto a actualizar, con los datos proporcionados en req
+        for (let propiedad in req.body)
+            productoAactualizar[propiedad] = req.body[propiedad]
+
+        // Lo agrego al array donde tengo todos los productos menos el que fue editado
+        // Y ordeno nuevamente todo el array segun el id de producto
+        let productosActualizados = productosIntactos
+        productosActualizados.push(productoAactualizar)
+        productosActualizados.sort((a,b) => (a.id > b.id) ? 1 : -1);
+
+        // Sobreescribo el JSON con el nuevo array actualizado
+        escribirJson(productosActualizados)
+
+        res.send(JSON.stringify(productosActualizados))
+    },
     delete: (req,res) => {
 
         // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req
