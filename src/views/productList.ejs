@@ -109,10 +109,10 @@
 
             <section class="listadoProductos">
 
-                <% productos.forEach(function(producto) { %>
+                <% products.forEach(function(producto) { %>
                 <article class="cajaProductoRecomendado">
                     <a href="/products/<%= producto.id %>">
-                    <img class="fotoRecomendados" src="/images/<%= producto.image%>">
+                    <img class="fotoRecomendados" src="/images/products/<%= producto.image%>">
                     <div>
                         <p class="descripcionRecomendados"><%= producto.name %></p>
                         <p class="precioRecomendados">$<%= producto.price %></p>

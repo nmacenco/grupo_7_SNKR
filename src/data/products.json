@@ -142,16 +142,5 @@
   "color": "Crimson",
   "category": "product",
   "image": "puma-rs-fast-mix.jfif"
- },
- {
-  "id": 13,
-  "name": "Las zapa mas piola ",
-  "brand": "Nike ",
-  "description": "Las mejores zapatillas del mundo ",
-  "gender": "Male ",
-  "size": "45",
-  "color": "red",
-  "price": "125000",
-  "image": "image-1630536191239.jpg"
  }
 ]

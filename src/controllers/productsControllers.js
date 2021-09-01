@@ -34,7 +34,8 @@ const productsControllers = {
         res.render ('productDetail', {productos: productosJSON, id}) ;
     },
     list : (req,res) => {
-        res.render('productList', { productos: productosJSON});
+        let products = leerJson()
+        res.render('productList', { products});
     },
     create : (req,res) => {
         
@@ -61,7 +62,7 @@ const productsControllers = {
         //  escribo el JSON 
         escribirJson (newArray) ;
         //  redirecciono la pagina 
-        res.redirect ('/products')
+        res.redirect ('/products') ;
     },
     edit: (req, res) => {
         let products = findById(req.params.id) ;
@@ -87,10 +88,10 @@ const productsControllers = {
             return prod
         })
         //  escribir json 
-        escribirJson (editProduct)
+        escribirJson (editProduct) ;
 
         //  redireccionar la vista al aparatado productos 
-        res.redirect ('/products')
+        res.redirect ('/products') ;
 
 
     } ,
@@ -102,10 +103,10 @@ const productsControllers = {
         })
 
         // Sobreescribo el JSON con el nuevo array actualizado
-        escribirJson(productosActualizados)
+        escribirJson(productosActualizados) ;
 
         // Redirecciono al apartado de productos
-        res.redirect('/products')
+        res.redirect('/products') ;
     }
 }
 
