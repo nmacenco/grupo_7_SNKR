@@ -11,53 +11,64 @@
     <main>
         <!--FORMULARIO DE REGISTRO-->
         <section class="register"> 
-            <form action="/registro" method="POST" class="formulario-registro">
+            <form action="/registro" method="POST" class="formulario-registro" enctype="multipart/form-data">
                 <div class="titulo-registro">
                     <h4>REGISTRATE</h4>
                 </div>
+
                 <div class="etiqueta-ingreso">
-                    <label for="nombre">NOMBRE:</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <label class="labelsRegistro" for="usuario">USUARIO</label>
+                    <input class="inputsRegistro" type="text" name="usuario" id="usuario" required>
+                </div>
+
+                <div class="etiqueta-ingreso">
+                    <label class="labelsRegistro" for="password">PASSWORD</label>
+                    <input class="inputsRegistro" type="password" name="password" id="password" required>
+                </div>
+
+                <div class="etiqueta-ingreso">
+                    <label class="labelsRegistro" for="rep_password">REPITA LA PASSWORD</label>
+                    <input class="inputsRegistro" type="password" name="password" id="rep_password" required>
+                </div>
+
+               <div class="etiqueta-ingreso">
+                    <label class="labelsRegistro" for="nombre">NOMBRE</label>
+                    <input class="inputsRegistro" type="text" name="nombre" id="nombre" required>
                 </div>
                 <div class="etiqueta-ingreso">
-                    <label for="apellido">APELLIDO:</label>
-                    <input type="text" name="apellido" id="apellido" required>
+                    <label class="labelsRegistro" for="apellido">APELLIDO</label>
+                    <input class="inputsRegistro" type="text" name="apellido" id="apellido" required>
                 </div>
                 <div class="etiqueta-ingreso">
-                    <label for="nacimiento">FECHA DE NACIMIENTO:</label>
-                    <input type="date" name="nacimiento" id="nacimiento" required class="lafecha">
+                    <label class="labelsRegistro" for="nacimiento">FECHA DE NACIMIENTO</label>
+                    <input class="inputsRegistro" type="date" name="nacimiento" id="nacimiento" required class="lafecha">
                 </div>
                 <div class="etiqueta-ingreso">
-                    <label for="documento">DNI:</label>
-                    <input type="number" name="documento" id="documento" required> 
+                    <label class="labelsRegistro" for="documento">DNI</label>
+                    <input class="inputsRegistro" type="text" name="documento" id="documento" required> 
                 </div>
                 <div class="etiqueta-sexo">
-                    <label for="sexo">SEXO:</label>
+                    <label class="labelsRegistro" for="sexo">SEXO</label>
                     <div class="myh">
                         <label>M</label>
-                        <input type="radio" name="sexo" id="sexo" value="M">
+                        <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="M">
                         <label>F</label>
-                        <input type="radio" name="sexo" id="sexo" value="F">
+                        <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="F">
                     </div>
                 </div>
+               
                 <div class="etiqueta-ingreso">
-                    <label for="usuario">USUARIO:</label>
-                    <input type="text" name="usuario" id="usuario" required>
+                    <label class="labelsRegistro" for="email">E-MAIL</label>
+                    <input class="inputsRegistro" type="email" name="email" id="email" required>
                 </div>
+
                 <div class="etiqueta-ingreso">
-                    <label for="email">E-MAIL:</label>
-                    <input type="email" name="email" id="email" required>
+                    <label class="labelsRegistro"> AVATAR </label>
+                    <input class="inputsRegistro" type="file" name="avatar" accept=".jpg,.png,.jfif">
                 </div>
-                <div class="etiqueta-ingreso">
-                    <label for="password">PASSWORD:</label>
-                    <input type="password" name="password" id="password" required>
-                </div>
-                <div class="etiqueta-ingreso">
-                    <label for="rep_password">REPITA LA PASSWORD:</label>
-                    <input type="password" name="password" id="rep_password" required>
-                </div>
-                <div class="boton">
-                    <button type="submit">ENVIAR</button>
+                
+                <div class="cajaBoton">
+                    <button class="botonEnviarRegistro" type="submit">ENVIAR</button>
                 </div>
             </form>
         </section>

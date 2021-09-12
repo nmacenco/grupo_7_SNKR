@@ -153,7 +153,9 @@ a {
     color:red;
 }
 
-/* FOOTER */
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS FOOTER                                      */
+/* ------------------------------------------------------------------------ */
 
 .footer {
     display: flex; 
@@ -217,7 +219,9 @@ a {
     
 }
 
-/************** DETALLE DE PRODUCTOS ****************/
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS DETALLE PRODUCTO                            */
+/* ------------------------------------------------------------------------ */
 
 .filtrosAplicados{
     height: 10%;
@@ -270,7 +274,9 @@ a {
     opacity: 40%;
 }
 
-/************* DETALLE DE PRODUCTO **************/
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS PRODUCT DETAIL                              */
+/* ------------------------------------------------------------------------ */
 
 .detalleProducto{
     width:50%;
@@ -350,7 +356,6 @@ a {
     margin: 0 10px 0 10px;
     height: 50px;
 }
-
 
 .botonCompra{
     width:70%;
@@ -446,7 +451,9 @@ a {
 }
 
 
-/* ////////// LOGIN /////////// */
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS LOGIN                                       */
+/* ------------------------------------------------------------------------ */
 
 .main-login {
     height: 50vh;
@@ -477,11 +484,11 @@ a {
     margin-bottom: 10px;  
 }
 
-
 .detalle-formulario{
     margin: 15px 0;
     position: relative;
 }
+
 .detalle-formulario input{
     position: absolute;
     right: 35px;
@@ -493,6 +500,7 @@ a {
     display: flex;
     justify-content: center;
 }
+
 .boton button {
     padding: 5px;
     background-color: #39A6A3 ;
@@ -501,6 +509,7 @@ a {
     width: 140px;
     font-weight: 600;
 }
+
 .crear-cuenta{
     width: 30%;
     padding-left: 20px;
@@ -513,6 +522,7 @@ a {
 .crear-cuenta label {
     margin-bottom: 10px;
 }
+
 .crear-cuenta button {
     margin-top: 10px;
     padding: 5px;
@@ -523,7 +533,9 @@ a {
     font-weight: 600;
 }
 
-/* //////////// Registro ////////////// */
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS REGISTRO                                    */
+/* ------------------------------------------------------------------------ */
 
 .titulo-registro{
     text-decoration: underline;
@@ -532,17 +544,17 @@ a {
 }
 .formulario-registro {
     width: 40%;
-
 }
 .register{
     display: flex;
     line-height: 22px;
-    padding: 50px;
+    padding: 50px 0 50px 0;
     justify-content: center;
 }
 .etiqueta-ingreso{
     display: flex;
     justify-content: space-between;
+    align-items:center;
     padding: 5px 0;
 }
 .lafecha {
@@ -568,11 +580,22 @@ a {
     top: 4px;
 }
 
+.botonEnviarRegistro{
+    width:70%;
+    padding:8px;
+    border-radius: 50px;
+    border: none;
+    background-color: #39A6A3;
+    font-weight: 700;
+}
 
-
+.inputsRegistro{
+    padding:5px;
+    width: 50%;
+}
 
 /* ------------------------------------------------------------------------ */
-/* ESTILOS PRODUCT CART */
+/*                      ESTILOS PRODUCT CART                                */
 /* ------------------------------------------------------------------------ */
 
 #items {
@@ -706,7 +729,9 @@ a {
     margin: 15px auto;
 }
 
-/* //////////////// ABM PRODUCT /////////////////// */
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS ABM PRODUCT                                 */
+/* ------------------------------------------------------------------------ */
 
 .título-abmProductos{
     text-align: center;
@@ -809,7 +834,9 @@ a {
     font-weight: 500;
 }
 
-/********* PÁGINA 404 PARA NADA ROBADA *************/
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS PÁGINA 404                                  */
+/* ------------------------------------------------------------------------ */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
@@ -902,13 +929,6 @@ a {
   }
 }
     
-
-
-
-
-/* demo stuff */
-
-
 .body404 {
   background-color: #f4f4f4;
   margin-bottom: 50px;
