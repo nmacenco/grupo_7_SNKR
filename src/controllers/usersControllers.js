@@ -1,5 +1,21 @@
 const express = require ('express')
+const path = require('path');
+const fs = require('fs');
     
+//  LECTURA JSON    //
+function leerJson () {
+    const usersFilePath = path.join (__dirname, '../data/users.json') ;
+    const users = JSON.parse(fs.readFileSync(usersFilePath,'utf-8')) ;
+    return users;
+}
+
+//  ESCRITURA JSON  //  
+function escribirJson (array) {
+    let newString = JSON.stringify(array, null, ' ') ;
+    return fs.writeFileSync(path.join(__dirname,'../data/users.json'),newString)
+}
+
+
 const productsControllers = {
     login : (req,res) => {
         res.render ('login') ;
@@ -9,21 +25,20 @@ const productsControllers = {
     },
     store: (req,res) => {
      //  leo todo el JSON 
-     let products = leerJson () ;
+     let users = leerJson () ;
      //  creo el nuevo producto 
-     let newProduct = {
-         id :   products.length + 1 ,
-         name : req.body.name ,
-         brand : req.body.brand ,
-         description : req.body.detail ,
-         gender : req.body.gender ,
-         size : req.body.size ,
-         color : req.body.color , 
-         price : req.body.price ,
-         image : req.file.filename
+     let newUser = {
+         id :   users.length + 1 ,
+         first_name : req.body.nombre,
+         last_name: req.body.apellido,
+         user_name : req.body.usuario ,
+         email : req.body.email ,
+         password : req.body.password ,
+         category: 'user', 
+         image : req.file 
      }
      //  agrego el nuevo producto al array 
-     let newArray = [... products , newProduct] ;
+     let newArray = [... users , newUser] ;
 
      //  escribo el JSON 
      escribirJson (newArray) ;

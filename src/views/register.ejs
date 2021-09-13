@@ -11,7 +11,7 @@
     <main>
         <!--FORMULARIO DE REGISTRO-->
         <section class="register"> 
-            <form action="/registro" method="POST" class="formulario-registro" enctype="multipart/form-data">
+            <form action="/users/register" method="POST" class="formulario-registro" enctype="multipart/form-data">
                 <div class="titulo-registro">
                     <h4>REGISTRATE</h4>
                 </div>
@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="rep_password">REPITA LA PASSWORD</label>
-                    <input class="inputsRegistro" type="password" name="password" id="rep_password" required>
+                    <label class="labelsRegistro" for="confirmacionPassword">REPITA LA PASSWORD</label>
+                    <input class="inputsRegistro" type="password" name="confirmacionPassword" id="rep_password" required>
                 </div>
 
                <div class="etiqueta-ingreso">
@@ -42,10 +42,6 @@
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="nacimiento">FECHA DE NACIMIENTO</label>
                     <input class="inputsRegistro" type="date" name="nacimiento" id="nacimiento" required class="lafecha">
-                </div>
-                <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="documento">DNI</label>
-                    <input class="inputsRegistro" type="text" name="documento" id="documento" required> 
                 </div>
                 <div class="etiqueta-sexo">
                     <label class="labelsRegistro" for="sexo">SEXO</label>
