@@ -1,11 +1,11 @@
 //////////// REQUIRES //////////////////
-const express = require("express") ;
-const path = require('path') ;
+const express = require('express') ;
+const path = require ('path') ;
 const app = express() ;
 const methodOverride = require ('method-override') ; 
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const multer = require('multer');
 
 ///////////// MIDDLEWARES //////////////////////
 app.use (express.static('public'));
@@ -15,9 +15,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
 
+
+
 /////////// TEMPLATE ENGINE //////////////
 app.set ('view engine' , 'ejs') ;   
-app.set ('views' , path.join(__dirname, './src/views') ) ;
+app.set ('views' , path.join(__dirname, './views') ) ;
 
 
 

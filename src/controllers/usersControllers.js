@@ -1,6 +1,7 @@
-const express = require ('express')
+const express = require ('express') ;
 const path = require('path');
 const fs = require('fs');
+const bycriptjs = require ('bcryptjs') ;
     
 //  LECTURA JSON    //
 function leerJson () {
@@ -18,7 +19,44 @@ function escribirJson (array) {
 
 const productsControllers = {
     login : (req,res) => {
-        res.render ('login') ;
+        res.render ('login', { old : req.body}) ;
+    },
+    processToLogin : (req,res) => {
+        //  busco el mail que se ingreso en el formulario para ver si esta en la base de datos
+        let userToLogin = leerJson().find(element => {
+            return element.email = req.body.mail ;
+        })
+        //  comparo password ingresada con la que esta en la base de datos
+        // PENDIENTE UNSAR BYCRIPT EN REGISTER PARA PODER USARLO EN EL LOGIN TAMBIEN 
+        if (userToLogin){
+            if (req.body.password == userToLogin.password){
+                delete userToLogin.password ;
+                // req.session.userLogged = userToLogin;
+                if (req.body.rememberUser){
+                    res.cookie('userEmail', req.userToLogin.email , {maxAge : (1000 * 60) * 60})
+                }
+                return res.redirect('/')
+            } else { 
+                res.render ('login' , {old : req.body,
+                errors: {
+                    password : {
+                        msg : 'credenciales invalidas '
+                    }
+                }})
+            }
+        }
+
+        return res.render ('login', {
+            errors : { 
+                email : { 
+                    msg : 'El usuario no se encuentra registrado en la base de datos '
+                }
+            }
+        })
+
+
+
+
     },
     register : (req,res) => {
         res.render ('register')
