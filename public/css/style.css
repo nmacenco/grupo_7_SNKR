@@ -489,9 +489,12 @@ a {
     position: relative;
 }
 
-.detalle-formulario input{
+.detalle-formulario-input{
     position: absolute;
     right: 35px;
+}
+.cajitaRecordarUsiario {
+    margin-left: 15px;
 }
 
 .boton{

@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 /***********************/
 
 router.get ('/login', usersControlador.login ) ;
+router.post ('/login', usersControlador.processToLogin)
 router.get ('/register' , usersControlador.register);
 router.post('/register', uploadFile.single('avatar'), usersControlador.store);
 
