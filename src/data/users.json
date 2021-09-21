@@ -336,5 +336,15 @@
    "path": "public\\images\\users\\avatars\\1631500490389_img_.jpg",
    "size": 24879
   }
+ },
+ {
+  "id": 33,
+  "first_name": "Testeo",
+  "last_name": "Testeo",
+  "user_name": "Testeo",
+  "email": "Testeo@Testeo.com",
+  "password": "$2a$10$5gWKp4GJ3Yj2lcS37UjMmOXnT8vuJpB7YUt7oihK6LdY/df3vGbwW",
+  "category": "user",
+  "image": "1632262504156_img_.jpg"
  }
 ]

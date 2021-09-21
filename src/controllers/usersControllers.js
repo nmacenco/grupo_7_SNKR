@@ -1,7 +1,9 @@
 const express = require ('express')
 const path = require('path');
 const fs = require('fs');
-    
+const bcrypt = require('bcryptjs');
+
+
 //  LECTURA JSON    //
 function leerJson () {
     const usersFilePath = path.join (__dirname, '../data/users.json') ;
@@ -26,23 +28,24 @@ const productsControllers = {
     store: (req,res) => {
      //  leo todo el JSON 
      let users = leerJson () ;
-     //  creo el nuevo producto 
+     //  creo el nuevo usuario 
      let newUser = {
          id :   users.length + 1 ,
          first_name : req.body.nombre,
          last_name: req.body.apellido,
          user_name : req.body.usuario ,
          email : req.body.email ,
-         password : req.body.password ,
+         password : bcrypt.hashSync(req.body.password, 10) ,
          category: 'user', 
-         image : req.file 
+         image : req.file.filename
      }
-     //  agrego el nuevo producto al array 
+     //  agrego el nuevo usuario al array 
      let newArray = [... users , newUser] ;
 
      //  escribo el JSON 
      escribirJson (newArray) ;
-     //  redirecciono la pagina 
+
+     //  redirecciono la pagina principal
      res.redirect ('/') ;
     }
 }
