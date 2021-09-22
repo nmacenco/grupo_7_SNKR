@@ -14,17 +14,27 @@
             <p>Necesitas asistencia? escribinos a eshop@snkr.com.ar</p>
         </section>
         <section class="login">
-            <form action="" class="ingresar">
+            <form action="/users/login" method="POST" class="ingresar">
                 <div class="titulo">
                     <h4>INGRESAR</h4>
                 </div>
                 <div class="detalle-formulario">
-                    <label for="usuario">Usuario/E-mail:</label>
-                    <input class="detalle-formulario-input" type="mail" name="usuario" id="usuario" required>
+                    <label for="mail">E-mail:</label>
+                    <input class="detalle-formulario-input" type="mail" name="mail" id="mail" required>
+                    <% if (locals.errors && errors.email) {  %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
                 </div>
                 <div class="detalle-formulario">
                     <label for="password">Password:</label>
-                    <input class="detalle-formulario-input" type="password" name="password" id="password" required>
+                    <input class="detalle-formulario-input" type="password" name="password" id="password" >
+                    <% if ( locals.errors && errors.password) {  %>
+                        <div>
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
                 </div>
                 <div class="detalle-formulario">
                     <label for="">Recordar mi usuario</label>

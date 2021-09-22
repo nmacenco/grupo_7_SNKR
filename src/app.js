@@ -6,6 +6,7 @@ const methodOverride = require ('method-override') ;
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const multer = require('multer');
+const session = require ('express-session')
 
 ///////////// MIDDLEWARES //////////////////////
 app.use (express.static('public'));
@@ -14,7 +15,11 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
-
+app.use(session({
+    secret : 'The secret' ,
+    resave : false , 
+    saveUninitialized : false 
+}))
 
 
 /////////// TEMPLATE ENGINE //////////////

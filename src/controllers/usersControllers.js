@@ -16,49 +16,14 @@ function escribirJson (array) {
     let newString = JSON.stringify(array, null, ' ') ;
     return fs.writeFileSync(path.join(__dirname,'../data/users.json'),newString)
 }
+//  BUSCAR USUARIO POR CAMPO //
+function findByField (field, text) {
+    let allUsers = leerJson();
+    let userFound = allUsers.find(oneUser => oneUser[field] === text);
+    return userFound;
+}
 
-
-const productsControllers = {
-    login : (req,res) => {
-        res.render ('login', { old : req.body}) ;
-    },
-    processToLogin : (req,res) => {
-        //  busco el mail que se ingreso en el formulario para ver si esta en la base de datos
-        let userToLogin = leerJson().find(element => {
-            return element.email = req.body.mail ;
-        })
-        //  comparo password ingresada con la que esta en la base de datos
-        // PENDIENTE UNSAR BYCRIPT EN REGISTER PARA PODER USARLO EN EL LOGIN TAMBIEN 
-        if (userToLogin){
-            if (req.body.password == userToLogin.password){
-                delete userToLogin.password ;
-                // req.session.userLogged = userToLogin;
-                if (req.body.rememberUser){
-                    res.cookie('userEmail', req.userToLogin.email , {maxAge : (1000 * 60) * 60})
-                }
-                return res.redirect('/')
-            } else { 
-                res.render ('login' , {old : req.body,
-                errors: {
-                    password : {
-                        msg : 'credenciales invalidas '
-                    }
-                }})
-            }
-        }
-
-        return res.render ('login', {
-            errors : { 
-                email : { 
-                    msg : 'El usuario no se encuentra registrado en la base de datos '
-                }
-            }
-        })
-
-
-
-
-    },
+const usersController = {
     register : (req,res) => {
         res.render ('register')
     },
@@ -84,7 +49,55 @@ const productsControllers = {
 
      //  redirecciono la pagina principal
      res.redirect ('/') ;
+    },
+
+    login : (req,res) => {
+        res.render ('login', { old : req.body}) ;
+    },
+    processToLogin : (req,res) => {
+        //  busco el mail que se ingreso en el formulario para ver si esta en la base de datos
+        let users = leerJson() ;
+        let userToLogin = findByField('email' , req.body.mail)
+           
+        //  comparo password ingresada con la que esta en la base de datos
+
+        if (userToLogin){
+            let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+            if (isOkPassword){
+                delete userToLogin.password ;
+                req.session.userLogged = userToLogin;
+
+                if (req.body.rememberUser){
+                   res.cookie('userEmail', req.body.email , {maxAge : (1000 * 60) * 60})
+                }
+                return res.redirect('/users/profile')
+            } 
+            return res.render ('login' , {old : req.body,
+                errors: {
+                    password : {
+                        msg : 'Las credenciales son invalidas '
+                    }
+                }})
+            
+        }
+
+        return res.render ('login', {
+            errors : { 
+                email : { 
+                    msg : 'El usuario no se encuentra registrado en la base de datos '
+                }
+            }
+        })
+    },
+    profile : (req,res) => {
+       return res.render ('profile', { user : req.session.userLogged }) ;
+    },
+    
+    logout : (req,res) => {
+        res.clearCookie('userEmail') ;
+        req.session.destroy() ;
+        return res.redirect('/') ;
     }
 }
 
-module.exports = productsControllers ;
+module.exports = usersController ;

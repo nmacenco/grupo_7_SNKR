@@ -346,5 +346,15 @@
   "password": "$2a$10$5gWKp4GJ3Yj2lcS37UjMmOXnT8vuJpB7YUt7oihK6LdY/df3vGbwW",
   "category": "user",
   "image": "1632262504156_img_.jpg"
+ },
+ {
+  "id": 34,
+  "first_name": "Nicolas ",
+  "last_name": "Macenco",
+  "user_name": "nico@gmail.com",
+  "email": "nico@gmail.com",
+  "password": "$2a$10$anghGriybMlFqcjY3HMh1.x8Yr96oO6C.9e0EhlHAspYSB2s4681S",
+  "category": "user",
+  "image": "1632317702484_img_.png"
  }
 ]
