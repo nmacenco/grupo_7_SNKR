@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const multer = require('multer');
 const session = require ('express-session')
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
 
 ///////////// MIDDLEWARES //////////////////////
 app.use (express.static('public'));
@@ -20,7 +21,7 @@ app.use(session({
     resave : false , 
     saveUninitialized : false 
 }))
-
+app.use(userLoggedMiddleware)
 
 /////////// TEMPLATE ENGINE //////////////
 app.set ('view engine' , 'ejs') ;   
