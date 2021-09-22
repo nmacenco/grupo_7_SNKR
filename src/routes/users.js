@@ -17,18 +17,21 @@ const storage = multer.diskStorage({
 
 /***********************/
 
+// MIDDLEWARES //
+const authMiddleware = require ('../middlewares/authMiddleware')
+const guestMiddleware = require ('../middlewares/guestMiddleware')
 
 // LOGIN //
-router.get ('/login', usersController.login ) ;
+router.get ('/login', guestMiddleware , usersController.login ) ;
 router.post ('/login', usersController.processToLogin)
 
 // REGISTER //
-router.get ('/register' , usersController.register);
+router.get ('/register' , guestMiddleware , usersController.register);
 router.post('/register', uploadFile.single('avatar'), usersController.store);
 
 // PROFILE  //
 
-router.get ( '/profile' , usersController.profile)
+router.get ( '/profile', authMiddleware , usersController.profile)
 
 // LOGOUT   //
 
