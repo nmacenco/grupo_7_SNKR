@@ -28,43 +28,65 @@ a {
 
 .main-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* background-color: #accbd6;  */
     /* background-color: #85C1E9;  */
     /* background-color: #6491AF; */
     background-color: #39A6A3; 
 }
-
+#logo {
+    width: 30%;
+}
 .main-header img {
     height: 100px;
 }
 .search {
-    width: 30%;
+    width: 40%;
     padding: 5px;
-    position: relative;
-    left: -15px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.buscador{
+.search2{
     padding:15px;
 }
 
 .search input {
-    width: 82%;
+    width: 100%;
     height: 35px;
     border-radius: 15px;
     border: none;
 }
 .search i {
-    position: relative;
-    right: 45px;
-    top: 3px;
+    position: absolute;
+    top: 63px;
+    right: 415px;
     font-size: 20px;
 }
 .login-cart{
+    width: 30%;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+}
+.user-logged {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.user-logged img { 
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.user-logged a { 
+    font-weight: bold;
+}
+.logout a {
+    font-weight: bold;
+    margin-left: 15px;
 }
 #login {
     margin: 10px;
@@ -597,6 +619,40 @@ a {
     width: 50%;
 }
 
+/* ------------------------------------------------------------------------ */
+/*                      ESTILOS PROFILE                                     */
+/* ------------------------------------------------------------------------ */
+.main-profile{
+    display: flex ;
+    justify-content: center;
+    /* background-color: grey; */
+}
+
+.contenedor-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 350px;
+    margin: 30px;
+    background-color: #DAD3D3;
+    border-radius: 10px;
+
+}
+.contenedor-profile h2 { 
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.contenedor-profile img { 
+    max-width: 300px;
+    max-height: 300px;
+    margin: 15px;
+}
+.contenedor-profile p {
+    padding: 10px;
+    margin: 10px 0px;
+}
 /* ------------------------------------------------------------------------ */
 /*                      ESTILOS PRODUCT CART                                */
 /* ------------------------------------------------------------------------ */

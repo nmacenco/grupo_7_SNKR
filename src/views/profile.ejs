@@ -7,11 +7,11 @@
     <header>
         <%- include ('./partials/header') %> 
     </header>
-    <main>
-        <div>
+    <main class="main-profile">
+        <div class="contenedor-profile">
             <h2>Hola <%= user.first_name %> <%= user.last_name %></h2>
             <img src="/images/users/avatars/<%= user.image %>" alt="">
-            <div><%= user.email %> </div>
+            <p><%= user.email %> </p>
         </div>
     </main>
     <footer>

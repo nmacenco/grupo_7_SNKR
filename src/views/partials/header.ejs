@@ -2,23 +2,23 @@
    <p> ¡Envios gratis a todo el país! </p>
 </div>
 <div class="main-header">
-    <a href="/">
+    <a href="/" id="logo">
         <img src="/images/logosimple.png" alt="Venta zapatillas">
     </a>
     <div class="search">
-        <input type="text" placeholder="Buscar..." class="buscador">
+        <input type="text" placeholder="Buscar..." class="search2">
         <i class="fas fa-search"></i>
     </div>
     <div class="login-cart" >
 
         <% if (locals.isLogged) {  %>
-        <div>
-            <!-- activar imagen cuando se le de estilo  -->
-            <!-- <img src="/images/users/avatars/<%= locals.userLogged.image %>" alt="">  -->
-            <a href="/users/profile"> <%= locals.userLogged.first_name %> <%= locals.userLogged.last_name %> </a>
+        <div class="user-logged">
+            <img src="/images/users/avatars/<%= locals.userLogged.image %>" alt=""> 
+            <a href="/users/profile"> <%= locals.userLogged.first_name %>  </a>
+             <!-- locals.userLogged.last_name -->
         </div>
         
-        <div>
+        <div class="logout">
             <a href="/users/logout">Logout</a>
         </div>
         <% } else {  %>
