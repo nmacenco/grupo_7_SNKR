@@ -22,7 +22,7 @@
                     <label for="mail">E-mail:</label>
                     <input class="detalle-formulario-input" type="mail" name="mail" id="mail" required>
                     <% if (locals.errors && errors.email) {  %>
-                        <div class="text-danger">
+                        <div class="error-login">
                             <%= errors.email.msg %> 
                         </div>
                     <% } %>
@@ -31,7 +31,7 @@
                     <label for="password">Password:</label>
                     <input class="detalle-formulario-input" type="password" name="password" id="password" >
                     <% if ( locals.errors && errors.password) {  %>
-                        <div>
+                        <div class="error-login">
                             <%= errors.password.msg %> 
                         </div>
                     <% } %>

@@ -37,6 +37,7 @@ a {
 }
 #logo {
     width: 30%;
+    padding-left: 65px; 
 }
 .main-header img {
     height: 100px;
@@ -45,7 +46,7 @@ a {
     width: 40%;
     padding: 5px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .search2{
@@ -53,7 +54,7 @@ a {
 }
 
 .search input {
-    width: 100%;
+    width: 80%;
     height: 35px;
     border-radius: 15px;
     border: none;
@@ -61,7 +62,7 @@ a {
 .search i {
     position: absolute;
     top: 63px;
-    right: 415px;
+    right: 470px;
     font-size: 20px;
 }
 .login-cart{
@@ -557,7 +558,10 @@ a {
     width: 140px;
     font-weight: 600;
 }
-
+.error-login {
+    color: red;
+    margin: 10px;
+}
 /* ------------------------------------------------------------------------ */
 /*                      ESTILOS REGISTRO                                    */
 /* ------------------------------------------------------------------------ */
