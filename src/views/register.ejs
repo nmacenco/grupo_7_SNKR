@@ -13,21 +13,21 @@
         <section class="register"> 
             <form action="/users/register" method="POST" class="formulario-registro" enctype="multipart/form-data">
                 <div class="titulo-registro">
-                    <h4>REGISTRATE</h4>
+                    <h3>FORMULARIO DE REGISTRO</h3>
                 </div>
-
+                
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="usuario">USUARIO</label>
                     <input class="inputsRegistro" type="text" name="usuario" id="usuario" required>
                 </div>
 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="password">PASSWORD</label>
+                    <label class="labelsRegistro" for="password">CONTRASEÑA</label>
                     <input class="inputsRegistro" type="password" name="password" id="password" required>
                 </div>
 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="confirmacionPassword">REPITA LA PASSWORD</label>
+                    <label class="labelsRegistro" for="confirmacionPassword">REPITA LA CONTRASEÑA</label>
                     <input class="inputsRegistro" type="password" name="confirmacionPassword" id="rep_password" required>
                 </div>
 
@@ -46,10 +46,10 @@
                 <div class="etiqueta-sexo">
                     <label class="labelsRegistro" for="sexo">SEXO</label>
                     <div class="myh">
+                        <label>H</label>
+                        <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="H">
                         <label>M</label>
                         <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="M">
-                        <label>F</label>
-                        <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="F">
                     </div>
                 </div>
                

@@ -58,7 +58,6 @@ const usersController = {
         //  busco el mail que se ingreso en el formulario para ver si esta en la base de datos
         let users = leerJson() ;
         let userToLogin = findByField('email' , req.body.mail)
-           
         //  comparo password ingresada con la que esta en la base de datos
 
         if (userToLogin){

@@ -566,19 +566,25 @@ a {
 /*                      ESTILOS REGISTRO                                    */
 /* ------------------------------------------------------------------------ */
 
+.register{
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+    padding: 40px 0 50px 0;
+    justify-content: center;
+    align-items: center;
+}
 .titulo-registro{
-    text-decoration: underline;
     text-align: center;
-    padding-bottom: 15px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
 }
 .formulario-registro {
     width: 40%;
-}
-.register{
-    display: flex;
-    line-height: 22px;
-    padding: 50px 0 50px 0;
-    justify-content: center;
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: #DAD3D3;
+    /* box-shadow: 0px 5px 10px rgb(100 100 100 / 70%); */
 }
 .etiqueta-ingreso{
     display: flex;
@@ -610,7 +616,7 @@ a {
 }
 
 .botonEnviarRegistro{
-    width:70%;
+    width:60%;
     padding:8px;
     border-radius: 50px;
     border: none;
@@ -641,6 +647,8 @@ a {
     margin: 30px;
     background-color: #DAD3D3;
     border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(100 100 100 / 70%);
+
 
 }
 .contenedor-profile h2 { 
@@ -798,13 +806,19 @@ a {
 
 .título-abmProductos{
     text-align: center;
-    padding: 50px 0;
-    text-decoration: underline;
+    padding: 5px 0;
+    margin-bottom: 15px;
 }
-
+.seccion-abmProductos{
+    display: flex;
+    justify-content: center;
+}
 .formulario-abmProductos{
     width: 40%;
-    margin: auto;
+    margin: 25px 0px;
+    padding: 20px 15px;
+    border-radius: 15px;
+    background-color: #DAD3D3;
 }
 
 .etiqueta-abmProductos{

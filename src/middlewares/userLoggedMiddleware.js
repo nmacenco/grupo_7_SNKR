@@ -24,7 +24,6 @@ function userLoggedMiddleware (req,res,next) {
     let emailInCookie = req.cookies.userEmail;
 	let userFromCookie = findByField('email', emailInCookie);
 
-    console.log(emailInCookie);
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
 	}
