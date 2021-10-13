@@ -18,30 +18,48 @@
                 
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="usuario">USUARIO</label>
-                    <input class="inputsRegistro" type="text" name="usuario" id="usuario" required>
+                    <input class="inputsRegistro" type="text" name="usuario" id="usuario" >
+                    <% if (locals.errors && errors.usuario) { %>
+                        <div><%= errors.usuario.msg %> </div>
+                    <% } %>
                 </div>
 
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="password">CONTRASEÑA</label>
-                    <input class="inputsRegistro" type="password" name="password" id="password" required>
+                    <input class="inputsRegistro" type="password" name="password" id="password" >
+                    <% if (locals.errors && errors.password) { %>
+                        <div><%= errors.password.msg %> </div>
+                    <% } %>
                 </div>
 
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="confirmacionPassword">REPITA LA CONTRASEÑA</label>
-                    <input class="inputsRegistro" type="password" name="confirmacionPassword" id="rep_password" required>
+                    <input class="inputsRegistro" type="password" name="confirmacionPassword" id="rep_password" >
+                    <% if (locals.errors && errors.confirmacionPassword) { %>
+                        <div><%= errors.confirmacionPassword.msg %> </div>
+                    <% } %>
                 </div>
 
                <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="nombre">NOMBRE</label>
-                    <input class="inputsRegistro" type="text" name="nombre" id="nombre" required>
+                    <input class="inputsRegistro" type="text" name="nombre" id="nombre" >
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div><%= errors.nombre.msg %> </div>
+                    <% } %>
                 </div>
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="apellido">APELLIDO</label>
-                    <input class="inputsRegistro" type="text" name="apellido" id="apellido" required>
+                    <input class="inputsRegistro" type="text" name="apellido" id="apellido" >
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div><%= errors.apellido.msg %> </div>
+                    <% } %>
                 </div>
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="nacimiento">FECHA DE NACIMIENTO</label>
-                    <input class="inputsRegistro" type="date" name="nacimiento" id="nacimiento" required class="lafecha">
+                    <input class="inputsRegistro" type="date" name="nacimiento" id="nacimiento"  class="lafecha">
+                    <% if (locals.errors && errors.nacimiento) { %>
+                        <div><%= errors.nacimiento.msg %> </div>
+                    <% } %>
                 </div>
                 <div class="etiqueta-sexo">
                     <label class="labelsRegistro" for="sexo">SEXO</label>
@@ -55,12 +73,18 @@
                
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="email">E-MAIL</label>
-                    <input class="inputsRegistro" type="email" name="email" id="email" required>
+                    <input class="inputsRegistro" type="email" name="email" id="email" >
+                    <% if (locals.errors && errors.email) { %>
+                        <div><%= errors.email.msg %> </div>
+                    <% } %>
                 </div>
 
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro"> AVATAR </label>
                     <input class="inputsRegistro" type="file" name="avatar" accept=".jpg,.png,.jfif">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div><%= errors.avatar.msg %> </div>
+                    <% } %>
                 </div>
                 
                 <div class="cajaBoton">

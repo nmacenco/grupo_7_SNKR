@@ -2,6 +2,7 @@ const express = require ('express') ;
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
+const {validationResult} = require ('express-validator')
 
 
 //  LECTURA JSON    //
@@ -28,27 +29,36 @@ const usersController = {
         res.render ('register')
     },
     store: (req,res) => {
-     //  leo todo el JSON 
-     let users = leerJson () ;
-     //  creo el nuevo usuario 
-     let newUser = {
-         id :   users.length + 1 ,
-         first_name : req.body.nombre,
-         last_name: req.body.apellido,
-         user_name : req.body.usuario ,
-         email : req.body.email ,
-         password : bcrypt.hashSync(req.body.password, 10) ,
-         category: 'user', 
-         image : req.file.filename
-     }
-     //  agrego el nuevo usuario al array 
-     let newArray = [... users , newUser] ;
+        // creo una variable de errores 
+        let resultValidation = validationResult(req) ;
 
-     //  escribo el JSON 
-     escribirJson (newArray) ;
+        console.log(resultValidation);
+        if (resultValidation.errors.length > 0) {
+            res.render ('register' , {errors : resultValidation.mapped() , old : req.body})
+        } else {
 
-     //  redirecciono la pagina principal
-     res.redirect ('/') ;
+            //  leo todo el JSON 
+            let users = leerJson () ;
+            //  creo el nuevo usuario 
+            let newUser = {
+                id :   users.length + 1 ,
+                first_name : req.body.nombre,
+                last_name: req.body.apellido,
+                user_name : req.body.usuario ,
+                email : req.body.email ,
+                password : bcrypt.hashSync(req.body.password, 10) ,
+                category: 'user', 
+                image : req.file.filename
+            }
+            //  agrego el nuevo usuario al array 
+            let newArray = [... users , newUser] ;
+        
+            //  escribo el JSON 
+            escribirJson (newArray) ;
+        
+            //  redirecciono la pagina principal
+            res.redirect ('/') ;
+        }
     },
 
     login : (req,res) => {
