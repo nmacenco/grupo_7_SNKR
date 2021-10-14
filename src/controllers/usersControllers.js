@@ -30,11 +30,13 @@ const usersController = {
     },
     store: (req,res) => {
         // creo una variable de errores 
-        let resultValidation = validationResult(req) ;
+        const resultValidation = validationResult(req) ;
 
-        console.log(resultValidation);
         if (resultValidation.errors.length > 0) {
-            res.render ('register' , {errors : resultValidation.mapped() , old : req.body})
+            return res.render ('register' , {
+                errors : resultValidation.mapped(), 
+                oldData : req.body
+            })
         } else {
 
             //  leo todo el JSON 

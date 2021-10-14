@@ -592,6 +592,9 @@ a {
     align-items:center;
     padding: 5px 0;
 }
+.errores-registro { 
+    color: #db0a3b;
+}
 .lafecha {
     width: 37%;
 }
@@ -628,6 +631,8 @@ a {
     padding:5px;
     width: 50%;
 }
+
+
 
 /* ------------------------------------------------------------------------ */
 /*                      ESTILOS PROFILE                                     */

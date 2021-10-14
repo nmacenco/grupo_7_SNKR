@@ -356,5 +356,15 @@
   "password": "$2a$10$anghGriybMlFqcjY3HMh1.x8Yr96oO6C.9e0EhlHAspYSB2s4681S",
   "category": "user",
   "image": "1632317702484_img_.png"
+ },
+ {
+  "id": 35,
+  "first_name": "Nicolas",
+  "last_name": "Macenco",
+  "user_name": " Nico ",
+  "email": "nicolas@hotmail.com",
+  "password": "$2a$10$2LSv5BWm8k7tZ5rGa5iyHemFU1jkOMxeh3VrPY9Ph1irvbtN2ECu.",
+  "category": "user",
+  "image": "1634170418256_img_.jpg"
  }
 ]

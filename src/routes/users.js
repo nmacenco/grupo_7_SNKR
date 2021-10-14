@@ -56,7 +56,7 @@ router.post ('/login', usersController.processToLogin)
 
 // REGISTER //
 router.get ('/register' , guestMiddleware , usersController.register);
-router.post('/register', validations , uploadFile.single('avatar'), usersController.store);
+router.post('/register' , uploadFile.single('avatar'), validations, usersController.store);
 
 // PROFILE  //
 
