@@ -40,7 +40,7 @@ const productsControllers = {
         // let products = leerJson()
         // res.render('productList', { products});
 
-        db.Users.findAll()
+        db.Size.findAll()
         .then( products => {
             res.send(products)
         })
