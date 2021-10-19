@@ -3,6 +3,9 @@ const fs = require ('fs') ;
 const { report } = require('../routes/main');
 const path = require ('path')
 
+const db = require('../../database/models');
+const sequelize = db.sequelize;
+
 //  LECTURA JSON    //
 function leerJson () {
     const productsFilePath = path.join (__dirname, '../data/products.json') ;
@@ -34,8 +37,13 @@ const productsControllers = {
         res.render ('productDetail', {productos: productosJSON, id}) ;
     },
     list : (req,res) => {
-        let products = leerJson()
-        res.render('productList', { products});
+        // let products = leerJson()
+        // res.render('productList', { products});
+
+        db.Users.findAll()
+        .then( products => {
+            res.send(products)
+        })
     },
     create : (req,res) => {
         
