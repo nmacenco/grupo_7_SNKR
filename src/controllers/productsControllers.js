@@ -4,6 +4,7 @@ const { report } = require('../routes/main');
 const path = require ('path')
 
 const db = require('../../database/models');
+const { Op } = require('sequelize/types');
 const sequelize = db.sequelize;
 
 //  LECTURA JSON    //
@@ -34,7 +35,10 @@ const productsControllers = {
     },
     detail : (req,res) => {
         let id = req.params.id;
-        res.render ('productDetail', {productos: productosJSON, id}) ;
+        db.Products.findByPk(id)
+            .then(function(producto){
+                return res.render('productDetail', {producto: producto}) ;        
+            })
     },
     list : (req,res) => {
         // let products = leerJson()
@@ -51,24 +55,25 @@ const productsControllers = {
     },
     store : (req,res) => {
         //  leo todo el JSON 
-        let products = leerJson () ;
+        //let products = leerJson () ;
         //  creo el nuevo producto 
-        let newProduct = {
-            id :   products.length + 1 ,
+        db.Products.create ({
+            //id_product :  products.length + 1 ,
             name : req.body.name ,
             brand : req.body.brand ,
             description : req.body.detail ,
-            gender : req.body.gender ,
-            size : req.body.size ,
-            color : req.body.color , 
+            gender: req.body.gender ,
+            category: 'list',
+            //size : req.body.size ,
+            //color : req.body.color , 
             price : req.body.price ,
             image : req.file.filename
-        }
+        });
         //  agrego el nuevo producto al array 
-        let newArray = [... products , newProduct] ;
+        //let newArray = [... products , newProduct] ;
 
         //  escribo el JSON 
-        escribirJson (newArray) ;
+        //escribirJson (newArray) ;
         //  redirecciono la pagina 
         res.redirect ('/products') ;
     },
@@ -79,24 +84,27 @@ const productsControllers = {
     },
     update : (req,res) => {
         //  leo todo el JSON 
-        let products = leerJson () ;
+        //let products = leerJson () ;
 
         //  producto editado 
-        let editProduct = products.map (function (prod) {
-            if (prod.id == req.params.id) {
-                prod.name = req.body.name ,
-                prod.brand = req.body.brand ,
-                prod.description = req.body.detail ,
-                prod.gender = req.body.gender ,
-                prod.size = req.body.size ,
-                prod.color = req.body.color , 
-                prod.price = req.body.price 
-                prod.image = req.file.filename
-            }
-            return prod
-        })
+            db.Products.update({
+                name = req.body.name ,
+                brand = req.body.brand ,
+                detail = req.body.detail ,
+                gender = req.body.gender ,
+                //size = req.body.size ,
+                //color = req.body.color, 
+                price = req.body.price, 
+                image = req.file.filename
+            },{
+                where: 
+                {
+                    id_product = req.params.id
+                }
+            });
+            
         //  escribir json 
-        escribirJson (editProduct) ;
+        //escribirJson (editProduct) ;
 
         //  redireccionar la vista al aparatado productos 
         res.redirect ('/products') ;
@@ -105,6 +113,12 @@ const productsControllers = {
     } ,
     delete: (req,res) => {
 
+        db.Products.destroy({
+            where:
+            {
+                id_product = req.params.id
+            }
+        })
         // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req
         let productosActualizados = productosJSON.filter(function(producto){
             return producto.id != req.params.id;
@@ -115,6 +129,14 @@ const productsControllers = {
 
         // Redirecciono al apartado de productos
         res.redirect('/products') ;
+    },
+    search: (req, res) => {
+        db.Products.findOne({
+            where:
+            {
+                name: {[Op.Like]: '%'+req.params.search+'%'} 
+            }
+        })
     }
 }
 

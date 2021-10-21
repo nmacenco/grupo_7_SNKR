@@ -20,10 +20,7 @@
         
         <section class="producto">
             
-            <% productos.forEach(function(producto) { %>
-                <% if(producto.id == id) { %>
-
-                <i class="fas fa-arrow-left"></i>
+                            <i class="fas fa-arrow-left"></i>
                 <img  class="fotoProducto" src="/images/products/<%= producto.image%>" alt="altas jordan 1">
                 <i class="fas fa-arrow-right"></i>
             
@@ -32,7 +29,7 @@
 
                 <div class="cajaBoton">
                     <div class="editarYBorrarProducto">
-                        <a href="/products/edit/<%= producto.id %>" class="botonEditarProducto">EDITAR PRODUCTO</a>
+                        <a href="/products/edit/<%= producto.id_product %>" class="botonEditarProducto">EDITAR PRODUCTO</a>
                             <form action="/products/<%= producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                                 <button type="submit" class="botonEliminarProducto">ELIMINAR PRODUCTO</button>
                             </form>
@@ -86,8 +83,7 @@
 
         </section>
         
-        <% } %>
-        <% }); %>
+
 
         <p class="tituloRecomendados">RECOMENDADOS PARA VOS</p>
 
