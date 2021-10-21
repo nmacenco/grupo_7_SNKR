@@ -120,7 +120,7 @@ const productsControllers = {
         res.redirect('/products');
     },
     search: (req, res) => {
-        db.Products.findOne({
+        db.Products.findAll({
             where:
             {
                 name: {[Op.Like]: '%'+req.params.search+'%'} 
