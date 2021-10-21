@@ -1,19 +1,15 @@
 //  REQUIRES    //
 const fs = require ('fs') ;
-const path = require ('path')
+const path = require ('path') ;
+const db = require('../../database/models');
+const sequelize = db.sequelize;
 
-//  LECTURA JSON    //
-function leerJson () {
-    const productsFilePath = path.join (__dirname, '../data/products.json') ;
-    const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8')) ;
-    return products ;
-}
-//  variable de todos los productos 
-const productosJSON = leerJson();
 let mainController = {
     home : function(req,res) {
-
-        res.render ('index', {products : productosJSON} );
+        db.Products.findAll()
+        .then((products) => {
+            res.render ('index', {products : products} );
+        })
     },
 }
 
