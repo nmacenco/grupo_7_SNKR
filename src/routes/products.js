@@ -35,15 +35,17 @@ router.get ('/:id', productsControllers.detail);
 //  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);
 
+// LISTADO DE PRODUCTOS POR SEARCH
+router.get('/search', productsControllers.search);
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
-router.get ('/edit/:id' , productsControllers.edit) 
+router.get ('/edit/:id' , productsControllers.edit); 
 
 //  ACCION DE EDITAR PRODUCTO  //
-router.put('/edit/:id' ,upLoadFile.single('image'),  productsControllers.update) 
+router.put('/edit/:id' ,upLoadFile.single('image'),  productsControllers.update);
 
 //  ACCION DE BORRADO   //
-router.delete('/:id', productsControllers.delete)
+router.delete('/:id', productsControllers.delete);
 
 
 
