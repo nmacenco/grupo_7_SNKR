@@ -40,10 +40,10 @@ router.get('/', productsControllers.list);
 router.get ('/edit/:id' , productsControllers.edit) 
 
 //  ACCION DE EDITAR PRODUCTO  //
-router.put ('/edit/:id' ,upLoadFile.single('image'),  productsControllers.update) 
+router.put('/edit/:id' ,upLoadFile.single('image'),  productsControllers.update) 
 
 //  ACCION DE BORRADO   //
-router.delete ('/:id', productsControllers.delete)
+router.delete('/:id', productsControllers.delete)
 
 
 
