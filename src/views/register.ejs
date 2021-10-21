@@ -62,23 +62,7 @@
                     <div class="errores-registro"><%= errors.apellido.msg %> </div>
                 <% } %>
 
-                <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="nacimiento">FECHA DE NACIMIENTO</label>
-                    <input class="inputsRegistro" type="date" name="nacimiento" id="nacimiento"  class="lafecha" value=" <%= locals.oldData ? oldData.nacimiento : null %> ">
-                </div>
-                <% if (locals.errors && errors.nacimiento) { %>
-                    <div class="errores-registro"><%= errors.nacimiento.msg %> </div>
-                <% } %>
 
-                <div class="etiqueta-sexo">
-                    <label class="labelsRegistro" for="sexo">SEXO</label>
-                    <div class="myh">
-                        <label>H</label>
-                        <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="H">
-                        <label>M</label>
-                        <input class="inputsRegistro" type="radio" name="sexo" id="sexo" value="M">
-                    </div>
-                </div>
                
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="email">E-MAIL</label>

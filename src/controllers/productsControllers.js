@@ -4,7 +4,7 @@ const { report } = require('../routes/main');
 const path = require ('path')
 
 const db = require('../../database/models');
-const { Op } = require('sequelize/types');
+// const { Op } = require('sequelize/types');
 const sequelize = db.sequelize;
 
 //  LECTURA JSON    //
@@ -88,18 +88,18 @@ const productsControllers = {
 
         //  producto editado 
             db.Products.update({
-                name = req.body.name ,
-                brand = req.body.brand ,
-                detail = req.body.detail ,
-                gender = req.body.gender ,
-                //size = req.body.size ,
-                //color = req.body.color, 
-                price = req.body.price, 
-                image = req.file.filename
+                name : req.body.name ,
+                brand : req.body.brand ,
+                detail : req.body.detail ,
+                gender : req.body.gender ,
+                //size : req.body.size ,
+                //color : req.body.color, 
+                price : req.body.price, 
+                image : req.file.filename
             },{
                 where: 
                 {
-                    id_product = req.params.id
+                    id_product : req.params.id
                 }
             });
             
@@ -116,7 +116,7 @@ const productsControllers = {
         db.Products.destroy({
             where:
             {
-                id_product = req.params.id
+                id_product : req.params.id
             }
         })
         // Filter que devuelve todo el array sin el producto que tiene el mismo ID pasado por req

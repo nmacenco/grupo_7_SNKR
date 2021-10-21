@@ -27,7 +27,6 @@ const validations = [
    body('confirmacionPassword').notEmpty().withMessage('Confirma la contraseña por favor'),
    body('nombre').notEmpty().withMessage('Ingresa un nombre por favor'),
    body('apellido').notEmpty().withMessage('Ingresa un apellido por favor'),
-   body('nacimiento').isDate().withMessage('Ingresa una fecha de nacimiento por favor').notEmpty(), 
    body('email').isEmail().withMessage('Ingresa un email valido').notEmpty(), 
    body('avatar').custom((value, { req }) => {
 		let file = req.file;
