@@ -55,7 +55,7 @@ const productsControllers = {
     },
     create : (req,res) => {
         
-      res.render ('abmProductos-create')
+      res.render('abmProductos-create');
     },
     store : (req,res) => {
         
@@ -71,14 +71,20 @@ const productsControllers = {
             //color : req.body.color , 
             price : req.body.price ,
             image : req.file.filename
+        })
+        .then(function(resultado){
+            res.redirect('/products');
         });
-        
-        res.redirect ('/products') ;
     },
     edit: (req, res) => {
-        let products = findById(req.params.id) ;
+        let id = req.params.id;
+        
+        // Utilizo la PK ID para traer solo el producto que quiero
+        db.Products.findByPk(id)
+            .then(function(products){
+                return res.render('abmProductos-edit' , {productToEdit : products}) ;        
+            })
 
-        res.render ('abmProductos-edit' , {productToEdit : products})
     },
     update : (req,res) => {
  
@@ -98,11 +104,14 @@ const productsControllers = {
                 {
                     id_product : req.params.id
                 }
-            });
+            })
+            .then(function(resultado){
+                res.redirect('/products');
+            })
+
             
       
         //  Redirecciono a la vista de productos 
-        res.redirect ('/products') ;
 
 
     } ,
@@ -114,10 +123,12 @@ const productsControllers = {
             {
                 id_product : req.params.id
             }
-        });
+        })
+        .then(function(resultado){
+            res.redirect('/products');
+        })
         
         // Redirecciono al apartado de productos
-        res.redirect('/products');
     },
     search: (req, res) => {
         db.Products.findAll({
