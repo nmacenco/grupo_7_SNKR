@@ -64,14 +64,20 @@ const productsControllers = {
             //id_product :  products.length + 1 , NO ES NECESARIO
             name : req.body.name ,
             brand : req.body.brand ,
-            description : req.body.detail ,
+            detail : req.body.detail ,
             gender: req.body.gender ,
             category: 'list',
-            //size : req.body.size ,
-            //color : req.body.color , 
+            size : req.body.size ,
+            color : req.body.color , 
             price : req.body.price ,
             image : req.file.filename
-        })
+        },{
+            include: [
+             "colors",
+             'sizes'
+            ]
+            }
+        )
         .then(function(resultado){
             res.redirect('/products');
         });
@@ -80,8 +86,15 @@ const productsControllers = {
         let id = req.params.id;
         
         // Utilizo la PK ID para traer solo el producto que quiero
-        db.Products.findByPk(id)
+        
+        db.Products.findByPk(id , {
+            include: [
+             "colors",
+             'sizes'
+            ]
+            })
             .then(function(products){
+                
                 return res.render('abmProductos-edit' , {productToEdit : products}) ;        
             })
 

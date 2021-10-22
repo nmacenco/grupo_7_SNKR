@@ -26,4 +26,15 @@ Mauri comunico que habia estado trabajando en el formulario de registro y que pe
 Reunion 23/09/2021:
 Fue durante la clase. Se charlo un poco respecto a como se realizaron los middlewares y se termino la retro.
 
+Sprint 6 : 
+
+Reunion 04/10/2021:
+Dividimos las tareas a realizar. 
+
+Reunion 14/10/2021:
+Mauri aviso que estaba casi terminando la base de datos para que pudieramos seguir adelante con el resto de los pasos. Nico dijo que realizaria las validaciones solicitadas en el Feedback del Sprint anterior.
+
+Reunion 19/10/2021:
+Redistribuimos las tareas porque no llegabamos con las cosas que teniamos que hacer. 
+
 Respecto a la daily optamos por no realizarla ya que hacemos el seguimiento por el grupo de whatsapp, consultandonos si pudimos avanzar o si alguno tuvo problemas con algo. 
