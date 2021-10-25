@@ -55,14 +55,14 @@ module.exports = (sequelize , dataTypes) => {
             timestamps : false 
         }),
         Products.belongsToMany(models.Colors , { 
-            as: 'colors' ,
+            // as: 'colors' ,
             through : 'color_products',
             foreignKey : 'id_product' ,
             otherKey : 'id_color',
             timestamps : false 
         }),
         Products.belongsToMany(models.Size , { 
-            as: 'sizes' ,
+            // as: 'sizes' ,
             through : 'size_products',
             foreignKey : 'id_product' ,
             otherKey : 'id_size',

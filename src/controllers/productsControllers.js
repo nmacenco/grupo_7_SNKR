@@ -67,20 +67,22 @@ const productsControllers = {
             detail : req.body.detail ,
             gender: req.body.gender ,
             category: 'list',
-            size : req.body.size ,
-            color : req.body.color , 
+            Sizes : [{ size : req.body.size }] ,
+            Colors : [{ color : req.body.color}] , 
             price : req.body.price ,
             image : req.file.filename
         },{
             include: [
-             "colors",
-             'sizes'
+             'Colors',
+             'Sizes'
             ]
             }
         )
+
         .then(function(resultado){
             res.redirect('/products');
-        });
+        })
+        .catch()
     },
     edit: (req, res) => {
         let id = req.params.id;
@@ -89,8 +91,8 @@ const productsControllers = {
         
         db.Products.findByPk(id , {
             include: [
-             "colors",
-             'sizes'
+             "Colors",
+             'Sizes'
             ]
             })
             .then(function(products){

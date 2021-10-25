@@ -23,7 +23,7 @@ module.exports = (sequelize,dataTypes) => {
 
     Colors.associate = function (models) {
         Colors.belongsToMany(models.Products , { 
-            as: 'colors' ,
+            // as: 'colors' ,
             through : 'color_products',
             foreignKey : 'id_color' ,
             otherKey : 'id_product',
