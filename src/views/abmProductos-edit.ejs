@@ -9,7 +9,7 @@
     </header>
 
     <section class="seccion-abmProductos">
-        <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data" method="POST" class="formulario-abmProductos">
+        <form action="/products/edit/<%= productToEdit.id_product %>?_method=PUT" enctype="multipart/form-data" method="POST" class="formulario-abmProductos">
                 <h3 class="título-abmProductos">EDICION DE PRODUCTOS</h3>
                 <div class="etiqueta-abmProductos">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
@@ -29,11 +29,11 @@
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="size">TALLE:</label>
-                    <input type="number" name="size" id="size" value="<%= productToEdit.Sizes[0].size %>"  required> 
+                    <input type="number" name="size" id="size" value="<%= productToEdit.sizes[0].size %>"  required> 
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="color">COLOR:</label>
-                    <input type="text" name="color" id="color" value="<%= productToEdit.Colors[0].color %>"  required>
+                    <input type="text" name="color" id="color" value="<%= productToEdit.colors[0].color %>"  required>
                 </div>
                 <div class="etiqueta-abmProductos">
                     <label for="price">PRECIO</label>

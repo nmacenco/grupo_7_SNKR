@@ -6,7 +6,7 @@ const sequelize = db.sequelize;
 
 let mainController = {
     home : function(req,res) {
-        db.Products.findAll()
+        db.Product.findAll()
         .then((products) => {
             res.render ('index', {products : products} );
         })

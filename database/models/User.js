@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Users' ;
+    let alias = 'User' ;
     let cols = {
         id_user : { 
             type : dataTypes.INTEGER(11) ,
@@ -42,11 +42,11 @@ module.exports = (sequelize, dataTypes) => {
         timestamps : false 
     }
 
-    const Users = sequelize.define(alias, cols, config) ;
+    const User = sequelize.define(alias, cols, config) ;
 
-    Users.associate = function (models) {
-        Users.belongsToMany(models.Products, {
-            as: 'users' ,
+    User.associate = function (models) {
+        User.belongsToMany(models.Product, {
+            as: 'products' ,
             through : 'products_users',
             foreignKey : 'id_user' ,
             otherKey : 'id_product',
@@ -54,5 +54,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    return Users 
+    return User
 }

@@ -40,7 +40,7 @@ const usersController = {
                 oldData : req.body
             })
         } else {
-            db.Users.create({
+            db.User.create({
                 first_name : req.body.nombre,
                 last_name: req.body.apellido,
                 username : req.body.usuario ,
@@ -63,7 +63,7 @@ const usersController = {
     processToLogin : (req,res) => {
         //  busco el mail que se ingreso en el formulario para ver si esta en la base de datos
         
-        db.Users.findOne({
+        db.User.findOne({
             where : { 
                 email : req.body.mail 
             }
