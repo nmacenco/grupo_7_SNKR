@@ -53,40 +53,45 @@ const productsControllers = {
             res.render('productList', { products })
         })
     },
-    create : (req,res) => {
+    create : async (req,res) => {
+        let colors = await db.Color.findAll()
+        let sizes = await db.Size.findAll()
         
-      res.render('abmProductos-create');
+        res.render('abmProductos-create' , {colors, sizes});
     },
-    store : (req,res) => {
+    store : async (req,res) => {
         
         //  Creo el nuevo producto 
-        db.Product.create ({
+        let productCreate = await db.Product.create ({
             //id_product :  products.length + 1 , NO ES NECESARIO
             name : req.body.name ,
             brand : req.body.brand ,
             detail : req.body.detail ,
             gender: req.body.gender ,
             category: 'list',
-            sizes : [{ size : req.body.size }] ,
-            colors : [{ color : req.body.color}] , 
+            //sizes : [{ size : req.body.size }] ,
+            //colors : [{ color : req.body.color}] , 
             price : req.body.price ,
             image : req.file.filename
-        },{
-            include: [
-             'colors',
-             'sizes'
-            ]
-            }
+        }
+        // ,{
+        //     include: [
+        //      'colors',
+        //      'sizes'
+        //     ]
+        //     }
         )
-
-        .then(function(resultado){
-            res.redirect('/products');
-        })
-        .catch()
+        await productCreate.setColors(req.body.color);
+        await productCreate.setSizes(req.body.size);
+        res.redirect('/products');
+        // .then(function(resultado){
+        // })
+        // .catch()
     },
-    edit: (req, res) => {
+    edit: async (req, res) => {
         let id = req.params.id;
-        
+        let colors = await db.Color.findAll()
+        let sizes = await db.Size.findAll()
         // Utilizo la PK ID para traer solo el producto que quiero
         
         db.Product.findByPk(id , {
@@ -97,24 +102,24 @@ const productsControllers = {
             })
             .then(function(products){
                 
-                return res.render('abmProductos-edit' , {productToEdit : products}) ;        
+                return res.render('abmProductos-edit' , {productToEdit : products , colors , sizes}) ;        
             })
 
     },
     update : async (req,res, next) => {
  
-
+        
         //  Edito el producto actualizandolo 
-            await db.Product.update({
-                name : req.body.name ,
-                brand : req.body.brand ,
-                detail : req.body.detail ,
-                gender : req.body.gender ,
-                //size : req.body.size ,
-                //color : req.body.color, 
-                price : req.body.price, 
-                image : req.file.filename
-            },{
+        await db.Product.update({
+            name : req.body.name ,
+            brand : req.body.brand ,
+            detail : req.body.detail ,
+            gender : req.body.gender ,
+            //size : req.body.size ,
+            //color : req.body.color, 
+            price : req.body.price, 
+            image : req.file.filename
+        },{
                 where: 
                 {
                     id_product : req.params.id
