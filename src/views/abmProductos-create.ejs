@@ -27,32 +27,42 @@
                     <label for="gender">GENERO:</label>
                     <input type="text" name="gender" id="gender" required>
                 </div>
+                <div class="etiqueta-abmProductos">
+                    <label for="price">PRECIO</label>
+                    <input type="number" name="price" id="price" required> 
+                </div>
                 <!-- <div class="etiqueta-abmProductos">
                     <label for="size">TALLE:</label>
                     <input type="number" name="size" id="size" required> 
                 </div> -->
-                <div class="etiqueta-abmProductos">
-                    <p>TALLE:</p>
-                    <%sizes.forEach(size =>{ %>
-                        <p><input type="checkbox" name="size" id="size"  class="inputform" value="<%= size.id_size %>"><%= size.size %></p>
-                    <% }) %>
+                <div class="etiqueta-abmProductos-2">
+                    <label for="">TALLE:</label>
+                        <div>
+                            <%sizes.forEach(size =>{ %>
+                                <p>
+                                    <input type="checkbox" name="size" id="size"  class="input-checkbox" value="<%= size.id_size %>">
+                                    <%= size.size %>
+                                </p>
+                            <% }) %>
+                        </div>
                 <p ></p>
                 </div>
-                <div class="etiqueta-abmProductos">
-                    <p>COLOR:</p>
-                    <%colors.forEach(color =>{ %>
-                        <p><input type="checkbox" name="color" id="color"  class="inputform" value="<%= color.id_color %>"><%= color.color %></p>
-                    <% }) %>
-                <p ></p>
+                <div class="etiqueta-abmProductos-2">
+                    <label for="">COLOR:</label>
+                    <div>
+                        <%colors.forEach(color =>{ %>
+                            <p>
+                                <input type="checkbox" name="color" id="color"  class="inputform" value="<%= color.id_color %>">
+                                <%= color.color %>
+                            </p>
+                        <% }) %>
+                    <p ></p>
+                    </div>
                 </div>
                 <!-- <div class="etiqueta-abmProductos">
                     <label for="color">COLOR:</label>
                     <input type="text" name="color" id="color" required>
                 </div> -->
-                <div class="etiqueta-abmProductos">
-                    <label for="price">PRECIO</label>
-                    <input type="number" name="price" id="price" required> 
-                </div>
                 <div class="etiqueta-abmProductos">
                     <label>SELECCIONAR IMAGENES:</label>
                     <input type="file" name="image" accept="jpg" multiple >

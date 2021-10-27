@@ -126,7 +126,6 @@ const productsControllers = {
                 }
             })
             let productFound = await db.Product.findByPk(req.params.id);
-            console.log(productFound);
             if(productFound){
                 await productFound.setColors(req.body.color);
                 await productFound.setSizes(req.body.size);
