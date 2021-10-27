@@ -30,7 +30,7 @@ router.post ('/new/' , upLoadFile.single('image') , productsControllers.store)
 router.get ('/cart', productsControllers.cart);
 
 //  DETALLE DE PRODUCTO PARTICULAR  //
-router.get ('/:id', productsControllers.detail);
+//router.get ('/:id', productsControllers.detail);
 
 //  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);

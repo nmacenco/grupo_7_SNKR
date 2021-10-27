@@ -4,7 +4,8 @@ const { report } = require('../routes/main');
 const path = require ('path')
 
 const db = require('../../database/models');
-// const { Op } = require('sequelize/types');
+const Op = db.Sequelize.Op;
+//const { Op } = require('sequelize/types');
 const sequelize = db.sequelize;
 
 /*****************************  JSON (NO SE UTILIZA MÁS) ****************************
@@ -158,12 +159,18 @@ const productsControllers = {
         
         // Redirecciono al apartado de productos
     },
-    search: (req, res) => {
+    search: async (req, res) => {
+
+        let buscado = req.query.search;
+        
         db.Product.findAll({
-            where:
+              where:
             {
-                name: {[Op.Like]: '%'+req.params.search+'%'} 
+                name: { [Op.like]:'%'+buscado+'%' }
             }
+        })
+        .then( products => {
+            res.render('productList', {products});
         })
     }
 }
