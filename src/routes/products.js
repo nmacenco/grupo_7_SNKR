@@ -29,14 +29,16 @@ router.post ('/new/' , upLoadFile.single('image') , productsControllers.store)
 // CARRITO DE PRODUCTOS //
 router.get ('/cart', productsControllers.cart);
 
+// LISTADO DE PRODUCTOS POR SEARCH
+router.get('/search', productsControllers.search);
+
 //  DETALLE DE PRODUCTO PARTICULAR  //
-//router.get ('/:id', productsControllers.detail);
+router.get ('/:id', productsControllers.detail);
 
 //  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);
 
-// LISTADO DE PRODUCTOS POR SEARCH
-router.get('/search', productsControllers.search);
+
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
 router.get ('/edit/:id' , productsControllers.edit); 
