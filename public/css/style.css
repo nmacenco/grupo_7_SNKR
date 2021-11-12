@@ -842,6 +842,7 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex : 1 ;
 
 }
 .etiqueta-abmProductos label {
@@ -874,11 +875,26 @@ a {
     padding: 3px 10px;
     margin-bottom: 10px;
     max-width: 200px;
+    
 }
 
 .botones {
     display: flex;
     justify-content: center ;
+}
+
+.error-input {
+    color: #FF2442 ;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+}
+
+.alert-err {
+    border: solid #FF2442;
+}
+.is-ok {
+    border: solid rgb(146, 207, 53);
 }
 
 /* ------------------------------------------------------------------------ */

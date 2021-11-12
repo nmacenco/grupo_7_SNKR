@@ -4,7 +4,7 @@
   "description": "Nuestro sitio se centrará en la comercialización de zapatillas exclusivas y/o importadas, brindando productos completamente originales.\r El producto está dirigido a un público conocedor del mercado, coleccionista del tipo de calzado deportivo, apuntado siempre a modelos exclusivos. Dedicados a la cultura SneakerHead.",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon src/app.js"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",

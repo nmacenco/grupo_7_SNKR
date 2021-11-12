@@ -13,28 +13,40 @@
                 <h3 class="título-abmProductos">EDICION DE PRODUCTOS</h3>
                 <div class="etiqueta-abmProductos">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
-                    <input type="text" name="name" id="name" value="<%= productToEdit.name %>" required>
+                    <input type="text" name="name" id="name" value="<%= productToEdit.name %>" >
+                    <!-- <div class=" error-input"></div> -->
                 </div>
+                <span class="name error-input"></span>
+
                 <div class="etiqueta-abmProductos">
                     <label for="brand">MARCA:</label>
-                    <input type="text" name="brand" id="brand" value="<%= productToEdit.brand %>"  required>
+                    <input type="text" name="brand" id="brand" value="<%= productToEdit.brand %>"  >
+                    <!-- <div class=" error-input"></div> -->
                 </div>
+                <span class="brand error-input"></span>
+
                 <div class="etiqueta-abmProductos">
                     <label for="detail">DESCRIPCION:</label>
-                    <input type="text" name="detail" id="detail" value="<%= productToEdit.detail %>"  required>
+                    <input type="text" name="detail" id="detail" value="<%= productToEdit.detail %>" >
+                    <!-- <div class=" error-input"></div> -->
                 </div>
+                <span class="detail error-input"></span>
+
                 <div class="etiqueta-abmProductos">
                     <label for="gender">GENERO:</label>
-                    <input type="text" name="gender" id="gender" value="<%= productToEdit.gender %>"  required>
+                    <input type="text" name="gender" id="gender" value="<%= productToEdit.gender %>"  >
+                    <!-- <div class=" error-input"></div> -->
                 </div>
+                <span class="gender error-input"></span>
+
                 <div class="etiqueta-abmProductos">
                     <label for="price">PRECIO</label>
-                    <input type="number" name="price" id="price" value="<%= productToEdit.price %>"  required> 
+                    <input type="number" name="price" id="price" value="<%= productToEdit.price %>"  > 
+                    <!-- <div class=" error-input"></div> -->
                 </div>
-                <!-- <div class="etiqueta-abmProductos">
-                    <label for="size">TALLE:</label>
-                    <input type="number" name="size" id="size" value="< productToEdit.sizes[0].size %>"  required> 
-                </div> -->
+                <span class="price error-input"></span>
+
+                
                 <div class="etiqueta-abmProductos-2">
                     <label for="">TALLE:</label>
                     <div>
@@ -42,7 +54,7 @@
                             <p>
                                 <input type="checkbox" name="size" id="size"  class="input-checkbox" value="<%= size.id_size %>" <%=  (size.size == productToEdit.sizes[0].size ) ? "checked" : "" %> > <%= size.size %>
                             </p>
-                        <% }) %>
+                            <% }) %>
                             <p ></p>
                     </div>
                 </div>
@@ -54,32 +66,31 @@
                                 <input type="checkbox" name="color" id="color"  class="input-checkbox" value="<%= color.id_color %>" <%= (color.color == productToEdit.colors[0].color) ? 'checked' : ''  %>  >
                                 <%= color.color %>
                             </p>
-                        <% }) %>
+                            <% }) %>
+                        </div>
+                        <p ></p>
                     </div>
-                    <p ></p>
-                </div>
-                <!--
-                <div class="etiqueta-abmProductos">
-                    <label for="color">COLOR:</label>
-                    <input type="text" name="color" id="color" value="< productToEdit.colors[0].color %>"  required>
-                </div> -->
-                <div class="etiqueta-abmProductos">
-                    <label>SELECCIONAR IMAGENES:</label>
-                    <input type="file" name="image" accept="jpg" value="<%= productToEdit.image %>"  multiple >
-                </div>
-                <div class="botones">
-
-                    <div class="boton">
-                        <button type="submit">EDITAR</button>
+                    
+                    <div class="etiqueta-abmProductos">
+                        <label>SELECCIONAR IMAGEN:</label>
+                        <input  class="image" type="file" name="image" accept="jpg" value="<%= productToEdit.image.filename %>" >
+                        <!-- <div class=" error-input"></div> -->
                     </div>
-                </div>
-            </form>
-        </section>
-    </main>
+                    <span class="image error-input"></span>
 
+                    <div class="botones">
+                        
+                        <div class="boton">
+                            <button type="submit">EDITAR</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
     <footer>
         <%- include ('./partials/footer') %>
     </footer>
-
+    <script src="/js/abmProducts-edit.js"></script>
 </body>
 </html>

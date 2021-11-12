@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <%- include ('./partials/head') %>
+
+
 </head>
 <body>
     <header >
@@ -11,62 +13,66 @@
     <section class="seccion-abmProductos">
         <form action="/products/new" enctype="multipart/form-data" method="POST" class="formulario-abmProductos">
                 <h3 class="título-abmProductos">CREACION DE PRODUCTOS</h3>
-                <div class="etiqueta-abmProductos">
+                <div class="etiqueta-abmProductos ">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" autofocus>
                 </div>
-                <div class="etiqueta-abmProductos">
+                <span class="name error-input"></span>
+                <div class="etiqueta-abmProductos ">
                     <label for="brand">MARCA:</label>
-                    <input type="text" name="brand" id="brand" required>
+                    <input type="text" name="brand" id="brand" >
                 </div>
+                <span class="brand error-input"></span>
+                <div class="brand"></div>
                 <div class="etiqueta-abmProductos">
                     <label for="detail">DESCRIPCION:</label>
-                    <input type="text" name="detail" id="detail" required>
+                    <input type="text" name="detail" id="detail">
                 </div>
+                <span class="detail error-input"></span>
                 <div class="etiqueta-abmProductos">
                     <label for="gender">GENERO:</label>
-                    <input type="text" name="gender" id="gender" required>
+                    <input type="text" name="gender" id="gender">
                 </div>
+                <span class="gender error-input"></span>
                 <div class="etiqueta-abmProductos">
                     <label for="price">PRECIO</label>
-                    <input type="number" name="price" id="price" required> 
+                    <input type="number error-input" name="price" id="price"> 
                 </div>
-                <!-- <div class="etiqueta-abmProductos">
-                    <label for="size">TALLE:</label>
-                    <input type="number" name="size" id="size" required> 
-                </div> -->
+                <span class="price error-input"></span>
+                
                 <div class="etiqueta-abmProductos-2">
                     <label for="">TALLE:</label>
-                        <div>
-                            <%sizes.forEach(size =>{ %>
-                                <p>
-                                    <input type="checkbox" name="size" id="size"  class="input-checkbox" value="<%= size.id_size %>">
-                                    <%= size.size %>
-                                </p>
+                    <div>
+                        <%sizes.forEach(size =>{ %>
+                            <p>
+                                <input type="checkbox" name="size" id="size"  class="input-sizes" value="<%= size.id_size %>">
+                                <%= size.size %>
+                            </p>
                             <% }) %>
-                        </div>
-                <p ></p>
+                    </div>
                 </div>
+                <span class="size error-input"></span>
+
+
                 <div class="etiqueta-abmProductos-2">
                     <label for="">COLOR:</label>
                     <div>
                         <%colors.forEach(color =>{ %>
                             <p>
-                                <input type="checkbox" name="color" id="color"  class="inputform" value="<%= color.id_color %>">
+                                <input type="checkbox" name="color" id="color"  class="inputform input-colors" value="<%= color.id_color %>">
                                 <%= color.color %>
                             </p>
                         <% }) %>
-                    <p ></p>
                     </div>
                 </div>
-                <!-- <div class="etiqueta-abmProductos">
-                    <label for="color">COLOR:</label>
-                    <input type="text" name="color" id="color" required>
-                </div> -->
+                <span class="color error-input"></span>
+
+
                 <div class="etiqueta-abmProductos">
-                    <label>SELECCIONAR IMAGENES:</label>
-                    <input type="file" name="image" accept="jpg" multiple >
+                    <label>SELECCIONAR IMAGEN:</label>
+                    <input class="image" type="file" name="image" accept="jpg" >
                 </div>
+                <span class="image error-input"></span>
                 <div class="botones">
                     <div class="boton">
                         <button type="submit">CREAR</button>
@@ -80,6 +86,8 @@
     <footer>
         <%- include ('./partials/footer') %>
     </footer>
+    <script src="/js/abmProducts-create.js">
 
+    </script>
 </body>
 </html>
