@@ -891,10 +891,10 @@ a {
 }
 
 .alert-err {
-    border: solid #FF2442;
+    border: solid 2px #FF2442;
 }
 .is-ok {
-    border: solid rgb(146, 207, 53);
+    border: solid 2px rgb(146, 207, 53);
 }
 
 /* ------------------------------------------------------------------------ */

@@ -21,21 +21,29 @@
                 <div class="detalle-formulario">
                     <label for="mail">E-mail:</label>
                     <input class="detalle-formulario-input" type="mail" name="mail" id="mail" required>
+
                     <% if (locals.errors && errors.email) {  %>
                         <div class="error-login">
                             <%= errors.email.msg %> 
                         </div>
                     <% } %>
                 </div>
+                
+                <span class="mailLoginErr error-input"></span>
+
                 <div class="detalle-formulario">
                     <label for="password">Password:</label>
                     <input class="detalle-formulario-input" type="password" name="password" id="password" >
+
                     <% if ( locals.errors && errors.password) {  %>
                         <div class="error-login">
                             <%= errors.password.msg %> 
                         </div>
                     <% } %>
                 </div>
+
+                <span class="passwordLoginErr error-input"></span>
+                
                 <div class="detalle-formulario">
                     <label for="rememberUser">Recordar mi usuario</label>
                     <input class="cajitaRecordarUsiario" type="checkbox" name="rememberUser" id="rememberUser" >
@@ -62,6 +70,6 @@
         <%- include ('./partials/footer') %>
     </footer>
 
-
+    <script src="/js/login.js"></script>
 </body>
 </html>
