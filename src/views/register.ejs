@@ -17,18 +17,19 @@
                 </div>
                 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="usuario">USUARIO</label>
+                    <label class="labelsRegistro" for="usuario">Usuario</label>
                     <input class="inputsRegistro" type="text" name="usuario" id="usuario" value="<%= locals.oldData ? oldData.usuario : null %> " >
                 </div>
+
+                <span class="usuarioErr error-input"></span>
 
                 <% if (locals.errors && errors.usuario) { %>
                     <div class="errores-registro"><%= errors.usuario.msg %> </div>
                 <% } %>
 
 
-
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="password">CONTRASEÑA</label>
+                    <label class="labelsRegistro" for="password">Contraseña</label>
                     <input class="inputsRegistro" type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : null %>">
                 </div>
 
@@ -41,9 +42,11 @@
 
 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="confirmacionPassword">REPITA LA CONTRASEÑA</label>
+                    <label class="labelsRegistro" for="confirmacionPassword">Repita la contraseña</label>
                     <input class="inputsRegistro" type="password" name="confirmacionPassword" id="rep_password" value="<%= locals.oldData ? oldData.confirmacionPassword : null %>" >
                 </div>
+
+                <span class="confirmacionPasswordErr error-input"></span>
 
                 <% if (locals.errors && errors.confirmacionPassword) { %>
                     <div class="errores-registro"><%= errors.confirmacionPassword.msg %> </div>
@@ -53,7 +56,7 @@
 
 
                <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="nombre">NOMBRE</label>
+                    <label class="labelsRegistro" for="nombre">Nombre</label>
                     <input class="inputsRegistro" type="text" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" >
                 </div>
 
@@ -67,7 +70,7 @@
 
 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="apellido">APELLIDO</label>
+                    <label class="labelsRegistro" for="apellido">Apellido</label>
                     <input class="inputsRegistro" type="text" name="apellido" id="apellido" value="<%= locals.oldData ? oldData.apellido : null %>" >
                 </div>
 
@@ -80,7 +83,7 @@
 
                
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro" for="email">E-MAIL</label>
+                    <label class="labelsRegistro" for="email">E-mail</label>
                     <input class="inputsRegistro" type="email" name="email" id="email" value=" <%= locals.oldData ? oldData.email : null %> ">
                 </div>
 
@@ -93,7 +96,7 @@
 
 
                 <div class="etiqueta-ingreso">
-                    <label class="labelsRegistro"> AVATAR </label>
+                    <label class="labelsRegistro">Avatar</label>
                     <input class="inputsRegistro" type="file" name="avatar" accept=".jpg,.png,.jfif">
                 </div>
                 
