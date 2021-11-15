@@ -24,29 +24,7 @@ const productsControllers = require ('../controllers/productsControllers')
 
 /////////////////       EXPRESS VALIDATOR       ///////////////
 
-// //Validación CUSTOM para las imagenes, ya que express validator solo valida strings.
-// function validacionImagenes (archivo){
-//     let extension = (path.extname(archivo)).toLowerCase();
-
-//     switch(extension) {
-//         case '.jpg': 
-//             return 'ok'; 
-//             break;
-//         case '.jpeg': 
-//             return 'ok'; 
-//             break;
-//         case '.png': 
-//             return 'ok'; 
-//             break;
-//         case '.gif': 
-//             return 'ok'; 
-//             break;
-
-//         default: return false
-//     }
-// }
-
-let validacionesEditProducts = [
+const validacionesProducts = [
     body('name')
         .notEmpty().withMessage('Por favor ingresa el nombre del producto.')
         .isLength({min:5, max: undefined}).withMessage('El nombre del producto debe tener como mínimo 5 caracteres.'),
@@ -70,10 +48,11 @@ let validacionesEditProducts = [
 ];
 
 
+
 /////////////////////////       RUTAS       ////////////////////////// 
 //  FORMULARIO DE CREACION DE PRODUCTOS //
 router.get ('/create' , productsControllers.create) 
-router.post ('/new/' , upLoadFile.single('image'), productsControllers.store) 
+router.post ('/new/' , upLoadFile.single('image'), validacionesProducts, productsControllers.store) 
 
 // CARRITO DE PRODUCTOS //
 router.get ('/cart', productsControllers.cart);
@@ -88,10 +67,10 @@ router.get ('/:id', productsControllers.detail);
 router.get('/', productsControllers.list);
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
-router.get ('/edit/:id' , validacionesEditProducts, productsControllers.edit); 
+router.get ('/edit/:id', productsControllers.edit); 
 
 //  ACCION DE EDITAR PRODUCTO  //
-router.put('/edit/:id' ,upLoadFile.single('image'),  productsControllers.update);
+router.put('/edit/:id', upLoadFile.single('image'), validacionesProducts, productsControllers.update);
 
 //  ACCION DE BORRADO   //
 router.delete('/:id', productsControllers.delete);

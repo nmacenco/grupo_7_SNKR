@@ -13,10 +13,16 @@
     <section class="seccion-abmProductos">
         <form action="/products/new" enctype="multipart/form-data" method="POST" class="formulario-abmProductos">
                 <h3 class="título-abmProductos">CREACION DE PRODUCTOS</h3>
+                
                 <div class="etiqueta-abmProductos ">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
                     <input type="text" name="name" id="name" autofocus>
                 </div>
+
+                <% if (locals.errors && errors.name) { %>
+                    <div class="errores-backend"><%= errors.name.msg %> </div>
+                <% } %>
+
                 <span class="name error-input"></span>
                 <div class="etiqueta-abmProductos ">
                     <label for="brand">MARCA:</label>
@@ -24,10 +30,16 @@
                 </div>
                 <span class="brand error-input"></span>
                 <div class="brand"></div>
+                
                 <div class="etiqueta-abmProductos">
                     <label for="detail">DESCRIPCION:</label>
                     <input type="text" name="detail" id="detail">
                 </div>
+
+                <% if (locals.errors && errors.detail) { %>
+                    <div class="errores-backend"><%= errors.detail.msg %> </div>
+                <% } %>
+
                 <span class="detail error-input"></span>
                 <div class="etiqueta-abmProductos">
                     <label for="gender">GENERO:</label>
@@ -72,7 +84,13 @@
                     <label>SELECCIONAR IMAGEN:</label>
                     <input class="image" type="file" name="image" accept="jpg" >
                 </div>
+
                 <span class="image error-input"></span>
+                
+                <% if (locals.errors && errors.image) { %>
+                    <div class="errores-backend"><%= errors.image.msg %> </div>
+                <% } %>
+                
                 <div class="botones">
                     <div class="boton">
                         <button type="submit">CREAR</button>

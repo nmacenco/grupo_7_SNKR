@@ -607,6 +607,12 @@ a {
 .errores-registro { 
     color: #db0a3b;
 }
+
+.errores-backend { 
+    color: #db0a3b;
+    padding: 2px 0 2px 0;
+}
+
 .lafecha {
     width: 37%;
 }

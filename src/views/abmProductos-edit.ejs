@@ -11,32 +11,46 @@
     <section class="seccion-abmProductos">
         <form action="/products/edit/<%= productToEdit.id_product %>?_method=PUT" enctype="multipart/form-data" method="POST" class="formulario-abmProductos">
                 <h3 class="título-abmProductos">EDICION DE PRODUCTOS</h3>
+                
                 <div class="etiqueta-abmProductos">
                     <label for="name">NOMBRE DEL PRODUCTO:</label>
                     <input type="text" name="name" id="name" value="<%= productToEdit.name %>" >
                     <!-- <div class=" error-input"></div> -->
                 </div>
+                
                 <span class="name error-input"></span>
+
+                <% if (locals.errors && errors.name) { %>
+                    <div class="errores-backend"><%= errors.name.msg %> </div>
+                <% } %>
 
                 <div class="etiqueta-abmProductos">
                     <label for="brand">MARCA:</label>
                     <input type="text" name="brand" id="brand" value="<%= productToEdit.brand %>"  >
                     <!-- <div class=" error-input"></div> -->
                 </div>
+                
                 <span class="brand error-input"></span>
+
 
                 <div class="etiqueta-abmProductos">
                     <label for="detail">DESCRIPCION:</label>
                     <input type="text" name="detail" id="detail" value="<%= productToEdit.detail %>" >
                     <!-- <div class=" error-input"></div> -->
                 </div>
+                
                 <span class="detail error-input"></span>
+
+                <% if (locals.errors && errors.detail) { %>
+                    <div class="errores-backend"><%= errors.detail.msg %> </div>
+                <% } %>
 
                 <div class="etiqueta-abmProductos">
                     <label for="gender">GENERO:</label>
                     <input type="text" name="gender" id="gender" value="<%= productToEdit.gender %>"  >
                     <!-- <div class=" error-input"></div> -->
                 </div>
+                
                 <span class="gender error-input"></span>
 
                 <div class="etiqueta-abmProductos">
@@ -44,6 +58,8 @@
                     <input type="number" name="price" id="price" value="<%= productToEdit.price %>"  > 
                     <!-- <div class=" error-input"></div> -->
                 </div>
+
+                
                 <span class="price error-input"></span>
 
                 
@@ -58,6 +74,7 @@
                             <p ></p>
                     </div>
                 </div>
+
                 <div class="etiqueta-abmProductos-2">
                     <label for="">COLOR:</label>
                     <div>
@@ -76,7 +93,12 @@
                         <input  class="image" type="file" name="image" accept="jpg" value="<%= productToEdit.image.filename %>" >
                         <!-- <div class=" error-input"></div> -->
                     </div>
+
                     <span class="image error-input"></span>
+
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="errores-backend"><%= errors.image.msg %> </div>
+                    <% } %>
 
                     <div class="botones">
                         
