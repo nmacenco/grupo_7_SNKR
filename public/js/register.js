@@ -42,7 +42,7 @@ nombre.addEventListener('blur', function(){
 
     nombreSpan = document.querySelector('.nombreErr');
     
-    if(nombre.value.length <= 2)
+    if(nombre.value.length < 2)
     {
         nombreSpan.innerHTML = "El nombre debe tener al menos 2 caracteres."
         nombre.classList.remove('is-ok');
@@ -62,7 +62,7 @@ apellido.addEventListener('blur', function(){
 
     apellidoSpan = document.querySelector('.apellidoErr');
     
-    if(apellido.value.length <= 2)
+    if(apellido.value.length < 2)
     {
         apellidoSpan.innerHTML = "El apellido debe tener al menos 2 caracteres."
         apellido.classList.remove('is-ok');
