@@ -37,4 +37,15 @@ Mauri aviso que estaba casi terminando la base de datos para que pudieramos segu
 Reunion 19/10/2021:
 Redistribuimos las tareas porque no llegabamos con las cosas que teniamos que hacer. 
 
+Sprint 7 : 
+
+Reunion 01/11/2021:
+Dividimos las tareas a realizar. 
+
+Reunion 09/11/2021:
+Nos consultamos como ibamos con el trabajo.Ninguno habia comenzado por lo que vimos un par de cosas juntos en la reunion. 
+
+Reunion 12/10/2021:
+Nuevamente se consulto como ibamos. Nico dijo que se habia demorado mas de lo que creia con las tareas realizadas. Mauri informo que iba bien, que trabajaria el fin de semana para poder terminar.
+
 Respecto a la daily optamos por no realizarla ya que hacemos el seguimiento por el grupo de whatsapp, consultandonos si pudimos avanzar o si alguno tuvo problemas con algo. 

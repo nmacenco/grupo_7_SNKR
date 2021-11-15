@@ -37,3 +37,11 @@ Hacer mas: Reuniones en las que hagamos codigo juntos.
 Continuar haciendo: Ayudandonos cuando vemos que un compañero no llega con lo que tiene que hacer. 
 Hacer menos: Usar las clases sincronicas para resolver los sprints.
 Dejar de hacer: 
+
+Retro sprint n° 6:
+
+Comenzar a hacer: Unificar el idioma del codigo. Correccion de los estilos para que el proyecto sea responsive. 
+Hacer mas: Dejar comentarios en el codigo. 
+Continuar haciendo: Redistribuir las tareas cuando vemos que no llegamos. 
+Hacer menos: 
+Dejar de hacer: Esperar a ultimo momento para resolver los sprint. Nos volvio a pasar que dejamos cosas para ultimo momento, de no ser por la prorroga no hubieramos llegado con todos los puntos. 
