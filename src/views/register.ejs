@@ -18,7 +18,7 @@
                 
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro" for="usuario">Usuario</label>
-                    <input class="inputsRegistro" type="text" name="usuario" id="usuario" value="<%= locals.oldData ? oldData.usuario : null %> " >
+                    <input class="inputsRegistro" type="text" name="usuario" id="usuario" value="<%= locals.oldData? oldData.usuario : null %>">
                 </div>
 
                 <span class="usuarioErr error-input"></span>
@@ -51,8 +51,6 @@
                 <% if (locals.errors && errors.confirmacionPassword) { %>
                     <div class="errores-registro"><%= errors.confirmacionPassword.msg %> </div>
                 <% } %>
-
-
 
 
                <div class="etiqueta-ingreso">
@@ -97,7 +95,7 @@
 
                 <div class="etiqueta-ingreso">
                     <label class="labelsRegistro">Avatar</label>
-                    <input class="inputsRegistro" type="file" name="avatar" accept=".jpg,.png,.jfif">
+                    <input class="inputsRegistro" type="file" name="avatar" id="avatar" accept=".jpg,.png,.jfif">
                 </div>
                 
                 <span class="avatarErr error-input"></span>

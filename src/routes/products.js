@@ -26,11 +26,16 @@ const productsControllers = require ('../controllers/productsControllers')
 
 const validacionesProducts = [
     body('name')
-        .notEmpty().withMessage('Por favor ingresa el nombre del producto.')
+        .notEmpty().withMessage('Por favor ingresa el nombre del producto.').bail()
         .isLength({min:5, max: undefined}).withMessage('El nombre del producto debe tener como mínimo 5 caracteres.'),
+    body('brand')
+        .notEmpty().withMessage('Por favor ingrese la marca.'),
     body('detail')
-        .notEmpty().withMessage('Por favor ingresa una descripción del producto').bail()
         .isLength({min:20, max:undefined}).withMessage('La descripción debe tener como mínimo 20 caracteres.'),
+    body('gender')
+        .notEmpty().withMessage('Por favor ingrese el género.'),
+    body('price')
+        .notEmpty().withMessage('Por favor ingrese el precio.'),
     body('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
@@ -43,8 +48,8 @@ const validacionesProducts = [
                 throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
             }
         }
-
         return true;})
+    // validar el checkbox de talles y colores ES IMPOSIBLE (o muy dificil)
 ];
 
 

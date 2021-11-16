@@ -17,10 +17,12 @@ window.addEventListener('load' , () => {
     name.addEventListener('blur' , () => {
         let nameSpan = document.querySelector('.name')
         if (name.value == '' || name.value.length < 5) {
-            nameSpan.innerHTML =  'El campo nombre debe contener al menos 5 caracteres' ;
+            nameSpan.innerHTML =  'El campo nombre debe contener al menos 5 caracteres';
+            name.classList.remove('is-ok')
             name.classList.add('alert-err')
         } else {
             nameSpan.innerHTML =  '' ;
+            name.classList.remove('alert-err')
             name.classList.add('is-ok')
         }
         
@@ -29,9 +31,11 @@ window.addEventListener('load' , () => {
         let brandSpan = document.querySelector('.brand')
         if (brand.value == '') {
             brandSpan.innerHTML =  'El campo marca no puede estar vacio' ;
-            brand.classList.add('alert-err')
+            brand.classList.remove('is-ok');
+            brand.classList.add('alert-err');
         } else {
             brandSpan.innerHTML =  '' ;
+            brand.classList.remove('alert-err');
             brand.classList.add('is-ok')
         }
         
@@ -39,33 +43,40 @@ window.addEventListener('load' , () => {
     detail.addEventListener('blur' , () => {
         let detailSpan = document.querySelector('.detail')
         if (detail.value == '' || detail.value.length < 20) {
-            detailSpan.innerHTML =  'El campo descripcion debe contener al menos 20 caracteres' ;
-            detail.classList.add('alert-err')
+            detailSpan.innerHTML =  'El campo descripcion debe contener al menos 20 caracteres';
+            brand.classList.remove('is-ok');
+            detail.classList.add('alert-err');
         } else {
-            detailSpan.innerHTML =  '' ;
-            detail.classList.add('is-ok')
+            detailSpan.innerHTML =  '';
+            brand.classList.remove('alert-err');
+            detail.classList.add('is-ok');
         }
         
     })
     gender.addEventListener('blur' , () => {
         let genderSpan = document.querySelector('.gender')
         if (gender.value == '') {
-            genderSpan.innerHTML =  'El campo genero no puede estar vacio' ;
-            gender.classList.add('alert-err')
+            genderSpan.innerHTML =  'El campo genero no puede estar vacio';
+            brand.classList.remove('is-ok');
+            gender.classList.add('alert-err');
         } else {
-            genderSpan.innerHTML =  '' ;
-            gender.classList.add('is-ok')
+            genderSpan.innerHTML =  '';
+            brand.classList.remove('alert-err');
+            gender.classList.add('is-ok');
         }
         
     })
+    
     price.addEventListener('blur' , () => {
         let priceSpan = document.querySelector('.price')
         if (price.value == '') {
-            priceSpan.innerHTML =  'El campo precio no puede estar vacio' ;
+            priceSpan.innerHTML =  'El campo precio no puede estar vacio';
+            brand.classList.remove('is-ok');
             price.classList.add('alert-err')
         } else {
-            priceSpan.innerHTML =  '' ;
-            price.classList.add('is-ok')
+            priceSpan.innerHTML =  '';
+            brand.classList.remove('alert-err');
+            price.classList.add('is-ok');
         }
         
     })

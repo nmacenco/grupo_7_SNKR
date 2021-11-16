@@ -1,4 +1,3 @@
-
 window.addEventListener('load' , () => {
     let form = document.querySelector('.formulario-abmProductos') ;
     let inputs = document.querySelectorAll('.formulario-abmProductos input')
@@ -66,22 +65,25 @@ window.addEventListener('load' , () => {
         }
         
     })
+    
     let errSize = [] ;
     sizes.forEach(oneSize => {
         oneSize.addEventListener('blur' , () => {
+            console.log(oneSize.value);
             let sizeSpan = document.querySelector('.size')
 
             if (oneSize.checked == false ) {
                 errSize.push('error')
                 sizeSpan.innerHTML =  'Debe seleccionar al menos un talle' ;
 
-            } else if (oneSize.checked == true ) {
+            } else {
                 sizeSpan.innerHTML =  '' ;
                 errSize = []
             }
         })
-
+        console.log(oneSize.value);
     })
+    
     let errColor = [] ;
     colors.forEach(oneColor => {
         oneColor.addEventListener('blur' , () => {
@@ -101,7 +103,7 @@ window.addEventListener('load' , () => {
         
     
     
-    image.addEventListener('blur' , () => {
+    image.addEventListener('change' , () => {
         let imageValue = image.value ;
         let imageExt = imageValue.slice( -3 , (imageValue.length) );
         let imageSpan = document.querySelector('span.image') ;

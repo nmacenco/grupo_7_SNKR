@@ -12,20 +12,18 @@ let confirmacionPassword = document.getElementById('rep_password');
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let email = document.getElementById('email');
-//let avatar = document.getElementById('avatar');
-let image = document.querySelector('avatar') ;
+let image = document.getElementById('avatar') ;
 
 
 // VALIDACIONES DE DATOS 
 
 usuario.addEventListener('blur', function(){
 
-    console.log(usuario);
     usuarioSpan = document.querySelector('.usuarioErr');
     
-    if(usuario.value == '')
+    if(usuario.value.length < 3)
     {
-        usuarioSpan.innerHTML = "Por favor ingrese el usuario."
+        usuarioSpan.innerHTML = "El usuario debe tener 3 caracteres como mínimo."
         usuario.classList.remove('is-ok');
         usuario.classList.add('alert-err');
     }
@@ -82,17 +80,18 @@ password.addEventListener('blur', function(){
 
     passwordSpan = document.querySelector('.passwordErr');
     
-    if(password.value.length <= 8)
-    {
-        passwordSpan.innerHTML = "La contraseña debe tener al menos 8 caracteres."
-        password.classList.remove('is-ok');
-        password.classList.add('alert-err');
-    }
-    else
+    if(password.value.length >= 8 && password.value.length  <= 12)
     {
         passwordSpan.innerHTML =  '' ;
         password.classList.remove('alert-err');
         password.classList.add('is-ok');
+    }
+    else
+    {
+        passwordSpan.innerHTML = "La contraseña debe tener entre 8 y 12 caracteres."
+        password.classList.remove('is-ok');
+        password.classList.add('alert-err');
+   
     }
 })
 
@@ -101,7 +100,7 @@ confirmacionPassword.addEventListener('blur', function(){
     confirmacionPasswordSpan = document.querySelector('.confirmacionPasswordErr');
     console.log(confirmacionPassword.value)
     console.log(password.value)
-    if(confirmacionPassword.value !== password.value)
+    if(confirmacionPassword.value !== password.value || confirmacionPassword.value == '')
     {
         confirmacionPasswordSpan.innerHTML = "Las contraseñas no coinciden."
         confirmacionPassword.classList.remove('is-ok');
@@ -137,11 +136,13 @@ email.addEventListener('blur', function(){
     }
 })
 
-image.addEventListener('blur' , () => {
+image.addEventListener('change' , () => {
     let imageValue = image.value ;
     let imageExt = imageValue.slice( -3 , (imageValue.length) );
     let imageSpan = document.querySelector('.avatarErr') ;
     
+    console.log(imageSpan);
+
     if (imageExt != 'jpg' && imageExt != 'jpeg' && imageExt != 'png' && imageExt != 'gif' ) {
         imageSpan.innerHTML = 'La imagen debe ser formato jpg, jpeg, png o gif';
         
