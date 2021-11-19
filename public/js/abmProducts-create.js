@@ -16,6 +16,7 @@ window.addEventListener('load' , () => {
         if (name.value == '' || name.value.length < 5) {
             nameSpan.innerHTML =  'El campo nombre debe contener al menos 5 caracteres' ;
             name.classList.add('alert-err')
+            name.classList.remove('is-ok')
         } else {
             nameSpan.innerHTML =  '' ;
             name.classList.add('is-ok')
@@ -27,6 +28,7 @@ window.addEventListener('load' , () => {
         if (brand.value == '') {
             brandSpan.innerHTML =  'El campo marca no puede estar vacio' ;
             brand.classList.add('alert-err')
+            brand.classList.remove('is-ok')
         } else {
             brandSpan.innerHTML =  '' ;
             brand.classList.add('is-ok')
@@ -38,6 +40,7 @@ window.addEventListener('load' , () => {
         if (detail.value == '' || detail.value.length < 20) {
             detailSpan.innerHTML =  'El campo descripcion debe contener al menos 20 caracteres' ;
             detail.classList.add('alert-err')
+            detail.classList.remove('is-ok')
         } else {
             detailSpan.innerHTML =  '' ;
             detail.classList.add('is-ok')
@@ -49,6 +52,7 @@ window.addEventListener('load' , () => {
         if (gender.value == '') {
             genderSpan.innerHTML =  'El campo genero no puede estar vacio' ;
             gender.classList.add('alert-err')
+            gender.classList.remove('is-ok')
         } else {
             genderSpan.innerHTML =  '' ;
             gender.classList.add('is-ok')
@@ -60,6 +64,7 @@ window.addEventListener('load' , () => {
         if (price.value == '') {
             priceSpan.innerHTML =  'El campo precio no puede estar vacio' ;
             price.classList.add('alert-err')
+            price.classList.remove('is-ok')
         } else {
             priceSpan.innerHTML =  '' ;
             price.classList.add('is-ok')
@@ -82,6 +87,28 @@ window.addEventListener('load' , () => {
         })
 
     })
+
+    // Probando otras opciones 
+    // let errSize = false ;
+    // sizes.forEach(oneSize => {
+    //     oneSize.addEventListener('click' , () => {
+            
+    //         sizes.forEach(size => {
+    //             console.log(errSize);
+    //             if (size.checked === true) {
+    //                 errSize = true
+    //             }
+    //         })
+    //         let sizeSpan = document.querySelector('.size')
+    //         if (errSize == true) {
+    //             sizeSpan.innerHTML =  '' ;
+    //         }else if (errSize == false ) {
+    //             sizeSpan.innerHTML =  'Debe seleccionar al menos un talle' ;
+    //         }
+    //     })
+        
+    // })
+        
     let errColor = [] ;
     colors.forEach(oneColor => {
         oneColor.addEventListener('blur' , () => {

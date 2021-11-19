@@ -76,5 +76,4 @@ router.put('/edit/:id', upLoadFile.single('image'), validacionesProducts, produc
 router.delete('/:id', productsControllers.delete);
 
 
-
 module.exports = router ; 
