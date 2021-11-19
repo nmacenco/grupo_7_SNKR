@@ -68,7 +68,7 @@
                     <div>
                         <%sizes.forEach(size =>{ %>
                             <p>
-                                <input type="checkbox" name="size" id="size"  class="input-checkbox" value="<%= size.id_size %>" <%=  (size.size == productToEdit.sizes[0].size ) ? "checked" : "" %> > <%= size.size %>
+                                <input type="checkbox" name="size[]" id="size"  class="input-checkbox" value="<%= size.id_size %>" <%=  (size.size == productToEdit.sizes[0].size ) ? "checked" : "" %> > <%= size.size %>
                             </p>
                             <% }) %>
                             <p ></p>

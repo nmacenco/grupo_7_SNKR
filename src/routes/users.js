@@ -22,11 +22,11 @@ const storage = multer.diskStorage({
 
 const validations = [
 
-   body('usuario').isLength({min : 4}).withMessage('Ingresa un usuario por favor').notEmpty(),
-   body('password').isLength({min : 8 , max : 12}).withMessage('Ingresa una contraseña de minimo 8 caracteres y maximo 12 caracteres').notEmpty(),
+   body('usuario').isLength({min: 3}).withMessage('El usuario no puede tener menos de 3 caracteres.'),
+   body('password').isLength({min: 8 , max : 12}).withMessage('Ingresa una contraseña de minimo 8 caracteres y maximo 12 caracteres').notEmpty(),
    body('confirmacionPassword').notEmpty().withMessage('Confirma la contraseña por favor'),
-   body('nombre').notEmpty().withMessage('Ingresa un nombre por favor'),
-   body('apellido').notEmpty().withMessage('Ingresa un apellido por favor'),
+   body('nombre').isLength({min:2}).withMessage('Ingresa un nombre por favor'),
+   body('apellido').isLength({min:2}).withMessage('Ingresa un apellido por favor'),
    body('email').isEmail().withMessage('Ingresa un email valido').notEmpty(), 
    body('avatar').custom((value, { req }) => {
 		let file = req.file;
