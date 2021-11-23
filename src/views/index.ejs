@@ -11,10 +11,23 @@
 
     
     <main>
-        <div class="banner">
-            <div class="flecha-izquierda"><i class="fas fa-chevron-left"></i></div>
-            <img src="/images/baner2.jpg" alt="">
-            <div class="flecha-derecha"><i class="fas fa-chevron-right"></i></div>
+        <div class="slideshow-container">
+            <div class="banner fade">
+                <div class="flecha-izquierda" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></div>
+                <img src="/images/baner2.jpg" alt="">
+                <div class="flecha-derecha" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="banner fade">
+                <div class="flecha-izquierda" onclick="plusSlides(-1)" ><i class="fas fa-chevron-left"></i></div>
+                <img src="/images/baner1.jpg" alt="">
+                <div class="flecha-derecha" onclick="plusSlides(1)" ><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="banner fade">
+                <div class="flecha-izquierda" onclick="plusSlides(-1)" ><i class="fas fa-chevron-left"></i></div>
+                <img src="/images/baner3.jpg" alt="">
+                <div class="flecha-derecha" onclick="plusSlides(1)" ><i class="fas fa-chevron-right"></i></div>
+            </div>
+
         </div>
         
         <section class="section-home">
@@ -33,6 +46,6 @@
     <footer>
         <%- include ('./partials/footer') %>
     </footer>
-
+    <script src="/js/banner.js"></script>
 </body>
 </html>

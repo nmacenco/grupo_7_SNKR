@@ -127,7 +127,13 @@ a {
     font-size: 18px;
 }
 
+.slideshow-container {
+    position: relative;
+    margin: auto;
+  }
+
 .banner {
+    display: none;
     position: relative;
     margin-bottom: 25px;
 }
@@ -138,18 +144,46 @@ a {
     
 }
 .flecha-izquierda {
+    cursor: pointer;
     font-size: 40px;
     position: absolute;
     top: 40%;
     left: 10px;
+    padding: 0 5px 5px 0 ;
+    border-radius: 2px;
 
 }
 .flecha-derecha {
+    cursor: pointer;
     font-size: 40px;
     position: absolute;
     top: 40%;
     right: 10px;
+    padding: 0 5px 5px 0 ;
+    border-radius: 2px;
 }
+
+.flecha-derecha:hover, .flecha-izquierda:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: aliceblue;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 .section-home {
     display: flex;
     justify-content: space-around;
