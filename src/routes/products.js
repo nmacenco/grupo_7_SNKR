@@ -52,12 +52,14 @@ const validacionesProducts = [
     // validar el checkbox de talles y colores ES IMPOSIBLE (o muy dificil)
 ];
 
+const adminMiddleware = require ('../middlewares/adminMiddleware');
+const admin2Middleware = require('../middlewares/admin2Middleware');
 
 
 /////////////////////////       RUTAS       ////////////////////////// 
 //  FORMULARIO DE CREACION DE PRODUCTOS //
-router.get ('/create' , productsControllers.create) 
-router.post ('/new/' , upLoadFile.single('image'), validacionesProducts, productsControllers.store) 
+router.get ('/create' , adminMiddleware ,  productsControllers.create) 
+router.post ('/new/' , adminMiddleware , upLoadFile.single('image'), validacionesProducts, productsControllers.store) 
 
 // CARRITO DE PRODUCTOS //
 router.get ('/cart', productsControllers.cart);
@@ -66,19 +68,19 @@ router.get ('/cart', productsControllers.cart);
 router.get('/search', productsControllers.search);
 
 //  DETALLE DE PRODUCTO PARTICULAR  //
-router.get ('/:id', productsControllers.detail);
+router.get ('/:id', admin2Middleware ,  productsControllers.detail);
 
 //  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);
 
 //  FORMULARIO DE EDICION DE PRODUCTOS  //
-router.get ('/edit/:id', productsControllers.edit); 
+router.get ('/edit/:id', adminMiddleware , productsControllers.edit); 
 
 //  ACCION DE EDITAR PRODUCTO  //
-router.put('/edit/:id', upLoadFile.single('image'), validacionesProducts, productsControllers.update);
+router.put('/edit/:id', adminMiddleware , upLoadFile.single('image'), validacionesProducts, productsControllers.update);
 
 //  ACCION DE BORRADO   //
-router.delete('/:id', productsControllers.delete);
+router.delete('/:id', adminMiddleware , productsControllers.delete);
 
 
 module.exports = router ; 

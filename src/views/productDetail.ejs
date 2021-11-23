@@ -20,21 +20,24 @@
         
         <section class="producto">
             
-                            <i class="fas fa-arrow-left"></i>
-                <img  class="fotoProducto" src="/images/products/<%= producto.image%>" alt="altas jordan 1">
-                <i class="fas fa-arrow-right"></i>
+            <i class="fas fa-arrow-left"></i>
+            <img  class="fotoProducto" src="/images/products/<%= producto.image%>" alt="altas jordan 1">
+            <i class="fas fa-arrow-right"></i>
             
 
             <div class="detalleProducto">
-
-                <div class="cajaBoton">
-                    <div class="editarYBorrarProducto">
-                        <a href="/products/edit/<%= producto.id_product %>" class="botonEditarProducto">EDITAR PRODUCTO</a>
-                            <form action="/products/<%= producto.id_product%>?_method=DELETE" method="POST" style="display: inline-flex">
-                                <button type="submit" class="botonEliminarProducto">ELIMINAR PRODUCTO</button>
-                            </form>
+                
+                <% if (locals.isAdmin) { %>
+                    <div class="cajaBoton">
+                        <div class="editarYBorrarProducto">
+                            <a href="/products/edit/<%= producto.id_product %>" class="botonEditarProducto">EDITAR PRODUCTO</a>
+                                <form action="/products/<%= producto.id_product%>?_method=DELETE" method="POST" style="display: inline-flex">
+                                    <button type="submit" class="botonEliminarProducto">ELIMINAR PRODUCTO</button>
+                                </form>
+                        </div>
                     </div>
-                </div>
+                <% } %>
+                 
                 <div>
                     <p class="tituloZapas"><%= producto.name %></p>
                     <p class="precioZapas">$<%= producto.price%></p>

@@ -17,7 +17,7 @@ const apiProductsController = {
                         url : 'api/products'
                     },
                     data : {
-                        products
+                        products,
                     }   
                 })
             })
@@ -36,7 +36,10 @@ const apiProductsController = {
 
                     // },
                     data : {
-                        product
+                        product,
+                        imageUrl : 'http://localhost:3001/images/products/' + product.image
+
+
                     }
 
                 })

@@ -29,7 +29,7 @@ app.set ('views' , path.join(__dirname, './views') ) ;
 
 
 
-app.listen (process.env.PORT || 3000, () => console.log('El servidor se esta ejecutando en http://localhost:3000') ) ;
+app.listen (process.env.PORT || 3001, () => console.log('El servidor se esta ejecutando en http://localhost:3001') ) ;
 
 
 /* REQUIRES DE ARCHIVOS DE RUTAS */
