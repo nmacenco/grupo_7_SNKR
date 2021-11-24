@@ -18,6 +18,8 @@ const apiProductsController = {
                     },
                     data : {
                         products,
+                        totalProducts : products.length ,   
+
                     }   
                 })
             })
@@ -30,15 +32,14 @@ const apiProductsController = {
             }) 
             .then(product => {
                 return res.json({
-                    // meta : { 
-                    //     status : 200 , 
-                    //     url : 'api/products/:id'
+                    meta : { 
+                        status : 200 , 
+                        url : 'api/products/:id'
 
-                    // },
+                    },
                     data : {
                         product,
-                        imageUrl : 'http://localhost:3001/images/products/' + product.image
-
+                        imageUrl : 'http://localhost:3001/images/products/' + product.image ,
 
                     }
 
