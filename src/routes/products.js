@@ -66,6 +66,10 @@ router.get ('/cart', productsControllers.cart);
 // LISTADO DE PRODUCTOS POR SEARCH
 router.get('/search', productsControllers.search);
 
+router.get('/hombre' , productsControllers.searchHombre) ;
+router.get('/mujer' , productsControllers.searchMujer) ;
+router.get('/sale' , productsControllers.searchSale) ;
+
 //  DETALLE DE PRODUCTO PARTICULAR  //
 router.get ('/:id' ,  productsControllers.detail);
 

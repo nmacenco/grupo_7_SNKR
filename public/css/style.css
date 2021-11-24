@@ -122,10 +122,13 @@ a {
     background-color: #DAD3D3;
 }
 
-.second-header p {
+.second-header p button {
     margin: 5px 25px;
     font-weight: 500;
     font-size: 18px;
+    border: transparent;
+    background-color: #DAD3D3 ;
+    cursor: pointer;
 }
 
 .slideshow-container {

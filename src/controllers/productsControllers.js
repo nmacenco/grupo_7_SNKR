@@ -198,6 +198,39 @@ const productsControllers = {
         .then( products => {
             res.render('productList', {products});
         })
+    },
+    searchHombre : async (req,res) => {
+        db.Product.findAll({
+           where : 
+           {
+               gender : { [Op.like] : 'Male'}
+           } 
+        })
+        .then( products => {
+            res.render('productList', {products});
+        })
+    },
+    searchMujer : async (req,res) => {
+        db.Product.findAll({
+           where : 
+           {
+               gender : { [Op.like] : 'Female'}
+           } 
+        })
+        .then( products => {
+            res.render('productList', {products});
+        })
+    },
+    searchSale : async (req,res) => {
+        db.Product.findAll({
+           where : 
+           {
+               category : { [Op.like] : 'Sale'}
+           } 
+        })
+        .then( products => {
+            res.render('productList', {products});
+        })
     }
 }
 

@@ -45,19 +45,34 @@
 <% if (locals.isAdmin) { %>
     <div class="second-header">
         <a href="/products/create"><p>NEW PRODUCT</p></a>
-        <form action="">
-            
+        <form action="/products/hombre">
+            <a href="/products/hombre"><p> <button>HOMBRE</button></p></a>
+
         </form>
-        <a href="/products"><p>HOMBRE</p></a>
         <a href="/products"><p>MUJER</p></a>
         <a href="/products"><p>TODOS</p></a>
         <a href="/products"><p id="sale">SALE</p></a>
     </div>
 <% } else { %>
     <div class="second-header">
-        <a href="/products"><p>HOMBRE</p></a>
-        <a href="/products"><p>MUJER</p></a>
+        <form action="/products/hombre">
+            <a href="/products/hombre"><p> <button>HOMBRE</button></p></a>
+
+        </form>
+        <form action="/products/mujer">
+            <a href="/products/mejer"><p> <button>MUJER</button></p></a>
+
+        </form>
+        <form action="/products">
+            <a href="/products"><p> <button>TODOS</button></p></a>
+
+        </form>
+        <form action="/products/sale">
+            <a href="/products/sale"><p id="sale" > <button>SALE</button></p></a>
+
+        </form>
+        <!-- <a href="/products"><p>MUJER</p></a>
         <a href="/products"><p>TODOS</p></a>
-        <a href="/products"><p id="sale">SALE</p></a>
+        <a href="/products"><p id="sale">SALE</p></a> -->
     </div>
 <% } %>
