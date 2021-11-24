@@ -90,9 +90,10 @@ a {
     padding: 5px;
 }
 .user-logged img { 
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin-right: 10px;
+    border-radius: 50%;
 }
 .user-logged a { 
     font-weight: bold;

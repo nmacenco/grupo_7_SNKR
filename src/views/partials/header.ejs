@@ -42,11 +42,22 @@
 
     </div>  
 </div>
-
-<div class="second-header">
-    <a href="/products/create"><p>NEW</p></a>
-    <a href="/products"><p>HOMBRE</p></a>
-    <a href="/products"><p>MUJER</p></a>
-    <a href="/products"><p>MARCA</p></a>
-    <a href="/products"><p id="sale">SALE</p></a>
-</div>
+<% if (locals.isAdmin) { %>
+    <div class="second-header">
+        <a href="/products/create"><p>NEW PRODUCT</p></a>
+        <form action="">
+            
+        </form>
+        <a href="/products"><p>HOMBRE</p></a>
+        <a href="/products"><p>MUJER</p></a>
+        <a href="/products"><p>TODOS</p></a>
+        <a href="/products"><p id="sale">SALE</p></a>
+    </div>
+<% } else { %>
+    <div class="second-header">
+        <a href="/products"><p>HOMBRE</p></a>
+        <a href="/products"><p>MUJER</p></a>
+        <a href="/products"><p>TODOS</p></a>
+        <a href="/products"><p id="sale">SALE</p></a>
+    </div>
+<% } %>

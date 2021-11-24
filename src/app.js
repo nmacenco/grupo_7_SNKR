@@ -8,6 +8,8 @@ const logger = require('morgan');
 const multer = require('multer');
 const session = require ('express-session')
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
+const admin2Middleware = require('./middlewares/admin2Middleware');
+
 
 const cors = require('cors')
 
@@ -25,6 +27,7 @@ app.use(session({
     saveUninitialized : false 
 }))
 app.use(userLoggedMiddleware)
+app.use(admin2Middleware)
 app.use(cors())
 
 

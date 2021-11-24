@@ -53,7 +53,6 @@ const validacionesProducts = [
 ];
 
 const adminMiddleware = require ('../middlewares/adminMiddleware');
-const admin2Middleware = require('../middlewares/admin2Middleware');
 
 
 /////////////////////////       RUTAS       ////////////////////////// 
@@ -68,7 +67,7 @@ router.get ('/cart', productsControllers.cart);
 router.get('/search', productsControllers.search);
 
 //  DETALLE DE PRODUCTO PARTICULAR  //
-router.get ('/:id', admin2Middleware ,  productsControllers.detail);
+router.get ('/:id' ,  productsControllers.detail);
 
 //  LISTADO GENERAL DE PRODUCTOS    //
 router.get('/', productsControllers.list);
