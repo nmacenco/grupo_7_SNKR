@@ -369,11 +369,18 @@ a {
     margin: 0 5px 5px 0;
     color:#39A6A3;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .listaTalles li:hover{
     background-color: #39A6A3;
     color: #fff;
+}
+
+.selectedLi {
+    background-color: #39A6A3;
+    color: #fff;
+
 }
 
 .tituloZapas{
