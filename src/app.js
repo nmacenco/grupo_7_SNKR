@@ -9,6 +9,9 @@ const multer = require('multer');
 const session = require ('express-session')
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
 
+const cors = require('cors')
+
+
 ///////////// MIDDLEWARES //////////////////////
 app.use (express.static('public'));
 app.use (methodOverride('_method')) ;
@@ -22,6 +25,8 @@ app.use(session({
     saveUninitialized : false 
 }))
 app.use(userLoggedMiddleware)
+app.use(cors())
+
 
 /////////// TEMPLATE ENGINE //////////////
 app.set ('view engine' , 'ejs') ;   

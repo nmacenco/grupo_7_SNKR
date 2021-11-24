@@ -34,8 +34,10 @@
             <% products.forEach(function (element) { %>
                 <% if (element.category == 'home') { %>
                 <article class="producto-home" >
-                    <img src="images/products/<%= element.image %>" alt=""> 
-                    <h2><%= element.name %></h2>
+                    <a href="/products/<%= element.id_product %>">
+                        <img src="images/products/<%= element.image %>" alt=""> 
+                        <h2><%= element.name %></h2>
+                    </a>
                 </article>
                 <% } %>
             <% }); %>
