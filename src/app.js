@@ -38,20 +38,21 @@ const rutasHome = require ('./routes/main');
 const rutasProducts = require ('./routes/products');
 const rutasUsers = require ('./routes/users');
 
-const rutasApiProducts = require ('./routes/apiRoutes/apiProducts') ;
+const rutasApiProducts = require ('./routes/apiRoutes/apiProducts');
+const rutasApiUsers = require('./routes/apiRoutes/apiUsers');
 
 
 
 /* DEFINICIÓN DE RUTAS EN LA WEB */
 
-app.use ('/' , rutasHome)
-app.use ('/users' , rutasUsers)
-app.use ('/products' , rutasProducts)
+app.use ('/' , rutasHome);
+app.use ('/users' , rutasUsers);
+app.use ('/products' , rutasProducts);
 
 //  RUTAS A UTILIZAR CON LAS API // 
 
-app.use ('/api/products' , rutasApiProducts) ;
-
+app.use ('/api/products' , rutasApiProducts);
+app.use ('/api/users', rutasApiUsers);
 
 /* 404 */
 

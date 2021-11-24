@@ -12,6 +12,7 @@ window.addEventListener('load' , () => {
     let image = document.querySelector('.image') ;
     let sizes = document.querySelectorAll('.input-checkbox') ;
     let colors = document.querySelectorAll('.input-colors');
+    
 
 
     name.addEventListener('blur' , () => {
@@ -66,7 +67,7 @@ window.addEventListener('load' , () => {
         }
         
     })
-    
+
     price.addEventListener('blur' , () => {
         let priceSpan = document.querySelector('.price')
         if (price.value == '') {
