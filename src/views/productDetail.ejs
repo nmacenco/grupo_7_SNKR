@@ -44,40 +44,67 @@
                 </div>
 
                 <hr class="separacionTituloTalles">
+            <form action="/cart/add/<%= producto.id_product %>" method="POST" id="formulario">
 
                 <div class="cajatalles">
-                    <p class="talle">Talle</p>
-                    <div class="numeroTalle">
-                        <ul class="listaTalles">
+                        <p class="talle">Talle</p>
+                        <div class="numeroTalle">
+                            <!-- <ul class="listaTalles">
+                                <li><span>38</span></li>
+                                <li><span>38.5</span></li>
+                                <li><span>39</span></li>
+                                <li><span>39.5</span></li>
+                                <li><span>40</span></li>
+                                <li><span>40.5</span></li>
+                                <li><span>41</span></li>
+                                <li><span>41.5</span></li>
+                                <li><span>42</span></li>
+                                <li><span>42.5</span></li>
+                                <li><span>43</span></li>
+                                <li><span>43.5</span></li>
+                                <li><span>44</span></li>
+                                <li><span>44.5</span></li>
+                            </ul> -->
 
-                            <li><span>38</span></li>
-                            <li><span>38.5</span></li>
-                            <li><span>39</span></li>
-                            <li><span>39.5</span></li>
-                            <li><span>40</span></li>
-                            <li><span>40.5</span></li>
-                            <li><span>41</span></li>
-                            <li><span>41.5</span></li>
-                            <li><span>42</span></li>
-                            <li><span>42.5</span></li>
-                            <li><span>43</span></li>
-                            <li><span>43.5</span></li>
-                            <li><span>44</span></li>
-                            <li><span>44.5</span></li>
-                        </ul>
+                            <select name="size" id="size">
+                                <%sizes.forEach(size =>{ %>
+                                    <option value="<%= size.id_size %>">
+                                        <%= size.size %>
+                                    </option><br>
+        
+                                    
+                                <% }) %>
+                            </select>
+                        </div>
+                        <label for="">COLOR:</label>
+                        <div>
+                            <select name="color" id="color">
+                                <%colors.forEach(color =>{ %>
+                                    <option value="<%= color.id_color %>">
+                                        <%= color.color %>
+                                    </option><br>
+        
+                                    
+                                <% }) %>
+                            </select>
+    
+                        </div>
+                        <p class="label"><label for="compra"></label>Cantidad</p>
+                        <input type="number" name="cantidad" id="compra" value="1">
+                    
+                    <div class="cajaBoton">
+                        <button type="submit" class="botonCompra">AGREGAR AL CARRITO</button>    
                     </div>
-                
-                <div class="cajaBoton">
-                    <button class="botonCompra">AGREGAR AL CARRITO</button>    
+
+                    <div class="compartirPublicacion">
+                        <span id="compartirLabel">Compartir</span>
+                        <span><i class="fab fa-whatsapp"></i></span>
+                        <span><i class="fab fa-instagram"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+                        <span><i class="fab fa-facebook"></i></span>
+                    </div>
                 </div>
-                <div class="compartirPublicacion">
-                    <span id="compartirLabel">Compartir</span>
-                    <span><i class="fab fa-whatsapp"></i></span>
-                    <span><i class="fab fa-instagram"></i></span>
-                    <span><i class="fab fa-twitter"></i></span>
-                    <span><i class="fab fa-facebook"></i></span>
-                </div>
-            </div>
+            </form>
         </section>
 
         <section class="cajaDescripcion">

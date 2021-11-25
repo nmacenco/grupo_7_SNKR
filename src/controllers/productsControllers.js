@@ -40,14 +40,16 @@ const productsControllers = {
     cart : (req,res) => {
         res.render ('productCart') ;
     },
-    detail : (req,res) => {
+    detail : async (req,res) => {
         // Traigo el ID del parámetro para utilizar en el findByPk
         let id = req.params.id;
+        let colors = await db.Color.findAll()
+        let sizes = await db.Size.findAll()
         
         // Utilizo la PK ID para traer solo el producto que quiero
         db.Product.findByPk(id)
             .then(function(producto){
-                return res.render('productDetail', {producto: producto}) ;        
+                return res.render('productDetail', {producto: producto , colors, sizes}) ;        
             })
     },
     list : async (req,res) => {

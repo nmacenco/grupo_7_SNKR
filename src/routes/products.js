@@ -61,7 +61,7 @@ router.get ('/create' , adminMiddleware ,  productsControllers.create)
 router.post ('/new/' , adminMiddleware , upLoadFile.single('image'), validacionesProducts, productsControllers.store) 
 
 // CARRITO DE PRODUCTOS //
-router.get ('/cart', productsControllers.cart);
+// router.get ('/cart', productsControllers.cart);
 
 // LISTADO DE PRODUCTOS POR SEARCH
 router.get('/search', productsControllers.search);

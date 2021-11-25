@@ -49,6 +49,9 @@ const rutasUsers = require ('./routes/users');
 const rutasApiProducts = require ('./routes/apiRoutes/apiProducts');
 const rutasApiUsers = require('./routes/apiRoutes/apiUsers');
 
+const rutasCart = require("./routes/cart");
+
+
 
 
 /* DEFINICIÓN DE RUTAS EN LA WEB */
@@ -56,6 +59,7 @@ const rutasApiUsers = require('./routes/apiRoutes/apiUsers');
 app.use ('/' , rutasHome);
 app.use ('/users' , rutasUsers);
 app.use ('/products' , rutasProducts);
+app.use("/cart", rutasCart);
 
 //  RUTAS A UTILIZAR CON LAS API // 
 
