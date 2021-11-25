@@ -12,7 +12,7 @@
         <section class="asistencia">
             <p>Necesitas asistencia? escribinos a eshop@snkr.com.ar</p>
         </section>
-        <section class="section-carrito">
+        <!-- <section class="section-carrito">
             <div id="items">
                 <div class="titulo">
                     <h3>ITEMS EN TU PEDIDO</h3>
@@ -69,8 +69,79 @@
                 </div>
             </div>
             
-        </section>
+        </section> -->
 
+        <section class="shoping-cart">
+            <div class="container-cart">
+                <div class="cart-title">
+                    <h1>CARRITO </h1>
+                </div>
+                <div class="container-titles">
+                    <div class="product">
+                        <h4>Producto</h4>
+                        <hr>
+                    </div>
+
+                    <div class="price">
+                        <h4>Precio</h4>
+                        <hr>
+                    </div>
+                    <div class="amount">
+                        <h4>Cantidad</h4>
+                        <hr>
+                    </div>
+                    <div class="subtotal">
+                        <h4>Subtotal</h4>
+                        <hr>
+                    </div>
+                    
+                </div>
+                    <% items.forEach(item =>{ %>
+                        <div class="container-items">
+
+                            <div class="product img-h4">
+                                <img src= '/images/products/<%= item.image %>' width="70px" />
+                                <h4><%= item.product_name %></h4>
+                            </div>
+                            <div class="price-item">
+                                <p> $  <%= item.unit_price %> </p>
+                            </div>
+                            <div class="amount-item">
+                                <input type="number" name="quantity" class="quantity" value="<%= item.quantity %>" >
+                            </div>
+                            <div class="subtotal-item">
+                                <p>  $ <%= item.subtotal %> </p>
+                            </div>
+                            <form  action="/cart/item/delete/<%= item.id_item %>?_method=DELETE" method="POST" >
+                                <button class="boton-delete-cart" type="submit">
+                                    <i class="fas fa-trash-alt"></i> 
+                                </button>
+                            </form>
+                            
+                        </div>
+                    <% }) %> 
+
+
+                <div class="container2">
+                      <h3>TOTAL A PAGAR</h3>
+                      <p id="total"> 
+                       $ <%= totalPrice %> 
+                      </p>
+                </div>
+
+                <div class="container3">
+                      <form class="botonEnviarRegistro1" action="/cart/order/add" method="POST">
+                        <button type="submit" class="pagar-boton">
+                          Pagar
+                        </button>
+                      </form>
+                      <button class= "botonEnviarRegistro1">
+                        <a href="/products">Seguir comprando</a>
+                      </button>
+                  </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>

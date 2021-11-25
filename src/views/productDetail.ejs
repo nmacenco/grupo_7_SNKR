@@ -47,50 +47,32 @@
             <form action="/cart/add/<%= producto.id_product %>" method="POST" id="formulario">
 
                 <div class="cajatalles">
-                        <p class="talle">Talle</p>
-                        <div class="numeroTalle">
-                            <!-- <ul class="listaTalles">
-                                <li><span>38</span></li>
-                                <li><span>38.5</span></li>
-                                <li><span>39</span></li>
-                                <li><span>39.5</span></li>
-                                <li><span>40</span></li>
-                                <li><span>40.5</span></li>
-                                <li><span>41</span></li>
-                                <li><span>41.5</span></li>
-                                <li><span>42</span></li>
-                                <li><span>42.5</span></li>
-                                <li><span>43</span></li>
-                                <li><span>43.5</span></li>
-                                <li><span>44</span></li>
-                                <li><span>44.5</span></li>
-                            </ul> -->
-
-                            <select name="size" id="size">
+                    <div class="container-datos">
+                        <div  class="talle-color-cantidad">
+                            <p class="talle">Talle</p>
+                            <select class="opciones-detalle" name="size" id="size">
                                 <%sizes.forEach(size =>{ %>
                                     <option value="<%= size.id_size %>">
                                         <%= size.size %>
                                     </option><br>
-        
-                                    
                                 <% }) %>
                             </select>
                         </div>
-                        <label for="">COLOR:</label>
-                        <div>
-                            <select name="color" id="color">
+                        <div class="talle-color-cantidad">
+                            <p class="talle">Color</p>
+                            <select class="opciones-detalle" name="color" id="color">
                                 <%colors.forEach(color =>{ %>
                                     <option value="<%= color.id_color %>">
                                         <%= color.color %>
                                     </option><br>
-        
-                                    
                                 <% }) %>
                             </select>
-    
                         </div>
-                        <p class="label"><label for="compra"></label>Cantidad</p>
-                        <input type="number" name="cantidad" id="compra" value="1">
+                        <div class="talle-color-cantidad">
+                            <p class="talle">Cantidad</p>
+                            <input class="opciones-detalle" type="number" name="cantidad" id="compra" value="1">
+                        </div>
+                    </div>
                     
                     <div class="cajaBoton">
                         <button type="submit" class="botonCompra">AGREGAR AL CARRITO</button>    

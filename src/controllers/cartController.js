@@ -5,20 +5,20 @@ module.exports = {
 
     // esto anda bien, no responde la base todavia 
     listCart: async (req, res) =>{
-        // let items = await db.Item.findAll({
-        //     where: {
-        //         id_user: req.session.userLogged.id,
-        //         id_order: null
-        //     }
-        // })
-        // let totalPrice = 0;
-        // items.forEach(item =>{
-        //     totalPrice += item.subtotal
-        // })
-        // return res.render("productCart", { items , totalPrice});
+        let items = await db.Item.findAll({
+            where: {
+                id_user: req.session.userLogged.id_user,
+                id_order: null
+            }
+        })
+        let totalPrice = 0;
+        items.forEach(item =>{
+            totalPrice += item.subtotal
+        })
+        return res.render("productCart", { items , totalPrice});
 
         // este render es para pruebas 
-        return res.render("productCart");
+        // return res.render("productCart");
     },
     addProduct: async (req, res) => {
         let producto = await db.Product.findByPk(req.params.id, {
@@ -40,7 +40,7 @@ module.exports = {
     destroyItem: async (req, res) =>{
         await db.Item.destroy({
             where:{
-                id: req.params.id
+                id_item : req.params.id
             }
         });
         res.redirect("/cart")
@@ -48,7 +48,7 @@ module.exports = {
     addOrder: async(req, res) =>{
         let items = await db.Item.findAll({
             where:{
-                id_user: req.session.userLogged.id,
+                id_user: req.session.userLogged.id_user,
                 id_order: null
             }
         })
@@ -58,13 +58,13 @@ module.exports = {
         })
         let orderNew = await db.Order.create({
             total_price: totalPrice,
-            id_user: req.session.userLogged.id
+            id_user: req.session.userLogged.id_user
         })
         await db.Item.update({
-            id_order : orderNew.id
+            id_order : orderNew.id_order
         },{
             where:{
-                id_user: req.session.userLogged.id,
+                id_user: req.session.userLogged.id_user,
                 id_order: null
             }
         })

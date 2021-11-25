@@ -400,9 +400,31 @@ a {
     font-weight: 1000;
 }
 
+.container-datos {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.talle-color-cantidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opciones-detalle {
+    width: 120px;
+    text-align: center;
+    border: 2px solid #39A6A3;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+    color:black;
+    /* font-weight: bold; */
+    cursor: pointer;
+}
 .talle{
     font-size: 20px;
     margin: 10px 0 10px 0;
+    font-weight: 600;
 }
 
 .listaTalles{
@@ -413,7 +435,7 @@ a {
 .cajaBoton{
     display:flex;
     justify-content: center;
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
 
 .compartirPublicacion{
@@ -872,7 +894,183 @@ a {
     margin: 15px auto;
 }
 
-/* ------------------------------------------------------------------------ */
+
+ /* /////////////// CARRITO VERSION 2 ////////////////////// */
+
+ /* .shoping-cart { 
+    align-content: center;
+ }
+ .container-cart {
+
+ }
+
+ .container-titles { 
+     display: flex;
+     justify-content: center;
+     padding: 15px;
+     width: 70%;
+     border: black solid;
+ }
+ .container-titles div p  { 
+padding: 5px;
+ }
+ .product {
+    flex: 3;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+ }
+ .price {
+    flex: 1;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+ }
+ .amount {
+     flex: 2;
+     margin: 0 10px 0 10px;
+     padding: 10px;
+ }
+ .subtotal {
+     flex: 1;
+     margin: 0 10px 0 10px;
+     padding: 10px;
+ }
+ .img-h6 {
+     display: flex;
+     align-items: center;
+     margin-left: 15px;
+ }
+ .img-h6 h4{
+    padding: 0 15px 0 15px;
+ }
+.each-item {
+    display: flex;
+}
+.shoppingCartItemsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    width: 70%;
+
+} */
+.container-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-title {
+    width: 80%;
+    text-align: center;
+}
+.container-titles {
+    width: 80%;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.container-items {
+    width: 80%;
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    border: solid #DAD3D3 ;
+}
+.product {
+    flex: 3;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+ }
+ .price {
+    flex: 1;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+}
+.price-item {
+    flex: 1;
+    margin: 0 10px 0 120px;
+    padding: 10px;
+}
+.amount {
+    flex: 1;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+}
+.amount-item {
+    flex: 1;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.amount-item input {
+    border: none;
+    width: 30px;
+}
+ .subtotal {
+     flex: 1.5;
+     margin: 0 40px 0 10px;
+     padding: 10px;
+ }
+ .subtotal-item {
+     flex: 1.5;
+     margin: 0 -10px 0 60px;
+     padding: 5px ;
+ }
+.img-h4 {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.img-h4 h4{
+    padding: 0 15px 0 15px;
+ }
+
+.boton-delete-cart {
+    border: none;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+ .container2 {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 40%;
+     padding: 30px;
+ }
+
+ #total {
+     font-weight: 700;
+     color: red;
+ }
+
+ .container3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+ }
+ .pagar-boton {
+     background-color: #39A6A3;
+     font-weight: 700;
+     border: none;
+    }
+.botonEnviarRegistro1{
+     display: flex;
+     justify-content: center;
+    width:60%;
+    margin: 20px;
+    padding:8px;
+    border-radius: 50px;
+    border: none;
+    background-color: #39A6A3;
+    font-weight: 700;
+}
+
+
+ /* ------------------------------------------------------------------------ */
 /*                      ESTILOS ABM PRODUCT                                 */
 /* ------------------------------------------------------------------------ */
 
