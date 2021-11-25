@@ -16,13 +16,12 @@
                 <span>SNKR <i class="fas fa-arrow-right"></i> RESULTADO BUSQUEDA</span>
             </div>
             <div class="filtrosAplicados">
-            <form action="/list/productobuscado" method="GET">
+            <form action="/products" method="GET" class="ordenarPor">
                 <label>ORDENAR POR</label>
                 <select name="ordenar">
-                    <option value="masVendidos">Más vendidos</option>
-                    <option value="nuevoLanzamiento">Nuevos lanzamientos</option>
-                    <option value="precioMasBajo">Precio más bajo</option>
-                    <option value="precioMasAlto">Precio más alto</option>
+                    <option name="masVendidos" value="masVendidos">Más vendidos</option>
+                    <option name="MenorPrecio" value="precioMasBajo">Precio más bajo</option>
+                    <option name="MayorPrecio" value="precioMasAlto">Precio más alto</option>
                 </select>
             </form>
             </div>

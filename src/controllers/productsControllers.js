@@ -9,6 +9,8 @@ const Op = db.Sequelize.Op;
 const sequelize = db.sequelize;
 const {validationResult} = require ('express-validator');
 
+// CANTIDAD MÁXIMA DE PRODUCTOS POR PÁGINA, PARA UTILIZAR EN LIMIT/OFFSET
+const cantMaxProductosPorPagina = 8
 /*****************************  JSON (NO SE UTILIZA MÁS) ****************************
  
 //  LECTURA JSON    //
@@ -50,7 +52,6 @@ const productsControllers = {
     },
     list : async (req,res) => {
 
-        const cantMaxProductosPorPagina = 8
         const cantTotalDePaginas = await db.Product.count().then((resultado => {
             return Math.ceil(resultado/cantMaxProductosPorPagina)
         }))
@@ -226,6 +227,12 @@ const productsControllers = {
         })
     },
     searchHombre : async (req,res) => {
+        const cantTotalDePaginas = await db.Product.count().then((resultado => {
+            return Math.ceil(resultado/cantMaxProductosPorPagina)
+        }))
+
+        let pagina = 0;
+        
         db.Product.findAll({
            where : 
            {
@@ -233,10 +240,16 @@ const productsControllers = {
            } 
         })
         .then( products => {
-            res.render('productList', {products});
+            res.render('productList', {products, pagina, cantTotalDePaginas});
         })
     },
     searchMujer : async (req,res) => {
+        const cantTotalDePaginas = await db.Product.count().then((resultado => {
+            return Math.ceil(resultado/cantMaxProductosPorPagina)
+        }))
+
+        let pagina = 0;
+
         db.Product.findAll({
            where : 
            {
@@ -244,10 +257,16 @@ const productsControllers = {
            } 
         })
         .then( products => {
-            res.render('productList', {products});
+            res.render('productList', {products, pagina, cantTotalDePaginas});
         })
     },
     searchSale : async (req,res) => {
+        const cantTotalDePaginas = await db.Product.count().then((resultado => {
+            return Math.ceil(resultado/cantMaxProductosPorPagina)
+        }))
+
+        let pagina = 0;
+
         db.Product.findAll({
            where : 
            {
@@ -255,7 +274,7 @@ const productsControllers = {
            } 
         })
         .then( products => {
-            res.render('productList', {products});
+            res.render('productList', {products, pagina, cantTotalDePaginas});
         })
     },
     pagination: async (req,res) => {
