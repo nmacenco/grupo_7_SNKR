@@ -122,16 +122,24 @@
                 
                 <% }); %>
                 
-                
+                <form action="/products" method="GET" class="numeroDePagina">
                 <div class="numeroDePagina">
                     <span>Página  
                         <select class="botonNumeroDePagina" name="pagina">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                                
+                                <% for(let i=1; i<=cantTotalDePaginas; i++){ %>
+                                    <% if(i==pagina){%>
+                                        <option name="num" value="<%=i%>" selected><%=  i %></option>
+                                    <%} else {%>
+                                        <option name="num" value="<%=i%>"><%=  i %></option>
+                                    <% } %>
+                                <%} %>
                         </select>
-                    de 3</span>
+                    de <%= cantTotalDePaginas %></span>
                 </div>
+                </form>
+                
+            
             </section>
         </div>
     </main>
@@ -144,5 +152,8 @@
     <footer>
         <%- include ('./partials/footer') %>
     </footer>
+
+    <script src="/js/productList.js"></script>
+
 </body>
 </html>

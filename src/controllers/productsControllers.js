@@ -48,12 +48,38 @@ const productsControllers = {
                 return res.render('productDetail', {producto: producto}) ;        
             })
     },
-    list : (req,res) => {
-        // Traigo todos los productos con findAll
-        db.Product.findAll()
+    list : async (req,res) => {
+
+        const cantMaxProductosPorPagina = 8
+        const cantTotalDePaginas = await db.Product.count().then((resultado => {
+            return Math.ceil(resultado/cantMaxProductosPorPagina)
+        }))
+
+        console.log(cantTotalDePaginas);
+
+        if(req.query.pagina)
+        {
+        console.log(cantTotalDePaginas);
+        let pagina = Number.parseInt(req.query.pagina);
+        
+        db.Product.findAll({ limit: cantMaxProductosPorPagina,
+            offset: (pagina * cantMaxProductosPorPagina) - cantMaxProductosPorPagina})
         .then( products => {
-            res.render('productList', { products })
+            res.render('productList', { products, pagina, cantTotalDePaginas })
         })
+
+        }
+        else
+        {
+            //Traigo todos los productos con findAll
+            let pagina = 0;
+
+            db.Product.findAll({ limit: cantMaxProductosPorPagina,
+                offset: pagina * cantMaxProductosPorPagina})
+            .then( products => {
+                res.render('productList', { products, pagina, cantTotalDePaginas })
+            })
+        }
     },
     create : async (req,res) => {
         let colors = await db.Color.findAll()
@@ -231,6 +257,9 @@ const productsControllers = {
         .then( products => {
             res.render('productList', {products});
         })
+    },
+    pagination: async (req,res) => {
+            console.log(req.body)
     }
 }
 

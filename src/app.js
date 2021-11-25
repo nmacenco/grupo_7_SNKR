@@ -11,7 +11,7 @@ const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
 const admin2Middleware = require('./middlewares/admin2Middleware');
 
 
-const cors = require('cors')
+//const cors = require('cors')
 
 
 ///////////// MIDDLEWARES //////////////////////
@@ -28,7 +28,7 @@ app.use(session({
 }))
 app.use(userLoggedMiddleware)
 app.use(admin2Middleware)
-app.use(cors())
+//app.use(cors())
 
 
 /////////// TEMPLATE ENGINE //////////////
