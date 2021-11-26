@@ -19,7 +19,6 @@ const apiProductsController = {
                     data : {
                         products,
                         totalProducts : products.length ,   
-
                     }   
                 })
             })

@@ -10,8 +10,9 @@ const session = require ('express-session')
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
 const admin2Middleware = require('./middlewares/admin2Middleware');
 
+/// requerido para que la api funcione /// 
 
-//const cors = require('cors')
+const cors = require('cors')
 
 
 ///////////// MIDDLEWARES //////////////////////
@@ -28,7 +29,7 @@ app.use(session({
 }))
 app.use(userLoggedMiddleware)
 app.use(admin2Middleware)
-//app.use(cors())
+app.use(cors())
 
 
 /////////// TEMPLATE ENGINE //////////////
