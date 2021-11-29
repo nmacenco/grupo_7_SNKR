@@ -83,6 +83,12 @@ const productsControllers = {
                 res.render('productList', { products, pagina, cantTotalDePaginas })
             })
         }
+
+
+            // db.Product.findAll()
+            // .then( products => {
+            //     res.render('productList', { products})
+            // })
     },
     create : async (req,res) => {
         let colors = await db.Color.findAll()
@@ -216,7 +222,18 @@ const productsControllers = {
     },
     search: async (req, res) => {
 
+        // parte del paginado 
+        
+        const cantTotalDePaginas = await db.Product.count().then((resultado => {
+            return Math.ceil(resultado/cantMaxProductosPorPagina)
+        }))
+        let pagina = Number.parseInt(req.query.pagina);
+
+
+        // parte de la barra de busqueda 
+
         let buscado = req.query.search;
+
         
         db.Product.findAll({
               where:
@@ -225,7 +242,7 @@ const productsControllers = {
             }
         })
         .then( products => {
-            res.render('productList', {products});
+            res.render('productList', {products , cantTotalDePaginas, pagina});
         })
     },
     searchHombre : async (req,res) => {

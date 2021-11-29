@@ -126,17 +126,30 @@
                     <span>Página  
                         <select class="botonNumeroDePagina" name="pagina">
                                 
-                                <% for(let i=1; i<=cantTotalDePaginas; i++){ %>
-                                    <% if(i==pagina){%>
-                                        <option name="num" value="<%=i%>" selected><%=  i %></option>
-                                    <%} else {%>
+                               <% for(let i=1; i<=cantTotalDePaginas; i++){ %>
+                                <%  if(i==pagina){%>
+                                        <option name="num" value=" <%=i%>" selected><%=  i %></option>
+                                        <% } else {%>
                                         <option name="num" value="<%=i%>"><%=  i %></option>
-                                    <% } %>
-                                <%} %>
+                                        <% } %>
+                                        <%  } %>
                         </select>
-                    de <%= cantTotalDePaginas %></span>
+                    de <%=  cantTotalDePaginas %></span>
                 </div>
-                </form>
+                </form> 
+
+
+                <!-- <form action="/products" method="GET" class="numeroDePagina">
+                <div class="numeroDePagina">
+                    <span>Página  
+                        <select class="botonNumeroDePagina" name="pagina">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>    
+
+                        </select>
+                </div>
+                </form> -->
                 
             
             </section>
